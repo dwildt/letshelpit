@@ -13,7 +13,7 @@
 ## Porto Alegre  
   
 - Nível do Guaíba | [site SNIRH/ANA](https://nivelguaiba.com/) | [x/CEIC_POA](https://twitter.com/CEIC_POA)  
-- CEIC POA, o Centro Integrado de Coordenação de Serviços. É o órgão de monitoramento da Prefeitura de Porto Alegre. [x/CEIC_POA](https://twitter.com/CEIC_POA) [ig/ceicpoa](https://www.instagram.com/ceicpoa/)  
+- CEIC POA, o Centro Integrado de Coordenação de Serviços. É o órgão de monitoramento da Prefeitura de Porto Alegre. [x/CEIC_POA](https://twitter.com/CEIC_POA) |  [ig/ceicpoa](https://www.instagram.com/ceicpoa/)  
 - DMAE [site](https://prefeitura.poa.br/dmae) [x/dmae](https://twitter.com/dmaepoa)  
   
   
