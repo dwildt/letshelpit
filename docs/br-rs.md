@@ -4,6 +4,7 @@
   
 - Defesa Civil | [avisos](https://defesacivil.rs.gov.br/avisos-e-alertas)  
 - SOS Enchentes | [geral](https://sosenchentes.rs.gov.br)  
+- Nível do Guaíba | [site](https://nivelguaiba.com/) | [x/CEIC_POA](https://twitter.com/CEIC_POA)  
   
   
 ## Notícias para não se esquecer  
@@ -13,7 +14,7 @@
 ## Porto Alegre  
   
 - Nível do Guaíba | [site SNIRH/ANA](https://nivelguaiba.com/)  
-- CEIC POA, o Centro Integrado de Coordenação de Serviços. É o órgão de monitoramento da Prefeitura de Porto Alegre. [x/CEIC_POA](https://twitter.com/CEIC_POA) [ig/] 
+- CEIC POA, o Centro Integrado de Coordenação de Serviços. É o órgão de monitoramento da Prefeitura de Porto Alegre. [x/CEIC_POA](https://twitter.com/CEIC_POA) [ig/ceicpoa](https://www.instagram.com/ceicpoa/)  
 - DMAE [site](https://prefeitura.poa.br/dmae) [x/dmae](https://twitter.com/dmaepoa)  
 
 
