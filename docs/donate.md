@@ -14,7 +14,8 @@ O Rio Grande do Sul está passando por necessidades após a enchente iniciada no
   
 ### Campanhas que você pode doar.  
   
-- Cozinhas Solidárias | [apoia.se](https://apoia.se/enchentesrs)  
+- Cozinha Solidária | [apoia.se](https://apoia.se/enchentesrs)  
+- Redes Solidárias RS | [apoia.se](https://descubra.apoia.se/redes-solidarias)  
 - SOS Enchentes | [sobre o pix](https://sosenchentes.rs.gov.br/sobre-o-pix)  
 - CUFA-RS | [campanha](https://www.instagram.com/p/C6lx2OEugfd/)  
   
