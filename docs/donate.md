@@ -23,4 +23,7 @@ O Rio Grande do Sul está passando por necessidades após a enchente iniciada no
 - Resgate e Equipamentos Para Pessoas com Deficiência | [ig/rodandopelavida](https://www.instagram.com/rodandopelavida) | [campanha apoiase](https://apoia.se/rodandocompcdsnors)  
   
   
+### Campanhas ligadas com a galera do Basquete  
   
+- Thuyan Oliveira Basketball, ajudando diversas iniciativas em Canoas | [instagram](https://www.instagram.com/p/C6tPKvSuELV/)  
+- Pimenta, técnico do Grêmio Náutico União |  [vakinha](https://www.vakinha.com.br/vaquinha/vamos-apoiar-o-coach-pimenta-e-sua-familia-a-se-recuperar-dos-imensuraveis-danos-causados-pelas-enchentes-no-rs)  
