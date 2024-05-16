@@ -29,6 +29,8 @@ O Rio Grande do Sul está passando por necessidades após a enchente iniciada no
   
 - Thuyan Oliveira Basketball, ajudando diversas iniciativas em Canoas | [instagram](https://www.instagram.com/p/C6tPKvSuELV/)  
 - Pimenta, técnico do Grêmio Náutico União |  [vakinha](https://www.vakinha.com.br/vaquinha/vamos-apoiar-o-coach-pimenta-e-sua-familia-a-se-recuperar-dos-imensuraveis-danos-causados-pelas-enchentes-no-rs)  
+- Movimento Lance Livre Rio Grande do Sul | [vakinha](https://www.vakinha.com.br/vaquinha/movimento-lance-livre-rio-grande-do-sul)  
+  
   
   
 ### Campanhas ligadas com a galera da Música (rifas, doações e crowdfunding)  
