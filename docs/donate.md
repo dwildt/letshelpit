@@ -21,9 +21,18 @@ O Rio Grande do Sul está passando por necessidades após a enchente iniciada no
 - Apib - Articulação dos povos indígenas do Brasil | [ig/apiboficial](https://www.instagram.com/apiboficial)  
 - Quilombo Dos Machado | [ig/quilombodosmachado](https://www.instagram.com/quilombodosmachado)  
 - Resgate e Equipamentos Para Pessoas com Deficiência | [ig/rodandopelavida](https://www.instagram.com/rodandopelavida) | [campanha apoiase](https://apoia.se/rodandocompcdsnors)  
+- Campanha SUCESU-RS | [vakinha](https://www.vakinha.com.br/vaquinha/vamos-ajudar-as-familias-do-rs)  
+- A Maior Campanha Solidária do RS | [vakinha](https://www.vakinha.com.br/vaquinha/a-maior-campanha-solidaria-do-rs)  
   
   
 ### Campanhas ligadas com a galera do Basquete  
   
 - Thuyan Oliveira Basketball, ajudando diversas iniciativas em Canoas | [instagram](https://www.instagram.com/p/C6tPKvSuELV/)  
 - Pimenta, técnico do Grêmio Náutico União |  [vakinha](https://www.vakinha.com.br/vaquinha/vamos-apoiar-o-coach-pimenta-e-sua-familia-a-se-recuperar-dos-imensuraveis-danos-causados-pelas-enchentes-no-rs)  
+  
+  
+### Campanhas ligadas com a galera da Música (rifas, doações e crowdfunding)  
+  
+- Estúdio Musitek | [instagram](https://www.instagram.com/p/C6_865jOdwb)  
+  
+  
