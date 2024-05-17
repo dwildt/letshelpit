@@ -1,8 +1,10 @@
 # Let's Help It  
   
-Uma iniciativa para conectar pessoas interessadas em apoiar instituições e a realizarem doações.  
+Uma iniciativa para conectar pessoas interessadas em apoiar instituições (ONGS) através de trabalhos voluntário e realizar doações.  
   
-- [Doações](docs/donate.md)  
+Escolha sua instituição de preferência, conheça as causas e se conecte! O seu apoio, seja de tempo, doação financeira ou através de alguma outra iniciativa do local, ajuda muito, não importa o tamanho da sua ajuda.  
+  
+- [Doações SOS RS](docs/donate.md)  
 - [Brazil / Rio Grande do Sul (RS)](docs/br-rs.md)  
   
 ## Sobre  
