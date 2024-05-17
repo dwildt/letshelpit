@@ -20,7 +20,7 @@ O Rio Grande do Sul está passando por necessidades após a enchente iniciada no
 - Abrigos e o que eles precisam | [SOS-RS](https://sos-rs.com)  
 - Resgates e pedidos de ajuda | [AjudeRS](https://ajuders.com.br) | [linkedin](https://www.linkedin.com/company/ajuders/) | [instagram](https://www.instagram.com/ajuders.com.br/)  
 - Limpeza de casas | [Meu Lar De Volta](https://www.meulardevolta.com.br/)  
-  
+- Materiais em vídeo e livros para acolhimento | [Saúde Mental UFRGS](https://www.ufrgs.br/saudemental/) | [acolhers](https://acolhers.framer.ai/materiais)  
   
 ## Sites importantes sobre Enchente em Porto Alegre  
   
