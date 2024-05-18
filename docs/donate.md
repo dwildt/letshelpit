@@ -65,6 +65,7 @@ O Rio Grande do Sul está passando por necessidades após a enchente iniciada no
   
 ### Campanhas ligadas com a galera da Música (rifas, doações e crowdfunding)  
   
-- Estúdio Musitek | [instagram](https://www.instagram.com/p/C6_865jOdwb)  
+- Estúdio Musitek | [instagram](https://www.instagram.com/p/C6_865jOdwb) | [rifa guitarra Marcelo Corsetti](https://rifapersonalizada.com.br/rifa-de-apoio-aos-estudios-musitektamborearte-e-ao-gravador-pub-yOjFGk)  
+- SOS Música | [instagram](https://www.instagram.com/sosmusicapoa/) | [chamada espaço 373](https://www.instagram.com/p/C7FMWe7OTky) | [playlist spotify músicos gaúchos](https://open.spotify.com/playlist/5f5g6pnBQKLxaGoCEAN7ra?si=75cbd8fcf09c448b) 
   
   
