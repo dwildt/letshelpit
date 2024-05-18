@@ -13,6 +13,8 @@ O Rio Grande do Sul está passando por necessidades após a enchente iniciada no
 ## Notícias para não se esquecer  
   
 - Governo do RS contabiliza R$ 117 milhões para combater desastres naturais em 2024 | [GZH](https://gauchazh.clicrbs.com.br/geral/noticia/2024/05/governo-do-rs-contabiliza-r-117-milhoes-para-combater-desastres-naturais-em-2024-clvpovc5m01sl011wund3myiw.html)  
+- Estava procurando informações sobre o Katrina, incidente que aconteceu nos Estados Unidos, e encontrei um site com [lições aprendidas do incidente](https://georgewbush-whitehouse.archives.gov/reports/katrina-lessons-learned/chapter4.html#:~:text=In%20the%20case%20of%20Katrina,and%20local%20governments%20to%20provide.).  
+  
   
   
 ## Soluções da comunidade  
