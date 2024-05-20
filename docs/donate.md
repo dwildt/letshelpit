@@ -69,3 +69,13 @@ O Rio Grande do Sul está passando por necessidades após a enchente iniciada no
 - SOS Música | [instagram](https://www.instagram.com/sosmusicapoa/) | [chamada espaço 373](https://www.instagram.com/p/C7FMWe7OTky) | [playlist spotify músicos gaúchos](https://open.spotify.com/playlist/5f5g6pnBQKLxaGoCEAN7ra?si=75cbd8fcf09c448b) 
   
   
+### Campanhas ligadas com a galera da Tecnologia impactada pelas enchentes.  
+  
+Ajuda para as famílias de colaboradores de empresas que perderam tudo na enchente.  
+  
+- Azion Volunteer | [vakinha](https://www.vakinha.com.br/vaquinha/azion-volunteer)
+- Ajuda para as famílias dos colaboradores da uMov.me | [vakinha](https://www.vakinha.com.br/vaquinha/ajuda-para-as-familias-dos-colaboradores-da-umov-me-que-perderam-tudo-na-enchente)  
+- Ajude os colaboradores das startups da WOW | [vakinha](https://www.vakinha.com.br/vaquinha/ajude-os-prejudicados-da-enchente-do-rio-grande-do-sul)  
+  
+  
+  
