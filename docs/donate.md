@@ -24,6 +24,24 @@ O Rio Grande do Sul está passando por necessidades após a enchente iniciada no
 - Limpeza de casas | [Meu Lar De Volta](https://www.meulardevolta.com.br/)  
 - Encontre pessoas que precisam muito da sua ajuda para reconstruir os lares [quemajudar.com.br](https://quemajudar.com.br/)  
 - Materiais em vídeo e livros para acolhimento | [Saúde Mental UFRGS](https://www.ufrgs.br/saudemental/) | [acolhers](https://acolhers.framer.ai/materiais)  
+- Contrata RS | [site](https://www.contratars.com.br/)  
+  
+  
+## Produtores de conteúdo, cursos e eventos, direcionando doações  
+  
+### Eventos Ao Vivo  
+  
+- Agilidade Solidária 25/Maio/2024 | [evento](https://evento10.com.br/agilidade-solidaria-rs/)  
+- QA Solidário de 20-24/Maio/2024 | [Evento](https://sites.google.com/view/eventoqasolidario)  
+- Lucas Montano, do [Canal Lucas Montano](https://lucasmontano.com/)  
+- Bonde pelo Rio Grande do Sul, pela [LinuxTips](https://www.youtube.com/live/HtXx6FRHfV4?si=qqfqKFTVcRc4W4tM)  
+  
+  
+### Eventos Gravados    
+  
+- TDC Porto Alegre | [Comunidade tech pelo RS](https://thedevconf.com/comunidadetechpelors)  
+- Perestroika | [CLIP](https://www.instagram.com/p/C7MHHF3LNMj/)  
+- Valkiria | [SOS RS Design](https://www.instagram.com/p/C7DA9mNAxj1/)  
   
   
 ## Sites importantes sobre Enchente em Porto Alegre  
