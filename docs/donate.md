@@ -14,7 +14,7 @@ O Rio Grande do Sul está passando por necessidades após a enchente iniciada no
   
 - Governo do RS contabiliza R$ 117 milhões para combater desastres naturais em 2024 | [GZH](https://gauchazh.clicrbs.com.br/geral/noticia/2024/05/governo-do-rs-contabiliza-r-117-milhoes-para-combater-desastres-naturais-em-2024-clvpovc5m01sl011wund3myiw.html)  
 - Estava procurando informações sobre o Katrina, incidente que aconteceu nos Estados Unidos, e encontrei um site com [lições aprendidas do incidente](https://georgewbush-whitehouse.archives.gov/reports/katrina-lessons-learned/chapter4.html#:~:text=In%20the%20case%20of%20Katrina,and%20local%20governments%20to%20provide.).  
-  
+- Conceito de Cidades Esponja | [artigo](https://www.terra.com.br/byte/como-cidades-esponja-impedem-inundacoes-e-alagamentos,20704597b9ce570954f52bc1137086e19y2limcz.html) | [bbc](https://www.bbc.com/portuguese/articles/ce44n8n14ewo)  
   
   
 ## Soluções da comunidade  
