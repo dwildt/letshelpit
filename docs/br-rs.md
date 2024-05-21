@@ -13,6 +13,16 @@ Aqui instituições do Rio Grande do Sul que estão sempre em busca de doações
   - Como [doar](https://aldeiadafraternidade.org.br/doe/)? Doe dinheiro, cadastre a instituição na Nota Fiscal Gaúcha, doe ou compre roupas no Bazar da Aldeia, doe Alimentos.  
   
   
+### Fundação Tênis  
+  
+  - Sobre: A Fundação Tênis é uma organização não governamental, sem fins lucrativos, que realiza um programa social e educativo, por meio do Esporte, com proposta pedagógica baseada na Educação Olímpica. Este trabalho é direcionado para crianças e adolescentes em situação de vulnerabilidade.  
+  - Núcleos: A Fundação Tênis [atua em diferentes locais](https://fundacaotenis.org.br/nucleos/). Atualmente assiste a mais de 2.500 alunos em 24 núcleos no Brasil, sendo 10 no Rio Grande do Sul, 9 em São Paulo, 1 em Santa Catarina e 4 em Minas Gerais no programa Esporte Educacional.  
+  - Endereço: Tv. São José, 455, Bairro Navegantes, Porto Alegre/RS  
+  - Site: [fundacaotenis.org.br](https://fundacaotenis.org.br/)  
+  - Instagram: [@fundacaotenis](https://www.instagram.com/fundacaotenis)  
+  - Como [doar](https://doar.fundacaotenis.org.br/)? Doação direta e leis de incentivo ao esporte. Ver atividades de [transparência](https://fundacaotenis.org.br/transparencia/) do projeto.  
+  
+  
 ### Kinder  
   
   - Sobre: Centro de Integração da Criança Especial  
@@ -28,6 +38,5 @@ Aqui instituições do Rio Grande do Sul que estão sempre em busca de doações
   - Site: [wimbelemdon.com.br](https://www.wimbelemdon.com.br/)  
   - Instagram: [@wimbelemdon](https://www.instagram.com/wimbelemdon/)  
   - Como [doar](https://wimbelemdon.com.br/doe/)? Doe dinheiro, Nota Fiscal Gaúcha, Funcriança e [outras possibilidades](https://www.wimbelemdon.com.br/colabore/).  
-  
   
   
