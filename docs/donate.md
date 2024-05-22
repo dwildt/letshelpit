@@ -3,10 +3,17 @@
 O Rio Grande do Sul está passando por necessidades após a enchente iniciada no início do mês de maio de 2024. Separamos aqui algumas iniciativas para doação.  
   
   
-## Principais links  
+## Principais links Rio Grande do Sul
   
 - Defesa Civil | [avisos](https://defesacivil.rs.gov.br/avisos-e-alertas)  
 - SOS Enchentes | [geral](https://sosenchentes.rs.gov.br)  
+  
+## Sites importantes sobre Enchente em Porto Alegre  
+  
+- Nível do Guaíba | [site SNIRH/ANA](https://nivelguaiba.com/) | [x/CEIC_POA](https://twitter.com/CEIC_POA)  
+- CEIC POA, o Centro Integrado de Coordenação de Serviços. É o órgão de monitoramento da Prefeitura de Porto Alegre. [x/CEIC_POA](https://twitter.com/CEIC_POA) |  [ig/ceicpoa](https://www.instagram.com/ceicpoa/)  
+- DMAE [site](https://prefeitura.poa.br/dmae) [x/dmae](https://twitter.com/dmaepoa)  
+- Cadastro Entidades para receber doações [chamada ig/DEMHABPOA](https://www.instagram.com/p/C66SUjVuuvC/)  
   
 ## Notícias e para não se esquecer...  
   
@@ -43,14 +50,6 @@ O Rio Grande do Sul está passando por necessidades após a enchente iniciada no
 - Valkiria | [SOS RS Design](https://www.instagram.com/p/C7DA9mNAxj1/)  
   
   
-## Sites importantes sobre Enchente em Porto Alegre  
-  
-- Nível do Guaíba | [site SNIRH/ANA](https://nivelguaiba.com/) | [x/CEIC_POA](https://twitter.com/CEIC_POA)  
-- CEIC POA, o Centro Integrado de Coordenação de Serviços. É o órgão de monitoramento da Prefeitura de Porto Alegre. [x/CEIC_POA](https://twitter.com/CEIC_POA) |  [ig/ceicpoa](https://www.instagram.com/ceicpoa/)  
-- DMAE [site](https://prefeitura.poa.br/dmae) [x/dmae](https://twitter.com/dmaepoa)  
-- Cadastro Entidades para receber doações [chamada ig/DEMHABPOA](https://www.instagram.com/p/C66SUjVuuvC/)  
-  
-   
 ## Quer doar materias, alimentos não perecíveis?  
   
 - Doações para abrigos: [Site SOS Enchentes](https://sosenchentes.rs.gov.br/doacoes-em-geral) | [SOS-RS](https://sos-rs.com)  
