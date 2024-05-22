@@ -1,6 +1,4 @@
-# Doações / Donations
-
-## Rio Grande do Sul / Brazil  (05/2024)
+# Doações / Rio Grande do Sul / Brasil  (05/2024)  
   
 O Rio Grande do Sul está passando por necessidades após a enchente iniciada no início do mês de maio de 2024. Separamos aqui algumas iniciativas para doação.  
   
@@ -53,14 +51,14 @@ O Rio Grande do Sul está passando por necessidades após a enchente iniciada no
 - Cadastro Entidades para receber doações [chamada ig/DEMHABPOA](https://www.instagram.com/p/C66SUjVuuvC/)  
   
    
-### Quer doar materias, alimentos não perecíveis?  
+## Quer doar materias, alimentos não perecíveis?  
   
 - Doações para abrigos: [Site SOS Enchentes](https://sosenchentes.rs.gov.br/doacoes-em-geral) | [SOS-RS](https://sos-rs.com)  
   
 - Locais que recebem doações para envio ao RS: [Correios](https://blog.correios.com.br/2024/05/07/ampliamos-nossa-rede-de-apoio-as-vitimas-saiba-onde-e-o-que-doar-para-ajudar-2/)  
   
   
-### Campanhas que você pode doar.  
+## Campanhas que você pode doar.  
   
 - Cozinha Solidária | [apoia.se](https://apoia.se/enchentesrs) | [ig/cozinhassolidariasmtst](https://www.instagram.com/cozinhassolidariasmtst)  
 - Redes Solidárias RS | [apoia.se](https://descubra.apoia.se/redes-solidarias)  
@@ -74,7 +72,7 @@ O Rio Grande do Sul está passando por necessidades após a enchente iniciada no
 - A Maior Campanha Solidária do RS | [vakinha](https://www.vakinha.com.br/vaquinha/a-maior-campanha-solidaria-do-rs)  
   
   
-### Campanhas ligadas com a galera do Basquete  
+## Campanhas ligadas com a galera do Basquete  
   
 - Thuyan Oliveira Basketball, ajudando diversas iniciativas em Canoas |  [instagram](https://www.instagram.com/p/C6tPKvSuELV/)  
 - Pimenta, técnico do Grêmio Náutico União |  [vakinha](https://www.vakinha.com.br/vaquinha/vamos-apoiar-o-coach-pimenta-e-sua-familia-a-se-recuperar-dos-imensuraveis-danos-causados-pelas-enchentes-no-rs)  
@@ -82,14 +80,14 @@ O Rio Grande do Sul está passando por necessidades após a enchente iniciada no
 - Associação Gaúcha dos Oficiais de Basketball (AGOB) | [instagram](https://www.instagram.com/p/C7MeoOhu-7X)  
   
   
-### Campanhas ligadas com a galera da Música (rifas, doações e crowdfunding)  
+## Campanhas ligadas com a galera da Música (rifas, doações e crowdfunding)  
   
 - Estúdio Musitek | [instagram](https://www.instagram.com/p/C6_865jOdwb) | [rifa guitarra Marcelo Corsetti](https://rifapersonalizada.com.br/rifa-de-apoio-aos-estudios-musitektamborearte-e-ao-gravador-pub-yOjFGk)  
 - SOS Música | [instagram](https://www.instagram.com/sosmusicapoa/) | [chamada espaço 373](https://www.instagram.com/p/C7FMWe7OTky) | [playlist spotify músicos gaúchos](https://open.spotify.com/playlist/5f5g6pnBQKLxaGoCEAN7ra?si=75cbd8fcf09c448b)  
 - Vivências Culturais DJ Piá | [instagram](https://www.instagram.com/p/C7H8EG5uTfi)  
   
   
-### Campanhas ligadas com a galera da Tecnologia impactada pelas enchentes.  
+## Campanhas ligadas com a galera da Tecnologia impactada pelas enchentes.  
   
 Ajuda para as famílias de colaboradores de empresas que perderam tudo na enchente.  
   
