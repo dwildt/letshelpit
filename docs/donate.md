@@ -10,8 +10,9 @@ O Rio Grande do Sul está passando por necessidades após a enchente iniciada no
 - Defesa Civil | [avisos](https://defesacivil.rs.gov.br/avisos-e-alertas)  
 - SOS Enchentes | [geral](https://sosenchentes.rs.gov.br)  
   
-## Notícias para não se esquecer  
+## Notícias e para não se esquecer...  
   
+- Não foi um treinamento | [limpeza começando](https://www.instagram.com/p/C7PffILuqJ6/) | [entrada de Porto Alegre / Corredor humanitário](https://www.instagram.com/p/C7PYqIgu0AO/) | [visão de Porto Alegre 14/Maio](https://www.instagram.com/p/C69-l46u7kg/)  
 - Governo do RS contabiliza R$ 117 milhões para combater desastres naturais em 2024 | [GZH](https://gauchazh.clicrbs.com.br/geral/noticia/2024/05/governo-do-rs-contabiliza-r-117-milhoes-para-combater-desastres-naturais-em-2024-clvpovc5m01sl011wund3myiw.html)  
 - Estava procurando informações sobre o Katrina, incidente que aconteceu nos Estados Unidos, e encontrei um site com [lições aprendidas do incidente](https://georgewbush-whitehouse.archives.gov/reports/katrina-lessons-learned/chapter4.html#:~:text=In%20the%20case%20of%20Katrina,and%20local%20governments%20to%20provide.).  
 - Conceito de Cidades Esponja | [artigo](https://www.terra.com.br/byte/como-cidades-esponja-impedem-inundacoes-e-alagamentos,20704597b9ce570954f52bc1137086e19y2limcz.html) | [bbc](https://www.bbc.com/portuguese/articles/ce44n8n14ewo)  
@@ -24,7 +25,7 @@ O Rio Grande do Sul está passando por necessidades após a enchente iniciada no
 - Limpeza de casas | [Meu Lar De Volta](https://www.meulardevolta.com.br/)  
 - Encontre pessoas que precisam muito da sua ajuda para reconstruir os lares [quemajudar.com.br](https://quemajudar.com.br/)  
 - Materiais em vídeo e livros para acolhimento | [Saúde Mental UFRGS](https://www.ufrgs.br/saudemental/) | [acolhers](https://acolhers.framer.ai/materiais)  
-- Contrata RS | [site](https://www.contratars.com.br/)  
+- Contrata RS | [Contrate Um Fornecedor Gaucho](https://www.contratars.com.br/)  
   
   
 ## Produtores de conteúdo, cursos e eventos, direcionando doações  
@@ -75,7 +76,7 @@ O Rio Grande do Sul está passando por necessidades após a enchente iniciada no
   
 ### Campanhas ligadas com a galera do Basquete  
   
-- Thuyan Oliveira Basketball, ajudando diversas iniciativas em Canoas | [instagram](https://www.instagram.com/p/C6tPKvSuELV/)  
+- Thuyan Oliveira Basketball, ajudando diversas iniciativas em Canoas |  [instagram](https://www.instagram.com/p/C6tPKvSuELV/)  
 - Pimenta, técnico do Grêmio Náutico União |  [vakinha](https://www.vakinha.com.br/vaquinha/vamos-apoiar-o-coach-pimenta-e-sua-familia-a-se-recuperar-dos-imensuraveis-danos-causados-pelas-enchentes-no-rs)  
 - Movimento Lance Livre Rio Grande do Sul | [vakinha](https://www.vakinha.com.br/vaquinha/movimento-lance-livre-rio-grande-do-sul)  
 - Associação Gaúcha dos Oficiais de Basketball (AGOB) | [instagram](https://www.instagram.com/p/C7MeoOhu-7X)  
@@ -84,7 +85,8 @@ O Rio Grande do Sul está passando por necessidades após a enchente iniciada no
 ### Campanhas ligadas com a galera da Música (rifas, doações e crowdfunding)  
   
 - Estúdio Musitek | [instagram](https://www.instagram.com/p/C6_865jOdwb) | [rifa guitarra Marcelo Corsetti](https://rifapersonalizada.com.br/rifa-de-apoio-aos-estudios-musitektamborearte-e-ao-gravador-pub-yOjFGk)  
-- SOS Música | [instagram](https://www.instagram.com/sosmusicapoa/) | [chamada espaço 373](https://www.instagram.com/p/C7FMWe7OTky) | [playlist spotify músicos gaúchos](https://open.spotify.com/playlist/5f5g6pnBQKLxaGoCEAN7ra?si=75cbd8fcf09c448b) 
+- SOS Música | [instagram](https://www.instagram.com/sosmusicapoa/) | [chamada espaço 373](https://www.instagram.com/p/C7FMWe7OTky) | [playlist spotify músicos gaúchos](https://open.spotify.com/playlist/5f5g6pnBQKLxaGoCEAN7ra?si=75cbd8fcf09c448b)  
+- Vivências Culturais DJ Piá | [instagram](https://www.instagram.com/p/C7H8EG5uTfi)  
   
   
 ### Campanhas ligadas com a galera da Tecnologia impactada pelas enchentes.  
