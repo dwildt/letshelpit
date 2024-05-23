@@ -15,6 +15,8 @@ O Rio Grande do Sul está passando por necessidades após a enchente iniciada no
 - CEIC POA, o Centro Integrado de Coordenação de Serviços. É o órgão de monitoramento da Prefeitura de Porto Alegre. [x/CEIC_POA](https://twitter.com/CEIC_POA) |  [ig/ceicpoa](https://www.instagram.com/ceicpoa/)  
 - DMAE [site](https://prefeitura.poa.br/dmae) [x/dmae](https://twitter.com/dmaepoa)  
 - Cadastro Entidades para receber doações [chamada ig/DEMHABPOA](https://www.instagram.com/p/C66SUjVuuvC/)  
+- Site Sebrae-RS | [Juntos pelo RS](https://conhecimento.sebraers.com.br/lp/juntos-pelo-rs/)  
+  
   
 ## Notícias e para não se esquecer...  
   
