@@ -72,6 +72,7 @@ O Rio Grande do Sul está passando por necessidades após a enchente iniciada no
 - Resgate e Equipamentos Para Pessoas com Deficiência | [ig/rodandopelavida](https://www.instagram.com/rodandopelavida) | [campanha apoiase](https://apoia.se/rodandocompcdsnors)  
 - Campanha SUCESU-RS | [vakinha](https://www.vakinha.com.br/vaquinha/vamos-ajudar-as-familias-do-rs)  
 - A Maior Campanha Solidária do RS | [vakinha](https://www.vakinha.com.br/vaquinha/a-maior-campanha-solidaria-do-rs)  
+- Benditta Marcenaria | [Reconstruindo Lares](https://www.instagram.com/p/C6yeJ3Nrhv8)  
   
   
 ## Campanhas ligadas com a galera do Basquete  
