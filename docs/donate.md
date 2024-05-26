@@ -81,6 +81,7 @@ O Rio Grande do Sul está passando por necessidades após a enchente iniciada no
 - Pimenta, técnico do Grêmio Náutico União |  [vakinha](https://www.vakinha.com.br/vaquinha/vamos-apoiar-o-coach-pimenta-e-sua-familia-a-se-recuperar-dos-imensuraveis-danos-causados-pelas-enchentes-no-rs)  
 - Movimento Lance Livre Rio Grande do Sul | [vakinha](https://www.vakinha.com.br/vaquinha/movimento-lance-livre-rio-grande-do-sul)  
 - Associação Gaúcha dos Oficiais de Basketball (AGOB) | [instagram](https://www.instagram.com/p/C7MeoOhu-7X)  
+- Isaura de Oliveira, madrinha do Alésio Gonçalves, Técnico de Basquete de Porto Alegre. | [vakinha](https://www.vakinha.com.br/vaquinha/ajude-isaura-na-sua-reconstrucao)  
   
   
 ## Campanhas ligadas com a galera da Música (rifas, doações e crowdfunding)  
