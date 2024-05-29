@@ -90,6 +90,7 @@ O Rio Grande do Sul está passando por necessidades após a enchente iniciada no
 - SOS Música | [instagram](https://www.instagram.com/sosmusicapoa/) | [chamada espaço 373](https://www.instagram.com/p/C7FMWe7OTky) | [playlist spotify músicos gaúchos](https://open.spotify.com/playlist/5f5g6pnBQKLxaGoCEAN7ra?si=75cbd8fcf09c448b)  
 - Vivências Culturais DJ Piá | [instagram](https://www.instagram.com/p/C7H8EG5uTfi)  
 - Rifa de Claudinho Fuhrmann: Fender Stratocaster Vintera 50 em prol das famílias e animas vitaminas da enchente no RS | [Campanha instagram](https://www.instagram.com/p/C6ujo0_upmc/)  
+- Rifa Mentoria e livro de Metodologias Ágeis Daniel Wildt - [Apoio para estúdios TecAudio, Musitek e Tamborearte](https://rifapersonalizada.com.br/apoio-para-estudios-de-musica-de-porto-alegre-NI1Typ)  
   
 ## Campanhas ligadas com a galera da Tecnologia impactada pelas enchentes.  
   
