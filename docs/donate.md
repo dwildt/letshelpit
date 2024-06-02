@@ -83,7 +83,7 @@ O Rio Grande do Sul está passando por necessidades após a enchente iniciada no
 - Associação Gaúcha dos Oficiais de Basketball (AGOB) | [instagram](https://www.instagram.com/p/C7MeoOhu-7X)  
 - Isaura de Oliveira, madrinha do Alésio Gonçalves, Técnico de Basquete de Porto Alegre. | [vakinha](https://www.vakinha.com.br/vaquinha/ajude-isaura-na-sua-reconstrucao)  
 - O [DunkPark](https://www.instagram.com/odunkpark/), lugar onde muitos campeonatos e equipes de Porto Alegre e região treinam, está com iniciativas e pedidos de apoio. Veja um [destaque na página do instagram](https://www.instagram.com/odunkpark/).  
-  
+- Summit Solidário, evento com palestras, para arrecadar fundos para o RS | [Grupo Whatsapp](https://chat.whatsapp.com/BDhkPRZ5OMtAoHgOCVUtbT)  
   
 ## Campanhas ligadas com a galera da Música (rifas, doações e crowdfunding)  
   
@@ -92,6 +92,9 @@ O Rio Grande do Sul está passando por necessidades após a enchente iniciada no
 - Vivências Culturais DJ Piá | [instagram](https://www.instagram.com/p/C7H8EG5uTfi)  
 - Rifa de Claudinho Fuhrmann: Fender Stratocaster Vintera 50 em prol das famílias e animas vitaminas da enchente no RS | [Campanha instagram](https://www.instagram.com/p/C6ujo0_upmc/)  
 - Rifa Mentoria e livro de Metodologias Ágeis Daniel Wildt - [Apoio para estúdios TecAudio, Musitek e Tamborearte](https://rifapersonalizada.com.br/apoio-para-estudios-de-musica-de-porto-alegre-NI1Typ)  
+- RS Música | [instagram](https://www.instagram.com/rsmusica/)  
+- APTA-RS (Ajuda Para Todos os Artistas - RS) | [instagram](https://www.instagram.com/apta.rs/) | [apoia-se](https://apoia.se/apta-rs)  
+  
   
 ## Campanhas ligadas com a galera da Tecnologia impactada pelas enchentes.  
   
