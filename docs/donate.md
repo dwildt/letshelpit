@@ -94,6 +94,7 @@ O Rio Grande do Sul está passando por necessidades após a enchente iniciada no
 - Rifa Mentoria e livro de Metodologias Ágeis Daniel Wildt - [Apoio para estúdios TecAudio, Musitek e Tamborearte](https://rifapersonalizada.com.br/apoio-para-estudios-de-musica-de-porto-alegre-NI1Typ)  
 - RS Música | [instagram](https://www.instagram.com/rsmusica/)  
 - APTA-RS (Ajuda Para Todos os Artistas - RS) | [instagram](https://www.instagram.com/apta.rs/) | [apoia-se](https://apoia.se/apta-rs)  
+- Apoio ao Gravador Pub | [instagram](https://www.instagram.com/gravadorpub/)  
   
   
 ## Campanhas ligadas com a galera da Tecnologia impactada pelas enchentes.  
