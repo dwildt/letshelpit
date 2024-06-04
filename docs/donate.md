@@ -74,6 +74,7 @@ O Rio Grande do Sul está passando por necessidades após a enchente iniciada no
 - A Maior Campanha Solidária do RS | [vakinha](https://www.vakinha.com.br/vaquinha/a-maior-campanha-solidaria-do-rs)  
 - Benditta Marcenaria | [Reconstruindo Lares](https://www.instagram.com/p/C6yeJ3Nrhv8)  
 - Fiocruz Unidos Pela Vida | [notícia](https://agencia.fiocruz.br/fiocruz-apoia-familias-do-rio-grande-do-sul) | [chamada vocalista simple plan](https://www.instagram.com/p/C7hGSHVOcmW/) | [campanha](https://fiocruz.colabore.org/unidosporRioGrandedoSul/single_step)  
+- Vila Flores | [post instagram](https://www.instagram.com/p/C7u6nPOOoPl/)  
   
   
 ## Campanhas ligadas com a galera do Basquete  
