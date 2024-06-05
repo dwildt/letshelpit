@@ -75,6 +75,7 @@ O Rio Grande do Sul está passando por necessidades após a enchente iniciada no
 - Benditta Marcenaria | [Reconstruindo Lares](https://www.instagram.com/p/C6yeJ3Nrhv8)  
 - Fiocruz Unidos Pela Vida | [notícia](https://agencia.fiocruz.br/fiocruz-apoia-familias-do-rio-grande-do-sul) | [chamada vocalista simple plan](https://www.instagram.com/p/C7hGSHVOcmW/) | [campanha](https://fiocruz.colabore.org/unidosporRioGrandedoSul/single_step)  
 - Vila Flores | [post instagram](https://www.instagram.com/p/C7u6nPOOoPl/)  
+- SOS Cultura RS. Apoio para os comércios da Casa de Cultura Mario Quintana | [apoiase](https://apoia.se/sosculturars)  
   
   
 ## Campanhas ligadas com a galera do Basquete  
