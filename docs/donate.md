@@ -85,7 +85,7 @@ O Rio Grande do Sul está passando por necessidades após a enchente iniciada no
 - Movimento Lance Livre Rio Grande do Sul | [vakinha](https://www.vakinha.com.br/vaquinha/movimento-lance-livre-rio-grande-do-sul)  
 - Associação Gaúcha dos Oficiais de Basketball (AGOB) | [instagram](https://www.instagram.com/p/C7MeoOhu-7X)  
 - Isaura de Oliveira, madrinha do Alésio Gonçalves, Técnico de Basquete de Porto Alegre. | [vakinha](https://www.vakinha.com.br/vaquinha/ajude-isaura-na-sua-reconstrucao)  
-- O [DunkPark](https://www.instagram.com/odunkpark/), lugar onde muitos campeonatos e equipes de Porto Alegre e região treinam, está com iniciativas e pedidos de apoio. Veja um [destaque na página do instagram](https://www.instagram.com/odunkpark/).  
+- O [DunkPark](https://www.instagram.com/odunkpark/), lugar onde muitos campeonatos e equipes de Porto Alegre e região treinam, está com iniciativas e pedidos de apoio. Veja um [destaque na página do instagram](https://www.instagram.com/odunkpark/) | [Compre uma camiseta da campanha de retomada](https://www.dunkpark.com.br).  
 - Summit Solidário Performance no Basquete, evento com palestras, para arrecadar fundos para o RS | [instagram](https://www.instagram.com/summitbasquetesolidario) | [Grupo Whatsapp](https://chat.whatsapp.com/BDhkPRZ5OMtAoHgOCVUtbT)  
   
 ## Campanhas ligadas com a galera da Música (rifas, doações e crowdfunding)  
