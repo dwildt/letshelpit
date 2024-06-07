@@ -35,7 +35,7 @@ O Rio Grande do Sul está passando por necessidades após a enchente iniciada no
 - Materiais em vídeo e livros para acolhimento | [Saúde Mental UFRGS](https://www.ufrgs.br/saudemental/) | [acolhers](https://acolhers.framer.ai/materiais)  
 - Contrata RS | [Contrate Um Fornecedor Gaucho](https://www.contratars.com.br/)  
 - Arcanimal. Ajudando animais em emergência a encontrar um lar. | [site](https://arcanimal.com.br/)  
-  
+- PETSRS | [site](https://petsrs.com.br)  
   
 ## Produtores de conteúdo, cursos e eventos, direcionando doações  
   
