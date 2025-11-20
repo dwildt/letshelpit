@@ -77,7 +77,7 @@
         "pt": "Contribuição Mensal",
         "en": "Monthly Contribution"
       },
-      "icon": "📅",
+      "icon": "🗓️",
       "category": "financial",
       "description": {
         "pt": "Contribuição financeira recorrente mensal (débito automático, PIX agendado, cartão recorrente)",

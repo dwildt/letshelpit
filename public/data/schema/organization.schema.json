@@ -50,6 +50,12 @@
         }
       }
     },
+    "icon": {
+      "type": "string",
+      "description": "Optional custom emoji icon for the organization (overrides category icons)",
+      "pattern": "^[\\u{1F000}-\\u{1F9FF}]$",
+      "examples": ["🏀", "🎾", "⚽", "🎨"]
+    },
     "categories": {
       "type": "array",
       "description": "Categories that apply to this organization",

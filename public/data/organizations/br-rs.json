@@ -13,6 +13,7 @@
       "name": "Instituto Ação Compassiva",
       "type": "ngo",
       "status": "active",
+      "icon": "🏀",
       "about": {
         "pt": "O Instituto Ação Compassiva (IAC) tem como missão gerar ações compassivas em rede. Desejamos que todas as pessoas possam se sentir pertencentes ao viver numa sociedade em equilíbrio sistêmico entre o dar e receber. Projeto em foco: Basquete Compaixão, que atua no Quarto Distrito de Porto Alegre, combinando desenvolvimento físico através da prática de basquete com desenvolvimento emocional, psíquico e espiritual através de oficinas, Yoga e Meditação.",
         "en": "Instituto Ação Compassiva (IAC) aims to generate compassionate actions in network. We want all people to feel they belong by living in a society in systemic balance between giving and receiving. Focus project: Basquete Compaixão (Basketball Compassion), which operates in the Fourth District of Porto Alegre, combining physical development through basketball practice with emotional, psychic and spiritual development through workshops, Yoga and Meditation."
@@ -164,6 +165,7 @@
       "name": "Fundação Tênis",
       "type": "foundation",
       "status": "active",
+      "icon": "🎾",
       "about": {
         "pt": "A Fundação Tênis é uma organização não governamental, sem fins lucrativos, que realiza um programa social e educativo, por meio do Esporte, com proposta pedagógica baseada na Educação Olímpica. Este trabalho é direcionado para crianças e adolescentes em situação de vulnerabilidade.",
         "en": "Fundação Tênis is a non-profit non-governmental organization that carries out a social and educational program through Sports, with a pedagogical approach based on Olympic Education. This work is aimed at children and adolescents in vulnerable situations."
@@ -323,11 +325,12 @@
       "name": "WimBelemDon",
       "type": "ngo",
       "status": "active",
+      "icon": "🎾",
       "about": {
         "pt": "O WimBelemDon é um projeto social criado no ano de 2000 e tem como objetivo promover transformação social em crianças e adolescentes em situação de vulnerabilidade social. Atendemos jovens entre seis e dezoito anos, na região do extremo sul de Porto Alegre (RS), que é uma das áreas mais vulneráveis da cidade.",
         "en": "WimBelemDon is a social project created in the year 2000 with the goal of promoting social transformation in children and adolescents in situations of social vulnerability. We serve young people between six and eighteen years old in the extreme south region of Porto Alegre (RS), which is one of the most vulnerable areas of the city."
       },
-      "categories": ["children_youth", "social_vulnerability", "education"],
+      "categories": ["children_youth", "social_vulnerability", "education", "sports"],
       "location": {
         "country": "BR",
         "countryName": "Brazil",

@@ -50,6 +50,7 @@ const UI = {
       <div class="org-card bg-white rounded-lg shadow-md p-6 cursor-pointer" onclick="openOrgModal('${org.id}')">
         <!-- Header -->
         <div class="flex justify-between items-start mb-4">
+          ${org.icon ? `<div class="text-4xl mr-4 flex-shrink-0">${org.icon}</div>` : ''}
           <div class="flex-1">
             <h3 class="text-xl font-bold text-gray-800 mb-1">${this.escapeHtml(org.name)}</h3>
             <div class="flex items-center text-sm text-gray-600">
