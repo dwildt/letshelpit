@@ -1,0 +1,94 @@
+{
+  "$schema": "../../schema/categories.schema.json",
+  "version": "1.0",
+  "lastUpdated": "2024-11-18",
+  "categories": [
+    {
+      "id": "children_youth",
+      "name": {
+        "pt": "Crianças e Jovens",
+        "en": "Children & Youth"
+      },
+      "icon": "👶",
+      "color": "#3B82F6",
+      "description": {
+        "pt": "Organizações que atendem crianças, adolescentes e jovens em situação de vulnerabilidade",
+        "en": "Organizations serving children, teenagers and youth in vulnerable situations"
+      },
+      "keywords": {
+        "pt": ["criança", "jovem", "adolescente", "infância", "juventude", "menor"],
+        "en": ["children", "youth", "teenager", "childhood", "adolescent", "minor"]
+      }
+    },
+    {
+      "id": "education",
+      "name": {
+        "pt": "Educação",
+        "en": "Education"
+      },
+      "icon": "📚",
+      "color": "#10B981",
+      "description": {
+        "pt": "Organizações focadas em educação formal, complementar ou profissionalizante",
+        "en": "Organizations focused on formal, complementary or vocational education"
+      },
+      "keywords": {
+        "pt": ["educação", "escola", "ensino", "aprendizagem", "alfabetização", "capacitação"],
+        "en": ["education", "school", "teaching", "learning", "literacy", "training"]
+      },
+      "relatedCategories": ["children_youth"]
+    },
+    {
+      "id": "disability",
+      "name": {
+        "pt": "Pessoas com Deficiência",
+        "en": "People with Disabilities"
+      },
+      "icon": "♿",
+      "color": "#8B5CF6",
+      "description": {
+        "pt": "Organizações que atendem pessoas com deficiências físicas, intelectuais ou múltiplas",
+        "en": "Organizations serving people with physical, intellectual or multiple disabilities"
+      },
+      "keywords": {
+        "pt": ["deficiência", "especial", "inclusão", "acessibilidade", "PCD", "autismo", "síndrome"],
+        "en": ["disability", "special", "inclusion", "accessibility", "disabled", "autism", "syndrome"]
+      }
+    },
+    {
+      "id": "sports",
+      "name": {
+        "pt": "Esporte",
+        "en": "Sports"
+      },
+      "icon": "⚽",
+      "color": "#F59E0B",
+      "description": {
+        "pt": "Organizações que usam o esporte como ferramenta de inclusão social e desenvolvimento",
+        "en": "Organizations using sports as a tool for social inclusion and development"
+      },
+      "keywords": {
+        "pt": ["esporte", "futebol", "tênis", "basquete", "atletismo", "atividade física"],
+        "en": ["sports", "football", "soccer", "tennis", "basketball", "athletics", "physical activity"]
+      },
+      "relatedCategories": ["children_youth", "education"]
+    },
+    {
+      "id": "social_vulnerability",
+      "name": {
+        "pt": "Vulnerabilidade Social",
+        "en": "Social Vulnerability"
+      },
+      "icon": "🤲",
+      "color": "#EF4444",
+      "description": {
+        "pt": "Organizações que atendem pessoas em situação de vulnerabilidade socioeconômica",
+        "en": "Organizations serving people in socioeconomic vulnerability"
+      },
+      "keywords": {
+        "pt": ["vulnerabilidade", "pobreza", "risco social", "assistência social", "desigualdade"],
+        "en": ["vulnerability", "poverty", "social risk", "social assistance", "inequality"]
+      }
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+{
+  "$schema": "../../schema/donation-types.schema.json",
+  "version": "1.0",
+  "lastUpdated": "2024-11-18",
+  "donation_types": [
+    {
+      "id": "money",
+      "name": {
+        "pt": "Dinheiro",
+        "en": "Money"
+      },
+      "icon": "💰",
+      "category": "financial",
+      "description": {
+        "pt": "Doação financeira via PIX, transferência bancária, cartão de crédito ou débito",
+        "en": "Financial donation via PIX, bank transfer, credit or debit card"
+      }
+    },
+    {
+      "id": "nota_fiscal_gaucha",
+      "name": {
+        "pt": "Nota Fiscal Gaúcha",
+        "en": "Tax Receipt Donation (RS)"
+      },
+      "icon": "🧾",
+      "category": "tax_incentive",
+      "regional": "RS",
+      "description": {
+        "pt": "Doação através do programa Nota Fiscal Gaúcha do governo do Rio Grande do Sul",
+        "en": "Donation through Rio Grande do Sul's Tax Receipt program"
+      },
+      "link": "https://www.sefaz.rs.gov.br/NFG/NFG-FPG.aspx"
+    },
+    {
+      "id": "clothes",
+      "name": {
+        "pt": "Roupas",
+        "en": "Clothes"
+      },
+      "icon": "👔",
+      "category": "items",
+      "description": {
+        "pt": "Doação de roupas para brechó, distribuição ou uso das pessoas assistidas",
+        "en": "Clothing donation for thrift shop, distribution or use by beneficiaries"
+      }
+    },
+    {
+      "id": "food",
+      "name": {
+        "pt": "Alimentos Não Perecíveis",
+        "en": "Non-Perishable Food"
+      },
+      "icon": "🥫",
+      "category": "items",
+      "description": {
+        "pt": "Doação de alimentos não perecíveis (arroz, feijão, macarrão, óleo, enlatados, etc.)",
+        "en": "Non-perishable food donation (rice, beans, pasta, oil, canned goods, etc.)"
+      }
+    },
+    {
+      "id": "sports_incentive_laws",
+      "name": {
+        "pt": "Leis de Incentivo ao Esporte",
+        "en": "Sports Incentive Laws"
+      },
+      "icon": "⚽",
+      "category": "tax_incentive",
+      "description": {
+        "pt": "Doação através de incentivo fiscal via leis federais de incentivo ao esporte",
+        "en": "Donation through tax incentive via federal sports incentive laws"
+      },
+      "link": "https://www.gov.br/cidadania/pt-br/acoes-e-programas/lei-de-incentivo-ao-esporte"
+    },
+    {
+      "id": "monthly_contribution",
+      "name": {
+        "pt": "Contribuição Mensal",
+        "en": "Monthly Contribution"
+      },
+      "icon": "📅",
+      "category": "financial",
+      "description": {
+        "pt": "Contribuição financeira recorrente mensal (débito automático, PIX agendado, cartão recorrente)",
+        "en": "Recurring monthly financial contribution (automatic debit, scheduled PIX, recurring card payment)"
+      }
+    },
+    {
+      "id": "bottle_caps",
+      "name": {
+        "pt": "Tampinhas de Garrafa",
+        "en": "Bottle Caps"
+      },
+      "icon": "🔴",
+      "category": "items",
+      "description": {
+        "pt": "Doação de tampinhas plásticas de garrafas para reciclagem e geração de renda",
+        "en": "Plastic bottle caps donation for recycling and income generation"
+      }
+    },
+    {
+      "id": "volunteering",
+      "name": {
+        "pt": "Voluntariado",
+        "en": "Volunteering"
+      },
+      "icon": "🤝",
+      "category": "time",
+      "description": {
+        "pt": "Doação de tempo e trabalho voluntário nas atividades da organização",
+        "en": "Time and volunteer work donation for organization activities"
+      }
+    },
+    {
+      "id": "funcrianca",
+      "name": {
+        "pt": "Funcriança",
+        "en": "Child Welfare Fund"
+      },
+      "icon": "👶",
+      "category": "tax_incentive",
+      "regional": "RS",
+      "description": {
+        "pt": "Fundo para a Infância e Adolescência - destinação de parte do imposto de renda devido",
+        "en": "Child and Adolescent Fund - allocation of part of the income tax owed"
+      },
+      "link": "https://receita.fazenda.rs.gov.br/conteudo/3936/funcrianca"
+    },
+    {
+      "id": "items",
+      "name": {
+        "pt": "Itens Diversos",
+        "en": "Miscellaneous Items"
+      },
+      "icon": "📦",
+      "category": "items",
+      "description": {
+        "pt": "Outros itens específicos solicitados pela organização (especificar na descrição)",
+        "en": "Other specific items requested by the organization (specify in description)"
+      },
+      "requiresDetails": true
+    }
+  ]
+}

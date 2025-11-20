@@ -1,0 +1,306 @@
+{
+  "$schema": "../schema/organization.schema.json",
+  "version": "1.0",
+  "lastUpdated": "2024-11-18",
+  "location": {
+    "country": "BR",
+    "state": "RS",
+    "stateName": "Rio Grande do Sul"
+  },
+  "organizations": [
+    {
+      "id": "aldeia-da-fraternidade",
+      "name": "Aldeia da Fraternidade",
+      "type": "ngo",
+      "status": "active",
+      "about": {
+        "pt": "Atuamos na educação e assistência de crianças e jovens, desenvolvendo suas maiores potencialidades, habilidades e competências.",
+        "en": "We work in the education and assistance of children and youth, developing their greatest potentials, skills and competencies."
+      },
+      "categories": ["children_youth", "education"],
+      "location": {
+        "country": "BR",
+        "countryName": "Brazil",
+        "state": "RS",
+        "stateName": "Rio Grande do Sul",
+        "city": "Porto Alegre",
+        "address": "Rua Dona Paulina, 700",
+        "postalCode": "91920-030"
+      },
+      "contact": {
+        "website": "https://aldeiadafraternidade.org.br",
+        "social": {
+          "instagram": "aldeiadafraternidade"
+        }
+      },
+      "donations": {
+        "methods": [
+          {
+            "type": "money",
+            "url": "https://aldeiadafraternidade.org.br/doe/",
+            "description": {
+              "pt": "Faça sua doação em dinheiro através do site",
+              "en": "Make your financial donation through the website"
+            }
+          },
+          {
+            "type": "nota_fiscal_gaucha",
+            "description": {
+              "pt": "Cadastre a instituição na Nota Fiscal Gaúcha",
+              "en": "Register the organization in the Tax Receipt program"
+            }
+          },
+          {
+            "type": "clothes",
+            "description": {
+              "pt": "Doe ou compre roupas no Bazar da Aldeia",
+              "en": "Donate or buy clothes at the Aldeia Bazaar"
+            }
+          },
+          {
+            "type": "food",
+            "description": {
+              "pt": "Doe alimentos não perecíveis",
+              "en": "Donate non-perishable food items"
+            }
+          }
+        ],
+        "acceptsItems": true,
+        "itemTypes": ["clothes", "food"],
+        "acceptsVolunteers": false
+      },
+      "verified": true,
+      "dateAdded": "2024-11-18",
+      "lastUpdated": "2024-11-18"
+    },
+    {
+      "id": "fundacao-tenis",
+      "name": "Fundação Tênis",
+      "type": "foundation",
+      "status": "active",
+      "about": {
+        "pt": "A Fundação Tênis é uma organização não governamental, sem fins lucrativos, que realiza um programa social e educativo, por meio do Esporte, com proposta pedagógica baseada na Educação Olímpica. Este trabalho é direcionado para crianças e adolescentes em situação de vulnerabilidade.",
+        "en": "Fundação Tênis is a non-profit non-governmental organization that carries out a social and educational program through Sports, with a pedagogical approach based on Olympic Education. This work is aimed at children and adolescents in vulnerable situations."
+      },
+      "categories": ["children_youth", "education", "sports"],
+      "location": {
+        "country": "BR",
+        "countryName": "Brazil",
+        "state": "RS",
+        "stateName": "Rio Grande do Sul",
+        "city": "Porto Alegre",
+        "neighborhood": "Navegantes",
+        "address": "Tv. São José, 455"
+      },
+      "contact": {
+        "website": "https://fundacaotenis.org.br/",
+        "social": {
+          "instagram": "fundacaotenis"
+        }
+      },
+      "donations": {
+        "methods": [
+          {
+            "type": "money",
+            "url": "https://doar.fundacaotenis.org.br/",
+            "description": {
+              "pt": "Faça uma doação direta através do site",
+              "en": "Make a direct donation through the website"
+            }
+          },
+          {
+            "type": "sports_incentive_laws",
+            "url": "https://doar.fundacaotenis.org.br/",
+            "description": {
+              "pt": "Doe através das leis de incentivo ao esporte",
+              "en": "Donate through sports incentive laws"
+            }
+          }
+        ],
+        "acceptsItems": false,
+        "acceptsVolunteers": false
+      },
+      "centers": [
+        {
+          "name": "Rio Grande do Sul",
+          "location": {
+            "country": "BR",
+            "state": "RS",
+            "city": "Múltiplas cidades"
+          }
+        },
+        {
+          "name": "São Paulo",
+          "location": {
+            "country": "BR",
+            "state": "SP",
+            "city": "Múltiplas cidades"
+          }
+        },
+        {
+          "name": "Santa Catarina",
+          "location": {
+            "country": "BR",
+            "state": "SC",
+            "city": "Múltiplas cidades"
+          }
+        },
+        {
+          "name": "Minas Gerais",
+          "location": {
+            "country": "BR",
+            "state": "MG",
+            "city": "Múltiplas cidades"
+          }
+        }
+      ],
+      "transparency": "https://fundacaotenis.org.br/transparencia/",
+      "verified": true,
+      "dateAdded": "2024-11-18",
+      "lastUpdated": "2024-11-18",
+      "notes": {
+        "pt": "Atualmente assiste a mais de 2.500 alunos em 24 núcleos no Brasil: 10 no RS, 9 em SP, 1 em SC e 4 em MG",
+        "en": "Currently assists over 2,500 students across 24 centers in Brazil: 10 in RS, 9 in SP, 1 in SC and 4 in MG"
+      }
+    },
+    {
+      "id": "kinder",
+      "name": "Kinder",
+      "type": "ngo",
+      "status": "active",
+      "about": {
+        "pt": "Centro de Integração da Criança Especial",
+        "en": "Special Children Integration Center"
+      },
+      "categories": ["disability", "children_youth"],
+      "location": {
+        "country": "BR",
+        "countryName": "Brazil",
+        "state": "RS",
+        "stateName": "Rio Grande do Sul",
+        "city": "Porto Alegre",
+        "address": "Rua Marcone, 421"
+      },
+      "contact": {
+        "social": {
+          "instagram": "kindercriancaespecial"
+        }
+      },
+      "donations": {
+        "methods": [
+          {
+            "type": "monthly_contribution",
+            "description": {
+              "pt": "Faça uma contribuição mensal para apoiar o centro",
+              "en": "Make a monthly contribution to support the center"
+            }
+          },
+          {
+            "type": "bottle_caps",
+            "description": {
+              "pt": "Doe tampinhas de garrafa para reciclagem",
+              "en": "Donate bottle caps for recycling"
+            }
+          },
+          {
+            "type": "clothes",
+            "description": {
+              "pt": "Doe roupas em bom estado",
+              "en": "Donate clothes in good condition"
+            }
+          },
+          {
+            "type": "food",
+            "description": {
+              "pt": "Doe alimentos não perecíveis",
+              "en": "Donate non-perishable food items"
+            }
+          },
+          {
+            "type": "volunteering",
+            "description": {
+              "pt": "Seja voluntário e ajude nas atividades do centro",
+              "en": "Volunteer and help with center activities"
+            }
+          }
+        ],
+        "acceptsItems": true,
+        "itemTypes": ["clothes", "food", "bottle_caps"],
+        "acceptsVolunteers": true
+      },
+      "verified": true,
+      "dateAdded": "2024-11-18",
+      "lastUpdated": "2024-11-18"
+    },
+    {
+      "id": "wimbelemdon",
+      "name": "WimBelemDon",
+      "type": "ngo",
+      "status": "active",
+      "about": {
+        "pt": "O WimBelemDon é um projeto social criado no ano de 2000 e tem como objetivo promover transformação social em crianças e adolescentes em situação de vulnerabilidade social. Atendemos jovens entre seis e dezoito anos, na região do extremo sul de Porto Alegre (RS), que é uma das áreas mais vulneráveis da cidade.",
+        "en": "WimBelemDon is a social project created in the year 2000 with the goal of promoting social transformation in children and adolescents in situations of social vulnerability. We serve young people between six and eighteen years old in the extreme south region of Porto Alegre (RS), which is one of the most vulnerable areas of the city."
+      },
+      "categories": ["children_youth", "social_vulnerability", "education"],
+      "location": {
+        "country": "BR",
+        "countryName": "Brazil",
+        "state": "RS",
+        "stateName": "Rio Grande do Sul",
+        "city": "Porto Alegre",
+        "neighborhood": "Belém Novo",
+        "address": "Av. Heitor Viêira 68"
+      },
+      "contact": {
+        "website": "https://www.wimbelemdon.com.br/",
+        "social": {
+          "instagram": "wimbelemdon"
+        }
+      },
+      "donations": {
+        "methods": [
+          {
+            "type": "money",
+            "url": "https://wimbelemdon.com.br/doe/",
+            "description": {
+              "pt": "Faça sua doação em dinheiro através do site",
+              "en": "Make your financial donation through the website"
+            }
+          },
+          {
+            "type": "nota_fiscal_gaucha",
+            "description": {
+              "pt": "Cadastre a instituição na Nota Fiscal Gaúcha",
+              "en": "Register the organization in the Tax Receipt program"
+            }
+          },
+          {
+            "type": "funcrianca",
+            "description": {
+              "pt": "Doe através do Funcriança (Fundo da Criança e Adolescente)",
+              "en": "Donate through Funcriança (Child and Adolescent Fund)"
+            }
+          },
+          {
+            "type": "items",
+            "url": "https://www.wimbelemdon.com.br/colabore/",
+            "description": {
+              "pt": "Veja outras possibilidades de colaboração no site",
+              "en": "See other collaboration possibilities on the website"
+            }
+          }
+        ],
+        "acceptsItems": true,
+        "itemTypes": ["various"],
+        "acceptsVolunteers": false
+      },
+      "verified": true,
+      "dateAdded": "2024-11-18",
+      "lastUpdated": "2024-11-18",
+      "notes": {
+        "pt": "Atende jovens entre 6 e 18 anos no extremo sul de Porto Alegre",
+        "en": "Serves youth aged 6 to 18 in the extreme south of Porto Alegre"
+      }
+    }
+  ]
+}

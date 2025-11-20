@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Let's Help It - Encontre ONGs para apoiar com doações e voluntariado">
+  <meta name="keywords" content="ONG, doações, voluntariado, Rio Grande do Sul, Brasil, NGO, donations">
+  <meta name="author" content="Daniel Wildt">
+
+  <title>Let's Help It - Encontre ONGs para Apoiar</title>
+
+  <!-- Favicon (placeholder) -->
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Tailwind Config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#3B82F6',
+            secondary: '#10B981',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="container mx-auto px-4 py-4">
+      <div class="flex justify-between items-center">
+        <!-- Logo & Title -->
+        <div class="flex items-center space-x-3">
+          <div class="text-3xl">🤝</div>
+          <div>
+            <h1 class="text-2xl font-bold text-gray-800" data-i18n="site.title">Let's Help It</h1>
+            <p class="text-sm text-gray-600" data-i18n="site.tagline">Encontre ONGs para apoiar</p>
+          </div>
+        </div>
+
+        <!-- Language Toggle -->
+        <button
+          id="lang-toggle"
+          class="px-3 py-2 rounded-lg bg-gray-100 hover:bg-gray-200 text-2xl transition hover:scale-110"
+          onclick="toggleLanguage()"
+          aria-label="Toggle language"
+          title="Toggle language">
+          <span id="lang-flag">🇧🇷</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="flex-1 container mx-auto px-4 py-8">
+
+    <!-- Breadcrumb Navigation -->
+    <section id="breadcrumb-section" class="mb-8 bg-white rounded-lg shadow p-6">
+      <h2 class="text-lg font-semibold text-gray-800 mb-4" data-i18n="filters.location">Localização</h2>
+      <div id="breadcrumb-container" class="breadcrumb">
+        <!-- Dynamically populated by JavaScript -->
+      </div>
+    </section>
+
+    <!-- Search & Filters -->
+    <section id="filters-section" class="mb-8 bg-white rounded-lg shadow p-6">
+      <!-- Search Bar -->
+      <div class="mb-6">
+        <div class="relative">
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Buscar organizações..."
+            data-i18n="search.placeholder"
+            class="w-full px-4 py-3 pl-12 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+            aria-label="Search organizations">
+          <svg class="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Category Filters -->
+      <div class="mb-6">
+        <h3 class="text-md font-semibold text-gray-800 mb-3" data-i18n="filters.categories">Categorias</h3>
+        <div id="category-filters" class="flex flex-wrap gap-2">
+          <!-- Dynamically populated by JavaScript -->
+        </div>
+      </div>
+
+      <!-- Donation Type Filters -->
+      <div class="mb-6">
+        <h3 class="text-md font-semibold text-gray-800 mb-3" data-i18n="filters.donationTypes">Tipos de Doação</h3>
+        <div id="donation-filters" class="flex flex-wrap gap-2">
+          <!-- Dynamically populated by JavaScript -->
+        </div>
+      </div>
+
+      <!-- Filter Actions -->
+      <div class="flex justify-between items-center">
+        <button
+          id="clear-filters-btn"
+          onclick="clearFilters()"
+          class="px-4 py-2 text-gray-600 hover:text-gray-800 font-medium transition"
+          data-i18n="filters.clear">
+          Limpar Filtros
+        </button>
+        <div id="results-count" class="text-sm text-gray-600">
+          <!-- Dynamically updated -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Loading State -->
+    <div id="loading-state" class="text-center py-16">
+      <div class="spinner mx-auto mb-4"></div>
+      <p class="text-gray-600" data-i18n="loading.text">Carregando organizações...</p>
+    </div>
+
+    <!-- Error State -->
+    <div id="error-state" class="hidden text-center py-16">
+      <div class="text-6xl mb-4">⚠️</div>
+      <h3 class="text-xl font-semibold text-gray-800 mb-2" data-i18n="error.title">Ops! Algo deu errado</h3>
+      <p class="text-gray-600 mb-6" data-i18n="error.description">Não foi possível carregar os dados.</p>
+      <button onclick="location.reload()" class="px-6 py-3 bg-primary text-white rounded-lg hover:bg-blue-600 transition" data-i18n="error.reload">
+        Recarregar
+      </button>
+    </div>
+
+    <!-- Empty State -->
+    <div id="empty-state" class="hidden empty-state">
+      <div class="empty-state-icon">🔍</div>
+      <h3 class="text-xl font-semibold text-gray-800 mb-2" data-i18n="empty.title">Nenhuma organização encontrada</h3>
+      <p class="text-gray-600 mb-6" data-i18n="empty.description">Tente ajustar os filtros ou fazer uma nova busca</p>
+      <button onclick="clearFilters()" class="px-6 py-3 bg-primary text-white rounded-lg hover:bg-blue-600 transition" data-i18n="empty.clearFilters">
+        Limpar filtros
+      </button>
+    </div>
+
+    <!-- Organizations Grid -->
+    <div id="organizations-grid" class="org-grid hidden">
+      <!-- Dynamically populated by JavaScript -->
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-8 mt-auto">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- About -->
+        <div>
+          <h3 class="text-lg font-semibold mb-3" data-i18n="footer.about">Sobre o Projeto</h3>
+          <p class="text-gray-300 text-sm">
+            Let's Help It conecta pessoas a organizações que fazem a diferença.
+            Plataforma open source para apoiar ONGs no Brasil.
+          </p>
+        </div>
+
+        <!-- Links -->
+        <div>
+          <h3 class="text-lg font-semibold mb-3">Links</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="https://github.com/dwildt/letshelpit" target="_blank" class="text-gray-300 hover:text-white transition">GitHub</a></li>
+            <li><a href="https://github.com/dwildt/letshelpit#como-contribuir" target="_blank" class="text-gray-300 hover:text-white transition" data-i18n="footer.contribute">Como Contribuir</a></li>
+            <li><a href="https://github.com/dwildt/letshelpit/blob/main/LICENSE" target="_blank" class="text-gray-300 hover:text-white transition" data-i18n="footer.license">Licença Apache 2.0</a></li>
+          </ul>
+        </div>
+
+        <!-- Credits -->
+        <div>
+          <h3 class="text-lg font-semibold mb-3">Projeto</h3>
+          <p class="text-gray-300 text-sm">
+            <span data-i18n="footer.madeWith">Feito com</span> ❤️
+            <span data-i18n="footer.by">por</span> <a href="https://github.com/dwildt" target="_blank" class="hover:text-white transition">Daniel Wildt</a>
+          </p>
+          <p class="text-gray-300 text-sm mt-3">
+            <strong data-i18n="footer.support">Apoie o projeto:</strong><br>
+            <a href="https://github.com/sponsors/dwildt" target="_blank" class="text-gray-300 hover:text-white transition text-xs">🩷 <span data-i18n="footer.sponsors">GitHub Sponsors</span></a>
+            <span class="text-gray-500 mx-1">•</span>
+            <a href="https://apoia.se/dwildt" target="_blank" class="text-gray-300 hover:text-white transition text-xs">☕ <span data-i18n="footer.apoia">Apoia.se</span></a>
+            <span class="text-gray-500 mx-1">•</span>
+            <a href="https://patreon.com/dwildt" target="_blank" class="text-gray-300 hover:text-white transition text-xs">🎨 <span data-i18n="footer.patreon">Patreon</span></a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Organization Detail Modal -->
+  <div id="org-modal" class="hidden fixed inset-0 z-50 overflow-y-auto modal-backdrop" onclick="closeModal(event)">
+    <div class="flex items-center justify-center min-h-screen px-4 pt-4 pb-20 text-center sm:block sm:p-0">
+      <!-- Modal Panel -->
+      <div class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-2xl sm:w-full" onclick="event.stopPropagation()">
+        <!-- Modal Content - Dynamically populated -->
+        <div id="org-modal-content"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <!-- Load in correct order: config -> i18n -> providers -> app -->
+  <script src="js/config.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/providers/DataProvider.js"></script>
+  <script src="js/providers/JSONProvider.js"></script>
+  <script src="js/providers/SQLiteProvider.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/app.js"></script>
+
+  <!-- Initialize App -->
+  <script>
+    // Initialize app when DOM is ready
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', () => {
+        initApp()
+        updateLanguageFlag()
+      })
+    } else {
+      initApp()
+      updateLanguageFlag()
+    }
+
+    // Update language flag display
+    function updateLanguageFlag() {
+      const flagElement = document.getElementById('lang-flag')
+      if (flagElement) {
+        flagElement.textContent = i18n.getLang() === 'pt' ? '🇧🇷' : '🇺🇸'
+      }
+    }
+
+    // Language toggle function (used by button)
+    function toggleLanguage() {
+      i18n.toggleLang()
+      updateLanguageFlag()
+    }
+
+    // Clear filters function (used by buttons)
+    function clearFilters() {
+      if (window.app) {
+        window.app.clearFilters()
+      }
+    }
+
+    // Close modal function (used by modal backdrop)
+    function closeModal(event) {
+      if (event.target.id === 'org-modal' || event.target.closest('[data-close-modal]')) {
+        document.getElementById('org-modal').classList.add('hidden')
+        document.body.style.overflow = 'auto'
+      }
+    }
+
+    // Close dropdowns when clicking outside
+    document.addEventListener('click', function(event) {
+      if (!event.target.closest('.location-icon-btn')) {
+        const allDropdowns = document.querySelectorAll('[id^="location-dropdown-"]')
+        allDropdowns.forEach(d => d.classList.add('hidden'))
+      }
+    })
+  </script>
+
+</body>
+</html>

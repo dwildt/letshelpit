@@ -1,0 +1,14 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 Discussões Gerais
+    url: https://github.com/dwildt/letshelpit/discussions
+    about: Perguntas gerais e discussões sobre o projeto
+  - name: 🐛 Reportar Bug
+    url: https://github.com/dwildt/letshelpit/issues/new
+    about: Reportar um problema técnico ou bug no site
+  - name: 💡 Sugerir Funcionalidade
+    url: https://github.com/dwildt/letshelpit/issues/new
+    about: Sugerir uma nova funcionalidade para o projeto
+  - name: 📚 Documentação
+    url: https://github.com/dwildt/letshelpit#readme
+    about: Ler a documentação completa do projeto

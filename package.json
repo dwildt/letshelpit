@@ -1,0 +1,42 @@
+{
+  "name": "letshelpit",
+  "version": "2.0.0",
+  "description": "Plataforma para conectar pessoas a ONGs - Find NGOs to support",
+  "main": "public/index.html",
+  "scripts": {
+    "start": "npx http-server public -p 8000 -o",
+    "dev": "npx http-server public -p 8000 -o",
+    "lint": "npx eslint public/js",
+    "lint:fix": "npx eslint public/js --fix",
+    "test": "npx jest",
+    "test:watch": "npx jest --watch",
+    "test:coverage": "npx jest --coverage",
+    "validate": "npm run lint && npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dwildt/letshelpit.git"
+  },
+  "keywords": [
+    "ngo",
+    "donations",
+    "volunteering",
+    "brazil",
+    "rio-grande-do-sul",
+    "social-impact"
+  ],
+  "author": "Daniel Wildt",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/dwildt/letshelpit/issues"
+  },
+  "homepage": "https://github.com/dwildt/letshelpit#readme",
+  "devDependencies": {
+    "eslint": "^8.50.0",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}

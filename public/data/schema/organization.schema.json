@@ -1,0 +1,390 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://letshelpid.org/schemas/organization.json",
+  "title": "Organization",
+  "description": "Schema for NGO/organization data in Let's Help It platform",
+  "type": "object",
+  "required": ["id", "name", "type", "status", "about", "categories", "location", "contact", "donations", "verified", "dateAdded", "lastUpdated"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier in slug format (lowercase, hyphens)",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+      "examples": ["aldeia-da-fraternidade", "fundacao-tenis"]
+    },
+    "name": {
+      "type": "string",
+      "description": "Official name of the organization",
+      "minLength": 2,
+      "maxLength": 200,
+      "examples": ["Aldeia da Fraternidade", "Fundação Tênis"]
+    },
+    "type": {
+      "type": "string",
+      "description": "Type of organization",
+      "enum": ["ngo", "foundation", "association", "cooperative", "social_enterprise"],
+      "default": "ngo"
+    },
+    "status": {
+      "type": "string",
+      "description": "Current operational status",
+      "enum": ["active", "inactive", "emergency", "completed"],
+      "default": "active"
+    },
+    "about": {
+      "type": "object",
+      "description": "Description of the organization's mission and work",
+      "required": ["pt"],
+      "properties": {
+        "pt": {
+          "type": "string",
+          "description": "Portuguese description",
+          "minLength": 10,
+          "maxLength": 2000
+        },
+        "en": {
+          "type": "string",
+          "description": "English description",
+          "minLength": 10,
+          "maxLength": 2000
+        }
+      }
+    },
+    "categories": {
+      "type": "array",
+      "description": "Categories that apply to this organization",
+      "items": {
+        "type": "string",
+        "enum": [
+          "children_youth",
+          "education",
+          "disability",
+          "sports",
+          "social_vulnerability",
+          "animals",
+          "environment",
+          "health",
+          "culture",
+          "housing",
+          "elderly",
+          "women",
+          "indigenous",
+          "quilombola",
+          "refugees_migrants",
+          "food_security",
+          "human_rights"
+        ]
+      },
+      "minItems": 1,
+      "maxItems": 5,
+      "uniqueItems": true
+    },
+    "location": {
+      "type": "object",
+      "description": "Primary location of the organization",
+      "required": ["country", "countryName", "state", "stateName"],
+      "properties": {
+        "country": {
+          "type": "string",
+          "description": "ISO 3166-1 alpha-2 country code",
+          "pattern": "^[A-Z]{2}$",
+          "examples": ["BR", "US", "AR"]
+        },
+        "countryName": {
+          "type": "string",
+          "description": "Country name",
+          "examples": ["Brazil", "Argentina"]
+        },
+        "state": {
+          "type": "string",
+          "description": "State/province code",
+          "examples": ["RS", "SP", "SC"]
+        },
+        "stateName": {
+          "type": "string",
+          "description": "State/province full name",
+          "examples": ["Rio Grande do Sul", "São Paulo"]
+        },
+        "city": {
+          "type": "string",
+          "description": "City name",
+          "examples": ["Porto Alegre", "São Paulo"]
+        },
+        "neighborhood": {
+          "type": "string",
+          "description": "Neighborhood/district",
+          "examples": ["Navegantes", "Belém Novo"]
+        },
+        "address": {
+          "type": "string",
+          "description": "Street address",
+          "examples": ["Rua Dona Paulina, 700"]
+        },
+        "postalCode": {
+          "type": "string",
+          "description": "Postal/ZIP code",
+          "examples": ["91920-030", "01310-100"]
+        },
+        "coordinates": {
+          "type": "object",
+          "description": "Geographic coordinates",
+          "required": ["lat", "lng"],
+          "properties": {
+            "lat": {
+              "type": "number",
+              "description": "Latitude",
+              "minimum": -90,
+              "maximum": 90
+            },
+            "lng": {
+              "type": "number",
+              "description": "Longitude",
+              "minimum": -180,
+              "maximum": 180
+            }
+          }
+        }
+      }
+    },
+    "contact": {
+      "type": "object",
+      "description": "Contact information",
+      "properties": {
+        "website": {
+          "type": "string",
+          "description": "Official website URL",
+          "format": "uri",
+          "examples": ["https://aldeiadafraternidade.org.br"]
+        },
+        "email": {
+          "type": "string",
+          "description": "Contact email",
+          "format": "email",
+          "examples": ["contato@example.org"]
+        },
+        "phone": {
+          "type": "string",
+          "description": "Contact phone number",
+          "examples": ["+55 51 1234-5678", "(51) 1234-5678"]
+        },
+        "social": {
+          "type": "object",
+          "description": "Social media handles",
+          "properties": {
+            "instagram": {
+              "type": "string",
+              "description": "Instagram handle (without @)",
+              "pattern": "^[a-zA-Z0-9._]+$",
+              "examples": ["aldeiadafraternidade"]
+            },
+            "facebook": {
+              "type": "string",
+              "description": "Facebook page name or URL",
+              "examples": ["aldeiadafraternidade", "https://facebook.com/page"]
+            },
+            "twitter": {
+              "type": "string",
+              "description": "Twitter/X handle (without @)",
+              "pattern": "^[a-zA-Z0-9_]+$",
+              "examples": ["fundacaotenis"]
+            },
+            "linkedin": {
+              "type": "string",
+              "description": "LinkedIn page URL",
+              "format": "uri",
+              "examples": ["https://linkedin.com/company/fundacao"]
+            },
+            "youtube": {
+              "type": "string",
+              "description": "YouTube channel URL or handle",
+              "examples": ["https://youtube.com/@channel", "@channelname"]
+            },
+            "tiktok": {
+              "type": "string",
+              "description": "TikTok handle (without @)",
+              "pattern": "^[a-zA-Z0-9._]+$",
+              "examples": ["fundacao.social"]
+            }
+          }
+        }
+      }
+    },
+    "donations": {
+      "type": "object",
+      "description": "Information about donation methods and what the organization accepts",
+      "required": ["methods"],
+      "properties": {
+        "methods": {
+          "type": "array",
+          "description": "Available donation methods",
+          "items": {
+            "type": "object",
+            "required": ["type"],
+            "properties": {
+              "type": {
+                "type": "string",
+                "description": "Type of donation (must match ID from donation-types.json)",
+                "enum": [
+                  "money",
+                  "nota_fiscal_gaucha",
+                  "clothes",
+                  "food",
+                  "sports_incentive_laws",
+                  "monthly_contribution",
+                  "bottle_caps",
+                  "volunteering",
+                  "funcrianca",
+                  "items"
+                ]
+              },
+              "url": {
+                "type": "string",
+                "description": "URL to donation page",
+                "format": "uri",
+                "examples": ["https://example.org/doar"]
+              },
+              "description": {
+                "type": "object",
+                "description": "Description of this donation method",
+                "properties": {
+                  "pt": {
+                    "type": "string",
+                    "description": "Portuguese description",
+                    "maxLength": 500
+                  },
+                  "en": {
+                    "type": "string",
+                    "description": "English description",
+                    "maxLength": 500
+                  }
+                }
+              },
+              "pixKey": {
+                "type": "string",
+                "description": "PIX key for Brazilian donations",
+                "examples": ["12345678000199", "contato@example.org", "+5551912345678"]
+              },
+              "bankDetails": {
+                "type": "object",
+                "description": "Bank account details for transfers",
+                "properties": {
+                  "bank": {"type": "string"},
+                  "agency": {"type": "string"},
+                  "account": {"type": "string"},
+                  "accountType": {"type": "string", "enum": ["checking", "savings"]},
+                  "holder": {"type": "string"}
+                }
+              }
+            }
+          },
+          "minItems": 1
+        },
+        "acceptsItems": {
+          "type": "boolean",
+          "description": "Whether organization accepts physical item donations",
+          "default": false
+        },
+        "itemTypes": {
+          "type": "array",
+          "description": "Types of items accepted (if acceptsItems is true)",
+          "items": {
+            "type": "string",
+            "examples": ["clothes", "food", "toys", "books", "medical_supplies"]
+          }
+        },
+        "acceptsVolunteers": {
+          "type": "boolean",
+          "description": "Whether organization accepts volunteers",
+          "default": false
+        }
+      }
+    },
+    "centers": {
+      "type": "array",
+      "description": "Additional centers/locations for organizations with multiple sites",
+      "items": {
+        "type": "object",
+        "required": ["name", "location"],
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name of this center"
+          },
+          "location": {
+            "type": "object",
+            "description": "Location of this center (same structure as main location)",
+            "required": ["city", "state"],
+            "properties": {
+              "country": {"type": "string"},
+              "state": {"type": "string"},
+              "city": {"type": "string"},
+              "neighborhood": {"type": "string"},
+              "address": {"type": "string"}
+            }
+          },
+          "contact": {
+            "type": "object",
+            "description": "Contact info specific to this center",
+            "properties": {
+              "phone": {"type": "string"},
+              "email": {"type": "string", "format": "email"}
+            }
+          }
+        }
+      }
+    },
+    "transparency": {
+      "type": "string",
+      "description": "URL to transparency/financial reports page",
+      "format": "uri",
+      "examples": ["https://example.org/transparencia"]
+    },
+    "tags": {
+      "type": "array",
+      "description": "Additional searchable tags",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9_]+$"
+      },
+      "uniqueItems": true,
+      "examples": [["educacao", "infancia", "esporte"]]
+    },
+    "verified": {
+      "type": "boolean",
+      "description": "Whether organization has been verified by Let's Help It team",
+      "default": false
+    },
+    "dateAdded": {
+      "type": "string",
+      "description": "Date organization was added to platform",
+      "format": "date",
+      "examples": ["2024-11-18"]
+    },
+    "lastUpdated": {
+      "type": "string",
+      "description": "Date organization info was last updated",
+      "format": "date",
+      "examples": ["2024-11-18"]
+    },
+    "emergencyResponse": {
+      "type": "boolean",
+      "description": "Whether this is an emergency response organization/campaign",
+      "default": false
+    },
+    "relatedCampaigns": {
+      "type": "array",
+      "description": "IDs of related emergency campaigns",
+      "items": {
+        "type": "string"
+      }
+    },
+    "notes": {
+      "type": "object",
+      "description": "Internal notes (not displayed publicly)",
+      "properties": {
+        "pt": {"type": "string"},
+        "en": {"type": "string"}
+      }
+    }
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "$schema": "./schema/locations.schema.json",
+  "version": "1.0",
+  "lastUpdated": "2024-11-18",
+  "countries": [
+    {
+      "code": "BR",
+      "name": {
+        "pt": "Brasil",
+        "en": "Brazil"
+      },
+      "states": [
+        {
+          "code": "RS",
+          "name": {
+            "pt": "Rio Grande do Sul",
+            "en": "Rio Grande do Sul"
+          },
+          "cities": [
+            {
+              "name": "Porto Alegre",
+              "organizationCount": 4,
+              "neighborhoods": [
+                "Navegantes",
+                "Belém Novo"
+              ]
+            }
+          ]
+        },
+        {
+          "code": "SP",
+          "name": {
+            "pt": "São Paulo",
+            "en": "São Paulo"
+          },
+          "cities": [],
+          "notes": {
+            "pt": "Fundação Tênis tem 9 núcleos no estado",
+            "en": "Fundação Tênis has 9 centers in the state"
+          }
+        },
+        {
+          "code": "SC",
+          "name": {
+            "pt": "Santa Catarina",
+            "en": "Santa Catarina"
+          },
+          "cities": [],
+          "notes": {
+            "pt": "Fundação Tênis tem 1 núcleo no estado",
+            "en": "Fundação Tênis has 1 center in the state"
+          }
+        },
+        {
+          "code": "MG",
+          "name": {
+            "pt": "Minas Gerais",
+            "en": "Minas Gerais"
+          },
+          "cities": [],
+          "notes": {
+            "pt": "Fundação Tênis tem 4 núcleos no estado",
+            "en": "Fundação Tênis has 4 centers in the state"
+          }
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "totalCountries": 1,
+    "totalStates": 4,
+    "totalCities": 1,
+    "totalOrganizations": 4,
+    "lastOrganizationAdded": "2024-11-18",
+    "supportedLanguages": ["pt", "en"]
+  }
+}
