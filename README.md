@@ -2,7 +2,7 @@
 
 Plataforma open source para conectar pessoas a ONGs que fazem a diferença.
 
-**🌐 Site:** [https://dwildt.github.io/letshelpit/public/](https://dwildt.github.io/letshelpit/public/)
+**🌐 Site:** [https://dwildt.github.io/letshelpit](https://dwildt.github.io/letshelpit)
 
 ---
 
