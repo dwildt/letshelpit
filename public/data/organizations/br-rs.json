@@ -1,13 +1,99 @@
 {
   "$schema": "../schema/organization.schema.json",
   "version": "1.0",
-  "lastUpdated": "2024-11-18",
+  "lastUpdated": "2025-11-20",
   "location": {
     "country": "BR",
     "state": "RS",
     "stateName": "Rio Grande do Sul"
   },
   "organizations": [
+    {
+      "id": "instituto-acao-compassiva",
+      "name": "Instituto Ação Compassiva",
+      "type": "ngo",
+      "status": "active",
+      "about": {
+        "pt": "O Instituto Ação Compassiva (IAC) tem como missão gerar ações compassivas em rede. Desejamos que todas as pessoas possam se sentir pertencentes ao viver numa sociedade em equilíbrio sistêmico entre o dar e receber. Projeto em foco: Basquete Compaixão, que atua no Quarto Distrito de Porto Alegre, combinando desenvolvimento físico através da prática de basquete com desenvolvimento emocional, psíquico e espiritual através de oficinas, Yoga e Meditação.",
+        "en": "Instituto Ação Compassiva (IAC) aims to generate compassionate actions in network. We want all people to feel they belong by living in a society in systemic balance between giving and receiving. Focus project: Basquete Compaixão (Basketball Compassion), which operates in the Fourth District of Porto Alegre, combining physical development through basketball practice with emotional, psychic and spiritual development through workshops, Yoga and Meditation."
+      },
+      "categories": ["children_youth", "education", "sports", "social_vulnerability"],
+      "location": {
+        "country": "BR",
+        "countryName": "Brazil",
+        "state": "RS",
+        "stateName": "Rio Grande do Sul",
+        "city": "Porto Alegre",
+        "neighborhood": "Navegantes",
+        "address": "R. Frederico Mentz, 1185",
+        "postalCode": "90240-110"
+      },
+      "contact": {
+        "website": "https://www.acaocompassiva.com.br/",
+        "email": "contato@acaocompassiva.com.br",
+        "social": {
+          "instagram": "institutoacaocompassiva"
+        }
+      },
+      "donations": {
+        "methods": [
+          {
+            "type": "money",
+            "pixKey": "56.066.865/0001-05",
+            "bankDetails": {
+              "bank": "BRADESCO (237)",
+              "agency": "0558-4",
+              "account": "27137-3",
+              "holder": "56.066.865/0001-05"
+            },
+            "description": {
+              "pt": "Doe através de PIX ou transferência bancária",
+              "en": "Donate through PIX or bank transfer"
+            }
+          },
+          {
+            "type": "monthly_contribution",
+            "url": "https://patreon.com/basquetecompaixao",
+            "description": {
+              "pt": "Apoie mensalmente o projeto Basquete Compaixão através do Patreon",
+              "en": "Support the Basquete Compaixão project monthly through Patreon"
+            }
+          },
+          {
+            "type": "clothes",
+            "description": {
+              "pt": "Doe roupas para as crianças e adolescentes do projeto",
+              "en": "Donate clothes for the children and adolescents in the project"
+            }
+          },
+          {
+            "type": "food",
+            "description": {
+              "pt": "Doe alimentos para apoiar as atividades do projeto",
+              "en": "Donate food to support the project activities"
+            }
+          },
+          {
+            "type": "items",
+            "url": "https://basquetecompaixao.lojavirtualnuvem.com.br/",
+            "description": {
+              "pt": "Compre camisetas e produtos do projeto - a renda apoia as atividades",
+              "en": "Buy t-shirts and project products - proceeds support activities"
+            }
+          }
+        ],
+        "acceptsItems": true,
+        "itemTypes": ["clothes", "food"],
+        "acceptsVolunteers": false
+      },
+      "verified": true,
+      "dateAdded": "2025-11-20",
+      "lastUpdated": "2025-11-20",
+      "notes": {
+        "pt": "Projeto Basquete ComPaixão focado no bem-estar integral dos jovens. Atividades incluem basquete, Yoga, Meditação, Inteligência Espiritual e Comunicação Não Violenta. CNPJ: 56.066.865/0001-05",
+        "en": "Basquete ComPaixão project focused on the comprehensive well-being of young people. Activities include basketball, Yoga, Meditation, Spiritual Intelligence and Nonviolent Communication. CNPJ: 56.066.865/0001-05"
+      }
+    },
     {
       "id": "aldeia-da-fraternidade",
       "name": "Aldeia da Fraternidade",
