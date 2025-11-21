@@ -39,4 +39,19 @@ Aqui instituições do Rio Grande do Sul que estão sempre em busca de doações
   - Instagram: [@wimbelemdon](https://www.instagram.com/wimbelemdon/)  
   - Como [doar](https://wimbelemdon.com.br/doe/)? Doe dinheiro, Nota Fiscal Gaúcha, Funcriança e [outras possibilidades](https://www.wimbelemdon.com.br/colabore/).  
   
+
+### Fundação Pão dos Pobres  
+  
+  - Sobre: Organização fundada em 1895 (130 anos de história) que potencializa o desenvolvimento integral de mais de 1.400 crianças e adolescentes em situação de vulnerabilidade social através de práticas socioassistenciais.  
+  - Programas: Educação Integral, Qualificação Profissional, Acolhimento Institucional, Fortalecimento de Vínculos, Práticas Restaurativas.  
+  - Endereço: Rua da República, 801, Cidade Baixa, Porto Alegre/RS - CEP 90050-321  
+  - Site: [paodospobres.org.br](https://www.paodospobres.org.br)  
+  - Instagram: [@fundacaopaodospobres](https://www.instagram.com/fundacaopaodospobres/)  
+  - Facebook: [/paodospobres](https://www.facebook.com/paodospobres)  
+  - E-mail: relacaoinstitucional@paodospobres.com.br | voluntarios@paodospobres.com.br  
+  - Telefone: (51) 3433.6900 | (51) 3433.6902  
+  - CNPJ: 92.666.015/0001-01  
+  - Como [doar](https://www.paodospobres.org.br/quero-apoiar/)? PIX (92.666.015/0001-01), Nota Fiscal Gaúcha, Funcriança PJ/PF, Voluntariado e doações diversas. Relatórios sociais anuais e balanços patrimoniais disponíveis no site (2019-2024).  
+  - Horário: Segunda a Sexta, 8h-12h e 13h-17h20  
+  
   
