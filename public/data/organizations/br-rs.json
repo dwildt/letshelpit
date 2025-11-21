@@ -1,7 +1,7 @@
 {
   "$schema": "../schema/organization.schema.json",
   "version": "1.0",
-  "lastUpdated": "2025-11-20",
+  "lastUpdated": "2025-11-21",
   "location": {
     "country": "BR",
     "state": "RS",
@@ -389,6 +389,91 @@
       "notes": {
         "pt": "Atende jovens entre 6 e 18 anos no extremo sul de Porto Alegre",
         "en": "Serves youth aged 6 to 18 in the extreme south of Porto Alegre"
+      }
+    },
+    {
+      "id": "fundacao-pao-dos-pobres",
+      "name": "Fundação Pão dos Pobres",
+      "type": "foundation",
+      "status": "active",
+      "about": {
+        "pt": "Organização fundada em 1895 que potencializa o desenvolvimento integral de mais de 1.400 crianças e adolescentes em situação de vulnerabilidade social através de práticas socioassistenciais. Oferece Educação Integral, Qualificação Profissional, Acolhimento Institucional, Fortalecimento de Vínculos e Práticas Restaurativas.",
+        "en": "Organization founded in 1895 that enhances the comprehensive development of more than 1,400 children and adolescents in situations of social vulnerability through social assistance practices. Offers Integral Education, Professional Qualification, Institutional Shelter, Family Bond Strengthening and Restorative Practices."
+      },
+      "categories": ["children_youth", "education", "social_vulnerability"],
+      "location": {
+        "country": "BR",
+        "countryName": "Brazil",
+        "state": "RS",
+        "stateName": "Rio Grande do Sul",
+        "city": "Porto Alegre",
+        "neighborhood": "Cidade Baixa",
+        "address": "Rua da República, 801",
+        "postalCode": "90050-321"
+      },
+      "contact": {
+        "website": "https://www.paodospobres.org.br",
+        "email": "relacaoinstitucional@paodospobres.com.br",
+        "phone": "(51) 3433.6900",
+        "social": {
+          "instagram": "fundacaopaodospobres",
+          "facebook": "paodospobres"
+        }
+      },
+      "donations": {
+        "methods": [
+          {
+            "type": "money",
+            "pixKey": "92.666.015/0001-01",
+            "url": "https://www.paodospobres.org.br/quero-apoiar/",
+            "description": {
+              "pt": "Faça sua doação através de PIX ou pelo site",
+              "en": "Make your donation through PIX or via the website"
+            }
+          },
+          {
+            "type": "nota_fiscal_gaucha",
+            "description": {
+              "pt": "Cadastre a instituição na Nota Fiscal Gaúcha",
+              "en": "Register the organization in the Tax Receipt program"
+            }
+          },
+          {
+            "type": "volunteering",
+            "url": "https://www.paodospobres.org.br/quero-apoiar/",
+            "description": {
+              "pt": "Seja voluntário - entre em contato através do email voluntarios@paodospobres.com.br",
+              "en": "Be a volunteer - contact us at voluntarios@paodospobres.com.br"
+            }
+          },
+          {
+            "type": "funcrianca",
+            "url": "https://www.paodospobres.org.br/quero-apoiar/",
+            "description": {
+              "pt": "Doe através do Funcriança PJ/PF (Fundo da Criança e Adolescente)",
+              "en": "Donate through Funcriança (Child and Adolescent Fund)"
+            }
+          },
+          {
+            "type": "items",
+            "url": "https://www.paodospobres.org.br/quero-apoiar/",
+            "description": {
+              "pt": "Doações diversas - confira outras possibilidades no site",
+              "en": "Various donations - check other possibilities on the website"
+            }
+          }
+        ],
+        "acceptsItems": true,
+        "itemTypes": ["various"],
+        "acceptsVolunteers": true
+      },
+      "transparency": "https://www.paodospobres.org.br",
+      "verified": true,
+      "dateAdded": "2025-11-21",
+      "lastUpdated": "2025-11-21",
+      "notes": {
+        "pt": "Fundada em 1895, com 130 anos de história. Atende mais de 1.400 crianças e adolescentes. Horário de Atendimento: Segunda a Sexta, 8h-12h e 13h-17h20. CNPJ: 92.666.015/0001-01. Relatórios sociais anuais e balanços patrimoniais disponíveis no site (2019-2024).",
+        "en": "Founded in 1895, with 130 years of history. Serves over 1,400 children and adolescents. Service Hours: Monday to Friday, 8am-12pm and 1pm-5:20pm. CNPJ: 92.666.015/0001-01. Annual social reports and financial statements available on the website (2019-2024)."
       }
     }
   ]
