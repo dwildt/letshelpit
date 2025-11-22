@@ -37,7 +37,6 @@ const UI = {
    * Create HTML for a single organization card
    */
   createOrganizationCard(org) {
-    const lang = i18n.getLang()
     const about = i18n.tWithFallback(org.about, '')
     const truncatedAbout = about.length > 150 ? about.substring(0, 150) + '...' : about
 
@@ -125,7 +124,6 @@ const UI = {
       return ''
     }
 
-    const lang = i18n.getLang()
     const name = i18n.tWithFallback(category.name)
 
     return `
@@ -144,7 +142,6 @@ const UI = {
       return ''
     }
 
-    const lang = i18n.getLang()
     const name = i18n.tWithFallback(donationType.name)
 
     return `
@@ -159,7 +156,6 @@ const UI = {
    */
   renderCategoryFilters(categories, selectedCategories = []) {
     const container = document.getElementById('category-filters')
-    const lang = i18n.getLang()
 
     container.innerHTML = categories.map(cat => {
       const name = i18n.tWithFallback(cat.name)
@@ -182,7 +178,6 @@ const UI = {
    */
   renderDonationTypeFilters(donationTypes, selectedTypes = []) {
     const container = document.getElementById('donation-filters')
-    const lang = i18n.getLang()
 
     container.innerHTML = donationTypes.map(type => {
       const name = i18n.tWithFallback(type.name)
@@ -205,7 +200,6 @@ const UI = {
    */
   renderBreadcrumb(locations, selectedLocation = {}) {
     const container = document.getElementById('breadcrumb-container')
-    const lang = i18n.getLang()
 
     const html = []
 
@@ -279,8 +273,6 @@ const UI = {
       return
     }
 
-    const lang = i18n.getLang()
-
     container.innerHTML = categories.map(cat => {
       const name = i18n.tWithFallback(cat.name)
       const isActive = selectedCategories.includes(cat.id)
@@ -306,8 +298,6 @@ const UI = {
       return
     }
 
-    const lang = i18n.getLang()
-
     container.innerHTML = donationTypes.map(type => {
       const name = i18n.tWithFallback(type.name)
       const isActive = selectedTypes.includes(type.id)
@@ -332,8 +322,6 @@ const UI = {
     if (!container) {
       return
     }
-
-    const lang = i18n.getLang()
 
     const html = []
 
@@ -403,7 +391,6 @@ const UI = {
   openOrgModal(org) {
     const modal = document.getElementById('org-modal')
     const content = document.getElementById('org-modal-content')
-    const lang = i18n.getLang()
 
     const about = i18n.tWithFallback(org.about, '')
 

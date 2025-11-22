@@ -51,7 +51,7 @@ class SQLiteProvider extends DataProvider {
       // Initialize sql.js
       debugLog('SQLiteProvider: Loading sql.js WebAssembly...')
       const SQL = await initSqlJs({
-        locateFile: file => sources.wasmFile
+        locateFile: () => sources.wasmFile
       })
 
       // Fetch the SQLite database file
@@ -144,7 +144,7 @@ class SQLiteProvider extends DataProvider {
    *
    * TODO: Implement full-text search
    */
-  async searchOrganizations(query, lang = 'pt') {
+  async searchOrganizations(query) {
     if (!this.isReady()) {
       throw new Error('SQLiteProvider not initialized')
     }
