@@ -475,6 +475,99 @@
         "pt": "Fundada em 1895, com 130 anos de história. Atende mais de 1.400 crianças e adolescentes. Horário de Atendimento: Segunda a Sexta, 8h-12h e 13h-17h20. CNPJ: 92.666.015/0001-01. Relatórios sociais anuais e balanços patrimoniais disponíveis no site (2019-2024).",
         "en": "Founded in 1895, with 130 years of history. Serves over 1,400 children and adolescents. Service Hours: Monday to Friday, 8am-12pm and 1pm-5:20pm. CNPJ: 92.666.015/0001-01. Annual social reports and financial statements available on the website (2019-2024)."
       }
+    },
+    {
+      "id": "viavida",
+      "name": "VIAVIDA Pró-Doações e Transplantes",
+      "type": "ngo",
+      "status": "active",
+      "about": {
+        "pt": "Organização que promove a doação de órgãos e tecidos no RS, oferecendo apoio a pessoas em lista de espera e transplantadas através da Pousada Solidariedade. Desde 2004, hospeda gratuitamente pacientes em pré e pós-transplante e seus familiares, oferecendo assistência social, apoio pedagógico e psicológico.",
+        "en": "Organization that promotes organ and tissue donation in RS, offering support to people on waiting lists and transplant recipients through Pousada Solidariedade. Since 2004, it provides free accommodation to pre and post-transplant patients and their families, offering social assistance, educational and psychological support."
+      },
+      "categories": ["health", "children_youth", "social_vulnerability"],
+      "location": {
+        "country": "BR",
+        "countryName": "Brazil",
+        "state": "RS",
+        "stateName": "Rio Grande do Sul",
+        "city": "Porto Alegre",
+        "neighborhood": "Petrópolis",
+        "address": "Av. Taquara, 579",
+        "postalCode": "90460-210"
+      },
+      "contact": {
+        "website": "https://www.viavida.org.br",
+        "email": "via@viavida.org.br",
+        "phone": "+55 51 9602-7844",
+        "social": {
+          "instagram": "viavidapro"
+        }
+      },
+      "donations": {
+        "methods": [
+          {
+            "type": "money",
+            "description": {
+              "pt": "Doação em dinheiro via transferência bancária",
+              "en": "Financial donation via bank transfer"
+            },
+            "bankDetails": {
+              "bank": "BANRISUL (041)",
+              "agency": "1167",
+              "account": "06008585.00",
+              "holder": "VIAVIDA Pró-Doações e Transplantes"
+            }
+          },
+          {
+            "type": "monthly_contribution",
+            "url": "https://www.viavida.org.br/colabore-1",
+            "description": {
+              "pt": "Campanha Adote um Leito - R$ 75,00/diária para custear hospedagem na Pousada Solidariedade",
+              "en": "Adopt a Bed Campaign - R$ 75.00/day to support accommodation at Pousada Solidariedade"
+            },
+            "bankDetails": {
+              "bank": "BANRISUL (041)",
+              "agency": "1167",
+              "account": "06.062018.0-5",
+              "holder": "VIA Pró-Doações e Transplantes"
+            }
+          },
+          {
+            "type": "funcrianca",
+            "description": {
+              "pt": "Dedução fiscal via Funcriança - 1% IR (PJ) e 6% IR (PF)",
+              "en": "Tax deduction via Funcriança - 1% IR (companies) and 6% IR (individuals)"
+            }
+          },
+          {
+            "type": "volunteering",
+            "description": {
+              "pt": "Seja voluntário - ajude nas oficinas e atividades da Pousada",
+              "en": "Be a volunteer - help with workshops and activities at the Inn"
+            }
+          },
+          {
+            "type": "items",
+            "url": "https://www.viavida.org.br/colabore-1",
+            "description": {
+              "pt": "Participe dos eventos de captação: Brechó, Chá/Jantar Beneficentes, Tour Gastronômico, Pedalando pela Vida",
+              "en": "Participate in fundraising events: Thrift Shop, Charity Tea/Dinner, Gastronomic Tour, Cycling for Life"
+            }
+          }
+        ],
+        "acceptsItems": true,
+        "itemTypes": ["various"],
+        "acceptsVolunteers": true
+      },
+      "transparency": "https://www.viavida.org.br",
+      "verified": true,
+      "dateAdded": "2025-11-23",
+      "lastUpdated": "2025-11-23",
+      "notes": {
+        "pt": "CNPJ: 04.043.606/0001-65. Pousada Solidariedade hospeda 600 pessoas/mês (60% menores de 18 anos). Custo operacional: R$ 45.000/mês. Entidade Beneficente/Filantrópica e Utilidade Pública Federal. Registrada no CMDCA. Oferece incentivos fiscais: dedução de até 2% como despesa (empresas lucro real).",
+        "en": "CNPJ: 04.043.606/0001-65. Pousada Solidariedade hosts 600 people/month (60% under 18). Operating cost: R$ 45,000/month. Charitable/Philanthropic Entity and Federal Public Utility. Registered with CMDCA. Offers tax incentives: deduction of up to 2% as expense (companies with actual profit)."
+      }
     }
   ]
 }
