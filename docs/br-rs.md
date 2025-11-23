@@ -40,18 +40,32 @@ Aqui instituições do Rio Grande do Sul que estão sempre em busca de doações
   - Como [doar](https://wimbelemdon.com.br/doe/)? Doe dinheiro, Nota Fiscal Gaúcha, Funcriança e [outras possibilidades](https://www.wimbelemdon.com.br/colabore/).  
   
 
-### Fundação Pão dos Pobres  
-  
-  - Sobre: Organização fundada em 1895 (130 anos de história) que potencializa o desenvolvimento integral de mais de 1.400 crianças e adolescentes em situação de vulnerabilidade social através de práticas socioassistenciais.  
-  - Programas: Educação Integral, Qualificação Profissional, Acolhimento Institucional, Fortalecimento de Vínculos, Práticas Restaurativas.  
-  - Endereço: Rua da República, 801, Cidade Baixa, Porto Alegre/RS - CEP 90050-321  
-  - Site: [paodospobres.org.br](https://www.paodospobres.org.br)  
-  - Instagram: [@fundacaopaodospobres](https://www.instagram.com/fundacaopaodospobres/)  
-  - Facebook: [/paodospobres](https://www.facebook.com/paodospobres)  
-  - E-mail: relacaoinstitucional@paodospobres.com.br | voluntarios@paodospobres.com.br  
-  - Telefone: (51) 3433.6900 | (51) 3433.6902  
-  - CNPJ: 92.666.015/0001-01  
-  - Como [doar](https://www.paodospobres.org.br/quero-apoiar/)? PIX (92.666.015/0001-01), Nota Fiscal Gaúcha, Funcriança PJ/PF, Voluntariado e doações diversas. Relatórios sociais anuais e balanços patrimoniais disponíveis no site (2019-2024).  
-  - Horário: Segunda a Sexta, 8h-12h e 13h-17h20  
-  
-  
+### Fundação Pão dos Pobres
+
+  - Sobre: Organização fundada em 1895 (130 anos de história) que potencializa o desenvolvimento integral de mais de 1.400 crianças e adolescentes em situação de vulnerabilidade social através de práticas socioassistenciais.
+  - Programas: Educação Integral, Qualificação Profissional, Acolhimento Institucional, Fortalecimento de Vínculos, Práticas Restaurativas.
+  - Endereço: Rua da República, 801, Cidade Baixa, Porto Alegre/RS - CEP 90050-321
+  - Site: [paodospobres.org.br](https://www.paodospobres.org.br)
+  - Instagram: [@fundacaopaodospobres](https://www.instagram.com/fundacaopaodospobres/)
+  - Facebook: [/paodospobres](https://www.facebook.com/paodospobres)
+  - E-mail: relacaoinstitucional@paodospobres.com.br | voluntarios@paodospobres.com.br
+  - Telefone: (51) 3433.6900 | (51) 3433.6902
+  - CNPJ: 92.666.015/0001-01
+  - Como [doar](https://www.paodospobres.org.br/quero-apoiar/)? PIX (92.666.015/0001-01), Nota Fiscal Gaúcha, Funcriança PJ/PF, Voluntariado e doações diversas. Relatórios sociais anuais e balanços patrimoniais disponíveis no site (2019-2024).
+  - Horário: Segunda a Sexta, 8h-12h e 13h-17h20
+
+
+### VIAVIDA Pró-Doações e Transplantes
+
+  - Sobre: Organização que promove a doação de órgãos e tecidos no RS, oferecendo apoio a pessoas em lista de espera e transplantadas através da Pousada Solidariedade. Desde 2004, hospeda gratuitamente pacientes em pré e pós-transplante e seus familiares (600 pessoas/mês, sendo 60% menores de 18 anos).
+  - Missão: Contribuir para a diminuição do número de doentes em lista de espera por órgão ou tecido, promovendo a vida e a saúde com incentivos à prevenção.
+  - Projetos: Pousada Solidariedade (hospedagem gratuita), Divulgação da Causa (palestras em escolas/empresas), Eventos de captação (Brechó, Tour Gastronômico, Pedalando pela Vida).
+  - Endereço: Av. Taquara, 579, Petrópolis, Porto Alegre/RS - CEP 90460-210
+  - Site: [viavida.org.br](https://www.viavida.org.br)
+  - Instagram: [@viavidapro](https://www.instagram.com/viavidapro/)
+  - E-mail: via@viavida.org.br
+  - Telefone: +55 51 9602-7844
+  - CNPJ: 04.043.606/0001-65
+  - Como [doar](https://www.viavida.org.br/colabore-1)? Transferência bancária, Campanha "Adote um Leito" (R$ 75/diária), Funcriança (1% IR PJ, 6% IR PF), Voluntariado. Entidade com incentivos fiscais: dedução de até 2% como despesa (empresas lucro real).
+  - Custo operacional: R$ 45.000/mês para manter a Pousada Solidariedade
+
