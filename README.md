@@ -1,5 +1,8 @@
 # Let's Help It 🤝
 
+[![PR Validation](https://github.com/dwildt/letshelpit/actions/workflows/pr-validation.yml/badge.svg)](https://github.com/dwildt/letshelpit/actions/workflows/pr-validation.yml)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+
 Plataforma open source para conectar pessoas a ONGs que fazem a diferença.
 
 **🌐 Site:** [https://dwildt.github.io/letshelpit](https://dwildt.github.io/letshelpit)
@@ -261,7 +264,9 @@ npm run lint:fix
 
 ## 🤝 Como Contribuir
 
-Você pode ajudar o Let's Help It de várias formas:
+Você pode ajudar o Let's Help It de várias formas!
+
+📚 **[Leia o Guia Completo de Contribuição →](CONTRIBUTING.md)**
 
 ### 1. 🏢 Cadastrar uma ONG
 
@@ -284,56 +289,28 @@ Precisamos dos seguintes dados:
 
 Quer adicionar funcionalidades ou corrigir bugs?
 
-#### Passo a passo
+**⚠️ IMPORTANTE:** Pull Requests passam por validação automática (lint + testes). Certifique-se de que `npm run validate` passa antes de abrir o PR.
+
+#### Início Rápido
 
 ```bash
-# 1. Fork o projeto no GitHub
-
-# 2. Clone seu fork
+# 1. Fork e clone
 git clone https://github.com/SEU-USUARIO/letshelpit.git
 cd letshelpit
 
-# 3. Crie uma branch
-git checkout -b feature/nome-da-funcionalidade
+# 2. Crie uma branch
+git checkout -b feat/sua-feature
 
-# 4. Faça suas alterações
-# - Edite o código
-# - Adicione testes se necessário
-# - Siga os padrões de código (ESLint)
+# 3. Faça suas alterações e valide
+npm run validate  # Lint + testes
 
-# 5. Valide suas alterações (IMPORTANTE!)
-npm run validate
-# Deve passar em:
-# ✓ Lint sem erros
-# ✓ Todos os testes passando
+# 4. Commit (Conventional Commits)
+git commit -m "feat: sua descrição"
 
-# 6. Commit suas alterações
-git add .
-git commit -m "feat: adiciona filtro por estado"
-
-# 7. Push para seu fork
-git push origin feature/nome-da-funcionalidade
-
-# 8. Abra um Pull Request no GitHub
+# 5. Abra um Pull Request
 ```
 
-#### Tipos de commit (Conventional Commits)
-
-- `feat`: Nova funcionalidade
-- `fix`: Correção de bug
-- `docs`: Documentação
-- `style`: Formatação (não afeta código)
-- `refactor`: Refatoração
-- `test`: Testes
-- `chore`: Manutenção/configuração
-
-**Exemplos:**
-```bash
-git commit -m "feat: adiciona filtro por estado"
-git commit -m "fix: corrige bug na busca"
-git commit -m "docs: atualiza README"
-git commit -m "test: adiciona testes para i18n"
-```
+👉 **[Veja o guia completo de contribuição →](CONTRIBUTING.md)** para instruções detalhadas, padrões de código e processo de cadastro de ONGs
 
 ### 3. 💰 Apoiar financeiramente
 

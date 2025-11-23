@@ -1,0 +1,53 @@
+name: PR Validation
+
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  validate:
+    name: Validate Code Quality
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run ESLint
+        run: npm run lint
+
+      - name: Run tests
+        run: npm test
+
+      - name: Validate JSON syntax
+        run: |
+          echo "Validating br-rs.json..."
+          python3 -m json.tool public/data/organizations/br-rs.json > /dev/null
+          echo "✅ JSON is valid"
+
+      - name: Check for MD documentation
+        run: |
+          echo "Checking if docs/br-rs.md exists..."
+          if [ ! -f docs/br-rs.md ]; then
+            echo "❌ docs/br-rs.md not found"
+            exit 1
+          fi
+          echo "✅ Documentation file exists"
+
+      - name: Summary
+        if: success()
+        run: |
+          echo "✅ All validations passed!"
+          echo "- Lint: OK"
+          echo "- Tests: OK"
+          echo "- JSON: OK"
+          echo "- Docs: OK"
