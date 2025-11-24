@@ -568,6 +568,108 @@
         "pt": "CNPJ: 04.043.606/0001-65. Pousada Solidariedade hospeda 600 pessoas/mês (60% menores de 18 anos). Custo operacional: R$ 45.000/mês. Entidade Beneficente/Filantrópica e Utilidade Pública Federal. Registrada no CMDCA. Oferece incentivos fiscais: dedução de até 2% como despesa (empresas lucro real).",
         "en": "CNPJ: 04.043.606/0001-65. Pousada Solidariedade hosts 600 people/month (60% under 18). Operating cost: R$ 45,000/month. Charitable/Philanthropic Entity and Federal Public Utility. Registered with CMDCA. Offers tax incentives: deduction of up to 2% as expense (companies with actual profit)."
       }
+    },
+    {
+      "id": "instituto-cancer-infantil",
+      "name": "Instituto do Câncer Infantil (ICI)",
+      "type": "ngo",
+      "status": "active",
+      "about": {
+        "pt": "Organização sem fins lucrativos fundada em 1990 que atua no combate ao câncer infantojuvenil no Rio Grande do Sul. Com mais de 33 anos de história, o ICI oferece atendimento médico especializado em oncologia pediátrica, mantém uma casa de apoio para pacientes e familiares, e desenvolve pesquisas na área. Mantém 27 leitos exclusivos de oncologia pediátrica no Hospital de Clínicas de Porto Alegre.",
+        "en": "Non-profit organization founded in 1990 that fights pediatric cancer in Rio Grande do Sul. With over 33 years of history, ICI offers specialized medical care in pediatric oncology, maintains a support house for patients and families, and develops research in the area. Maintains 27 exclusive pediatric oncology beds at Hospital de Clínicas de Porto Alegre."
+      },
+      "categories": ["children_youth", "health", "social_vulnerability"],
+      "location": {
+        "country": "BR",
+        "countryName": "Brazil",
+        "state": "RS",
+        "stateName": "Rio Grande do Sul",
+        "city": "Porto Alegre",
+        "neighborhood": "Rio Branco",
+        "address": "Rua São Manoel, 850",
+        "postalCode": "90620-110"
+      },
+      "contact": {
+        "website": "https://ici.ong",
+        "social": {
+          "instagram": "ici_rs",
+          "facebook": "iciportoalegre",
+          "linkedin": "instituto-do-cancer-infantil",
+          "youtube": "InstitutodoCancerInfantil"
+        }
+      },
+      "donations": {
+        "methods": [
+          {
+            "type": "money",
+            "url": "https://ici.ong/como-ajudar/#doacao-unica",
+            "pixKey": "92.956.491/0001-16",
+            "description": {
+              "pt": "Faça uma doação única via PayPal ou PIX",
+              "en": "Make a one-time donation via PayPal or PIX"
+            }
+          },
+          {
+            "type": "monthly_contribution",
+            "url": "https://ici.ong/como-ajudar/#doacao-mensal",
+            "description": {
+              "pt": "Torne-se um doador recorrente e contribua mensalmente",
+              "en": "Become a recurring donor and contribute monthly"
+            }
+          },
+          {
+            "type": "funcrianca",
+            "url": "https://ici.ong/como-ajudar/#leis-de-incentivo",
+            "description": {
+              "pt": "Destinação de imposto de renda através do Funcriança e outras leis de incentivo",
+              "en": "Income tax allocation through Funcriança and other incentive laws"
+            }
+          },
+          {
+            "type": "items",
+            "url": "https://ici.ong/como-ajudar/#doacao-de-cabelo",
+            "description": {
+              "pt": "Doe cabelos com no mínimo 15cm para confecção de perucas",
+              "en": "Donate hair with a minimum of 15cm for wig production"
+            }
+          },
+          {
+            "type": "clothes",
+            "url": "https://ici.ong/como-ajudar/#doacao-roupas-alimentos-brinquedos",
+            "description": {
+              "pt": "Doação de roupas em bom estado",
+              "en": "Donation of clothes in good condition"
+            }
+          },
+          {
+            "type": "food",
+            "url": "https://ici.ong/como-ajudar/#doacao-roupas-alimentos-brinquedos",
+            "description": {
+              "pt": "Doação de alimentos não perecíveis",
+              "en": "Donation of non-perishable food"
+            }
+          },
+          {
+            "type": "items",
+            "url": "https://ici.ong/como-ajudar/#testamento-bens-imoveis-outras-doacoes",
+            "description": {
+              "pt": "Deixe o ICI como beneficiário em testamento ou doe bens e imóveis",
+              "en": "Leave ICI as beneficiary in your will or donate property and assets"
+            }
+          }
+        ],
+        "acceptsItems": true,
+        "itemTypes": ["clothes", "food", "hair", "toys"],
+        "acceptsVolunteers": false
+      },
+      "transparency": "https://ici.ong",
+      "verified": true,
+      "dateAdded": "2025-11-24",
+      "lastUpdated": "2025-11-24",
+      "notes": {
+        "pt": "CNPJ: 92.956.491/0001-16. Fundada em 1990, com mais de 33 anos de história. Mantém 27 leitos exclusivos de oncologia pediátrica no Hospital de Clínicas de Porto Alegre (HCPA). Oferece casa de apoio para famílias que vêm do interior. Desenvolve pesquisas na área de oncologia pediátrica. Promove eventos de arrecadação ao longo do ano. Aceita parcerias corporativas.",
+        "en": "CNPJ: 92.956.491/0001-16. Founded in 1990, with over 33 years of history. Maintains 27 exclusive pediatric oncology beds at Hospital de Clínicas de Porto Alegre (HCPA). Offers support house for families from the interior. Develops research in pediatric oncology. Promotes fundraising events throughout the year. Accepts corporate partnerships."
+      }
     }
   ]
 }

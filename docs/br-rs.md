@@ -69,3 +69,18 @@ Aqui instituições do Rio Grande do Sul que estão sempre em busca de doações
   - Como [doar](https://www.viavida.org.br/colabore-1)? Transferência bancária, Campanha "Adote um Leito" (R$ 75/diária), Funcriança (1% IR PJ, 6% IR PF), Voluntariado. Entidade com incentivos fiscais: dedução de até 2% como despesa (empresas lucro real).
   - Custo operacional: R$ 45.000/mês para manter a Pousada Solidariedade
 
+
+### Instituto do Câncer Infantil (ICI)
+
+  - Sobre: Organização sem fins lucrativos fundada em 1990 (mais de 33 anos de história) que atua no combate ao câncer infantojuvenil no Rio Grande do Sul. Oferece atendimento médico especializado em oncologia pediátrica, mantém uma casa de apoio para pacientes e familiares, e desenvolve pesquisas na área.
+  - Estrutura: Mantém 27 leitos exclusivos de oncologia pediátrica no Hospital de Clínicas de Porto Alegre (HCPA).
+  - Serviços: Atendimento médico especializado, casa de apoio para famílias do interior, suporte psicológico e social, atividades recreativas e educativas, pesquisa científica.
+  - Endereço: Rua São Manoel, 850, Rio Branco, Porto Alegre/RS - CEP 90620-110
+  - Site: [ici.ong](https://ici.ong)
+  - Instagram: [@ici_rs](https://www.instagram.com/ici_rs/)
+  - Facebook: [/iciportoalegre](https://www.facebook.com/iciportoalegre)
+  - LinkedIn: [instituto-do-cancer-infantil](https://www.linkedin.com/company/instituto-do-cancer-infantil)
+  - YouTube: [@InstitutodoCancerInfantil](https://www.youtube.com/@InstitutodoCancerInfantil)
+  - CNPJ: 92.956.491/0001-16
+  - Como [doar](https://ici.ong/como-ajudar/)? [Doação única](https://ici.ong/como-ajudar/#doacao-unica) (PayPal, PIX: 92.956.491/0001-16), [Doação mensal](https://ici.ong/como-ajudar/#doacao-mensal), [Funcriança e leis de incentivo](https://ici.ong/como-ajudar/#leis-de-incentivo), [Doação de cabelo](https://ici.ong/como-ajudar/#doacao-de-cabelo) (mínimo 15cm), [Roupas, alimentos e brinquedos](https://ici.ong/como-ajudar/#doacao-roupas-alimentos-brinquedos), [Testamento e bens](https://ici.ong/como-ajudar/#testamento-bens-imoveis-outras-doacoes)
+
