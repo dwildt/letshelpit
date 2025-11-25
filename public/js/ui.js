@@ -196,75 +196,6 @@ const UI = {
   },
 
   /**
-   * Render breadcrumb navigation
-   */
-  renderBreadcrumb(locations, selectedLocation = {}) {
-    const container = document.getElementById('breadcrumb-container')
-
-    const html = []
-
-    // Country selector
-    const countries = locations.countries || []
-    if (countries.length > 0) {
-      const countryOptions = countries.map(c => {
-        const name = i18n.tWithFallback(c.name)
-        const selected = c.code === selectedLocation.country ? 'selected' : ''
-        return `<option value="${c.code}" ${selected}>${this.escapeHtml(name)}</option>`
-      }).join('')
-
-      html.push(`
-        <select onchange="selectCountry(this.value)" class="px-3 py-2 border rounded-lg focus:ring-2 focus:ring-primary">
-          <option value="">${i18n.t('breadcrumb.select')} ${i18n.t('breadcrumb.country')}</option>
-          ${countryOptions}
-        </select>
-      `)
-    }
-
-    // State selector (if country selected)
-    if (selectedLocation.country) {
-      const country = countries.find(c => c.code === selectedLocation.country)
-      if (country && country.states) {
-        const stateOptions = country.states.map(s => {
-          const name = i18n.tWithFallback(s.name)
-          const selected = s.code === selectedLocation.state ? 'selected' : ''
-          return `<option value="${s.code}" ${selected}>${this.escapeHtml(name)}</option>`
-        }).join('')
-
-        html.push(`
-          <span class="breadcrumb-separator">›</span>
-          <select onchange="selectState(this.value)" class="px-3 py-2 border rounded-lg focus:ring-2 focus:ring-primary">
-            <option value="">${i18n.t('breadcrumb.all')}</option>
-            ${stateOptions}
-          </select>
-        `)
-      }
-
-      // City selector (if state selected)
-      if (selectedLocation.state) {
-        const country = countries.find(c => c.code === selectedLocation.country)
-        const state = country?.states?.find(s => s.code === selectedLocation.state)
-        if (state && state.cities && state.cities.length > 0) {
-          const cityOptions = state.cities.map(city => {
-            const name = typeof city === 'string' ? city : city.name
-            const selected = name === selectedLocation.city ? 'selected' : ''
-            return `<option value="${name}" ${selected}>${this.escapeHtml(name)}</option>`
-          }).join('')
-
-          html.push(`
-            <span class="breadcrumb-separator">›</span>
-            <select onchange="selectCity(this.value)" class="px-3 py-2 border rounded-lg focus:ring-2 focus:ring-primary">
-              <option value="">${i18n.t('breadcrumb.all')}</option>
-              ${cityOptions}
-            </select>
-          `)
-        }
-      }
-    }
-
-    container.innerHTML = html.join('')
-  },
-
-  /**
    * Render category filters in modal
    */
   renderModalCategoryFilters(categories, selectedCategories = []) {
@@ -366,10 +297,11 @@ const UI = {
       const country = countries.find(c => c.code === selectedLocation.country)
       if (country) {
         const state = country.states.find(s => s.code === selectedLocation.state)
-        if (state && state.cities) {
+        if (state && state.cities && state.cities.length > 0) {
           const cityOptions = state.cities.map(city => {
-            const selected = city === selectedLocation.city ? 'selected' : ''
-            return `<option value="${city}" ${selected}>${this.escapeHtml(city)}</option>`
+            const cityName = typeof city === 'string' ? city : city.name
+            const selected = cityName === selectedLocation.city ? 'selected' : ''
+            return `<option value="${cityName}" ${selected}>${this.escapeHtml(cityName)}</option>`
           }).join('')
 
           html.push(`

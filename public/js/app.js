@@ -145,12 +145,7 @@ class App {
    * Setup UI components
    */
   setupUI() {
-    // Render breadcrumb
-    UI.renderBreadcrumb(this.locations, {
-      country: this.filters.country,
-      state: this.filters.state,
-      city: this.filters.city
-    })
+    // Breadcrumb is now only in the modal
 
     // Render modal filters (they will be populated when modal opens)
     UI.renderModalCategoryFilters(this.categories, this.filters.categories)
@@ -250,8 +245,7 @@ class App {
     this.filters.state = ''
     this.filters.city = ''
 
-    // Re-render breadcrumb (both regular and modal)
-    UI.renderBreadcrumb(this.locations, this.filters)
+    // Re-render modal breadcrumb
     UI.renderModalBreadcrumb(this.locations, this.filters)
 
     // Update tags and count
@@ -269,8 +263,7 @@ class App {
     this.filters.state = stateCode
     this.filters.city = ''
 
-    // Re-render breadcrumb (both regular and modal)
-    UI.renderBreadcrumb(this.locations, this.filters)
+    // Re-render modal breadcrumb
     UI.renderModalBreadcrumb(this.locations, this.filters)
 
     // Update tags and count
@@ -287,8 +280,7 @@ class App {
   selectCity(cityName) {
     this.filters.city = cityName
 
-    // Re-render breadcrumb (both regular and modal)
-    UI.renderBreadcrumb(this.locations, this.filters)
+    // Re-render modal breadcrumb
     UI.renderModalBreadcrumb(this.locations, this.filters)
 
     // Update tags and count
@@ -578,9 +570,6 @@ class App {
 
     // Update DOM
     i18n.updateDOM()
-
-    // Re-render breadcrumb
-    UI.renderBreadcrumb(this.locations, this.filters)
 
     // Re-render modal filters
     UI.renderModalCategoryFilters(this.categories, this.filters.categories)
