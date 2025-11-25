@@ -1,6 +1,6 @@
 # Let's Help It 🤝
 
-[![PR Validation](https://github.com/dwildt/letshelpit/actions/workflows/pr-validation.yml/badge.svg)](https://github.com/dwildt/letshelpit/actions/workflows/pr-validation.yml)
+[![Deploy to GitHub Pages](https://github.com/dwildt/letshelpit/actions/workflows/deploy.yml/badge.svg)](https://github.com/dwildt/letshelpit/actions/workflows/deploy.yml)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 Plataforma open source para conectar pessoas a ONGs que fazem a diferença.
