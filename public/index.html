@@ -49,7 +49,7 @@
             </div>
           </div>
 
-          <!-- Mobile: Filters + Language -->
+          <!-- Mobile: Filters + Theme + Language -->
           <div class="flex md:hidden items-center gap-2">
             <button
               id="filters-btn-mobile"
@@ -59,6 +59,13 @@
               <span class="text-lg">🎚️</span>
               <span data-i18n="filters.button">Filtros</span>
               <span id="filters-count-mobile" class="hidden px-2 py-0.5 bg-white text-primary rounded-full text-xs font-bold"></span>
+            </button>
+            <button
+              id="theme-toggle-mobile"
+              class="px-3 py-2 rounded-lg bg-gray-100 hover:bg-gray-200 text-2xl transition hover:scale-110 theme-toggle"
+              onclick="toggleTheme()"
+              aria-label="Toggle theme">
+              <span id="theme-icon-mobile">☀️</span>
             </button>
             <button
               id="lang-toggle-mobile"
@@ -95,6 +102,16 @@
             <span class="text-lg">🎚️</span>
             <span data-i18n="filters.button">Filtros</span>
             <span id="filters-count" class="hidden px-2 py-0.5 bg-white text-primary rounded-full text-xs font-bold"></span>
+          </button>
+
+          <!-- Desktop: Theme Toggle -->
+          <button
+            id="theme-toggle"
+            class="hidden md:block px-3 py-2 rounded-lg bg-gray-100 hover:bg-gray-200 text-2xl transition hover:scale-110 theme-toggle"
+            onclick="toggleTheme()"
+            aria-label="Toggle theme"
+            title="Toggle theme">
+            <span id="theme-icon">☀️</span>
           </button>
 
           <!-- Desktop: Language Toggle -->
@@ -313,7 +330,8 @@
   </div>
 
   <!-- Scripts -->
-  <!-- Load in correct order: config -> i18n -> providers -> app -->
+  <!-- Load in correct order: theme -> config -> i18n -> providers -> app -->
+  <script src="js/theme.js"></script>
   <script src="js/config.js"></script>
   <script src="js/i18n.js"></script>
   <script src="js/providers/DataProvider.js"></script>
@@ -324,6 +342,11 @@
 
   <!-- Initialize App -->
   <script>
+    // Initialize theme FIRST (before DOM ready to avoid flash)
+    if (window.themeManager) {
+      themeManager.init()
+    }
+
     // Initialize app when DOM is ready
     if (document.readyState === 'loading') {
       document.addEventListener('DOMContentLoaded', () => {
@@ -333,6 +356,13 @@
     } else {
       initApp()
       updateLanguageFlag()
+    }
+
+    // Theme toggle function (used by button)
+    function toggleTheme() {
+      if (window.themeManager) {
+        themeManager.toggle()
+      }
     }
 
     // Update language flag display
