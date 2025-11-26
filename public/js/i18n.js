@@ -27,6 +27,7 @@ const TRANSLATIONS = {
     // Search & Filters
     'search.placeholder': 'Buscar organizações...',
     'search.button': 'Buscar',
+    'search.label': 'Buscar organizações',
     'filters.title': 'Filtros',
     'filters.button': 'Filtros',
     'filters.categories': 'Categorias',
@@ -127,6 +128,7 @@ const TRANSLATIONS = {
     // Search & Filters
     'search.placeholder': 'Search organizations...',
     'search.button': 'Search',
+    'search.label': 'Search organizations',
     'filters.title': 'Filters',
     'filters.button': 'Filters',
     'filters.categories': 'Categories',

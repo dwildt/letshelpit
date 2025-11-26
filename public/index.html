@@ -34,8 +34,12 @@
 </head>
 <body class="min-h-screen flex flex-col">
 
+  <!-- Skip Links for Keyboard Navigation -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <a href="#filters-btn" class="skip-link">Skip to filters</a>
+
   <!-- Header -->
-  <header class="bg-white shadow-md sticky top-0 z-50">
+  <header class="bg-white shadow-md sticky top-0 z-50" role="banner">
     <div class="container mx-auto px-4 py-4">
       <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-4">
         <!-- Top Row: Logo + Actions -->
@@ -55,7 +59,8 @@
               id="filters-btn-mobile"
               onclick="openFiltersModal()"
               class="px-3 py-2 rounded-lg bg-primary text-white hover:bg-blue-600 transition flex items-center gap-2"
-              aria-label="Open filters">
+              aria-label="Open filters"
+              aria-haspopup="dialog">
               <span class="text-lg">🎚️</span>
               <span data-i18n="filters.button">Filtros</span>
               <span id="filters-count-mobile" class="hidden px-2 py-0.5 bg-white text-primary rounded-full text-xs font-bold"></span>
@@ -81,14 +86,16 @@
         <div class="flex items-center gap-3 w-full md:w-auto">
           <!-- Search Bar -->
           <div class="relative flex-1 md:w-80">
+            <label for="search-input" class="sr-only" data-i18n="search.label">Search organizations</label>
             <input
               type="text"
               id="search-input"
               placeholder="Buscar organizações..."
               data-i18n-placeholder="search.placeholder"
               class="w-full px-4 py-2 pl-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-sm"
-              aria-label="Search organizations">
-            <svg class="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              aria-label="Search organizations"
+              role="searchbox">
+            <svg class="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
             </svg>
           </div>
@@ -98,7 +105,8 @@
             id="filters-btn"
             onclick="openFiltersModal()"
             class="hidden md:flex items-center gap-2 px-4 py-2 rounded-lg bg-primary text-white hover:bg-blue-600 transition"
-            aria-label="Open filters">
+            aria-label="Open filters"
+            aria-haspopup="dialog">
             <span class="text-lg">🎚️</span>
             <span data-i18n="filters.button">Filtros</span>
             <span id="filters-count" class="hidden px-2 py-0.5 bg-white text-primary rounded-full text-xs font-bold"></span>
@@ -129,7 +137,7 @@
   </header>
 
   <!-- Main Content -->
-  <main class="flex-1 container mx-auto px-4 py-8">
+  <main id="main-content" class="flex-1 container mx-auto px-4 py-8" role="main">
 
     <!-- Active Filters Tags -->
     <div id="active-filters-container" class="hidden mb-6">
@@ -151,21 +159,21 @@
 
     <!-- Results Counter -->
     <div class="mb-6 flex justify-end">
-      <div id="results-count" class="text-sm text-gray-600">
+      <div id="results-count" class="text-sm text-gray-600" role="status" aria-live="polite" aria-atomic="true">
         <!-- Dynamically updated -->
       </div>
     </div>
 
     <!-- Loading State -->
-    <div id="loading-state" class="text-center py-16">
-      <div class="spinner mx-auto mb-4"></div>
+    <div id="loading-state" class="text-center py-16" role="status" aria-live="polite">
+      <div class="spinner mx-auto mb-4" aria-hidden="true"></div>
       <p class="text-gray-600" data-i18n="loading.text">Carregando organizações...</p>
     </div>
 
     <!-- Error State -->
-    <div id="error-state" class="hidden text-center py-16">
-      <div class="text-6xl mb-4">⚠️</div>
-      <h3 class="text-xl font-semibold text-gray-800 mb-2" data-i18n="error.title">Ops! Algo deu errado</h3>
+    <div id="error-state" class="hidden text-center py-16" role="alert" aria-live="assertive">
+      <div class="text-6xl mb-4" aria-hidden="true">⚠️</div>
+      <h2 class="text-xl font-semibold text-gray-800 mb-2" data-i18n="error.title">Ops! Algo deu errado</h2>
       <p class="text-gray-600 mb-6" data-i18n="error.description">Não foi possível carregar os dados.</p>
       <button onclick="location.reload()" class="px-6 py-3 bg-primary text-white rounded-lg hover:bg-blue-600 transition" data-i18n="error.reload">
         Recarregar
@@ -173,9 +181,9 @@
     </div>
 
     <!-- Empty State -->
-    <div id="empty-state" class="hidden empty-state">
-      <div class="empty-state-icon">🔍</div>
-      <h3 class="text-xl font-semibold text-gray-800 mb-2" data-i18n="empty.title">Nenhuma organização encontrada</h3>
+    <div id="empty-state" class="hidden empty-state" role="status" aria-live="polite">
+      <div class="empty-state-icon" aria-hidden="true">🔍</div>
+      <h2 class="text-xl font-semibold text-gray-800 mb-2" data-i18n="empty.title">Nenhuma organização encontrada</h2>
       <p class="text-gray-600 mb-6" data-i18n="empty.description">Tente ajustar os filtros ou fazer uma nova busca</p>
       <button onclick="clearFilters()" class="px-6 py-3 bg-primary text-white rounded-lg hover:bg-blue-600 transition" data-i18n="empty.clearFilters">
         Limpar filtros
@@ -183,19 +191,19 @@
     </div>
 
     <!-- Organizations Grid -->
-    <div id="organizations-grid" class="org-grid hidden">
+    <div id="organizations-grid" class="org-grid hidden" role="region" aria-label="Organizations list">
       <!-- Dynamically populated by JavaScript -->
     </div>
 
   </main>
 
   <!-- Footer -->
-  <footer class="bg-gray-800 text-white py-8 mt-auto">
+  <footer class="bg-gray-800 text-white py-8 mt-auto" role="contentinfo">
     <div class="container mx-auto px-4">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <!-- About -->
         <div>
-          <h3 class="text-lg font-semibold mb-3" data-i18n="footer.about">Sobre o Projeto</h3>
+          <h2 class="text-lg font-semibold mb-3" data-i18n="footer.about">Sobre o Projeto</h2>
           <p class="text-gray-300 text-sm">
             Let's Help It conecta pessoas a organizações que fazem a diferença.
             Plataforma open source para apoiar ONGs no Brasil.
@@ -204,7 +212,7 @@
 
         <!-- Links -->
         <div>
-          <h3 class="text-lg font-semibold mb-3">Links</h3>
+          <h2 class="text-lg font-semibold mb-3">Links</h2>
           <ul class="space-y-2 text-sm">
             <li><a href="https://github.com/dwildt/letshelpit" target="_blank" class="text-gray-300 hover:text-white transition">GitHub</a></li>
             <li><a href="https://github.com/dwildt/letshelpit#como-contribuir" target="_blank" class="text-gray-300 hover:text-white transition" data-i18n="footer.contribute">Como Contribuir</a></li>
@@ -214,7 +222,7 @@
 
         <!-- Credits -->
         <div>
-          <h3 class="text-lg font-semibold mb-3">Projeto</h3>
+          <h2 class="text-lg font-semibold mb-3">Projeto</h2>
           <p class="text-gray-300 text-sm">
             <span data-i18n="footer.madeWith">Feito com</span> ❤️
             <span data-i18n="footer.by">por</span> <a href="https://github.com/dwildt" target="_blank" class="hover:text-white transition">Daniel Wildt</a>
@@ -233,20 +241,21 @@
   </footer>
 
   <!-- Filters Modal -->
-  <div id="filters-modal" class="hidden fixed inset-0 z-50 overflow-y-auto modal-backdrop" onclick="closeFiltersModal(event)">
+  <div id="filters-modal" class="hidden fixed inset-0 z-50 overflow-y-auto modal-backdrop" onclick="closeFiltersModal(event)" role="dialog" aria-modal="true" aria-labelledby="filters-modal-title">
     <div class="flex items-center justify-center min-h-screen px-4 pt-4 pb-20 text-center sm:block sm:p-0">
       <!-- Modal Panel -->
-      <div class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-3xl sm:w-full" onclick="event.stopPropagation()">
+      <div class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-3xl sm:w-full" onclick="event.stopPropagation()" role="document">
 
         <!-- Modal Header -->
         <div class="bg-white px-6 pt-6 pb-4 border-b border-gray-200">
           <div class="flex items-center justify-between">
-            <h3 class="text-xl font-semibold text-gray-800" data-i18n="filters.title">Filtros</h3>
+            <h2 id="filters-modal-title" class="text-xl font-semibold text-gray-800" data-i18n="filters.title">Filtros</h2>
             <button
               onclick="closeFiltersModal()"
               class="text-gray-400 hover:text-gray-600 transition"
-              aria-label="Close filters">
-              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              aria-label="Close filters"
+              type="button">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
               </svg>
             </button>
@@ -258,7 +267,7 @@
 
           <!-- Category Filters -->
           <div class="mb-6">
-            <h4 class="text-md font-semibold text-gray-800 mb-3" data-i18n="filters.categories">Categorias</h4>
+            <h3 class="text-md font-semibold text-gray-800 mb-3" data-i18n="filters.categories">Categorias</h3>
             <div id="modal-category-filters" class="flex flex-wrap gap-2">
               <!-- Dynamically populated by JavaScript -->
             </div>
@@ -266,7 +275,7 @@
 
           <!-- Donation Type Filters -->
           <div class="mb-6">
-            <h4 class="text-md font-semibold text-gray-800 mb-3" data-i18n="filters.donationTypes">Tipos de Doação</h4>
+            <h3 class="text-md font-semibold text-gray-800 mb-3" data-i18n="filters.donationTypes">Tipos de Doação</h3>
             <div id="modal-donation-filters" class="flex flex-wrap gap-2">
               <!-- Dynamically populated by JavaScript -->
             </div>
@@ -274,7 +283,7 @@
 
           <!-- Location Filters -->
           <div class="mb-6">
-            <h4 class="text-md font-semibold text-gray-800 mb-3" data-i18n="filters.location">Localização</h4>
+            <h3 class="text-md font-semibold text-gray-800 mb-3" data-i18n="filters.location">Localização</h3>
             <div id="modal-breadcrumb-container" class="breadcrumb">
               <!-- Dynamically populated by JavaScript -->
             </div>
@@ -311,10 +320,10 @@
   </div>
 
   <!-- Organization Detail Modal -->
-  <div id="org-modal" class="hidden fixed inset-0 z-50 overflow-y-auto modal-backdrop" onclick="closeModal(event)">
+  <div id="org-modal" class="hidden fixed inset-0 z-50 overflow-y-auto modal-backdrop" onclick="closeModal(event)" role="dialog" aria-modal="true" aria-labelledby="org-modal-title">
     <div class="flex items-center justify-center min-h-screen px-4 pt-4 pb-20 text-center sm:block sm:p-0">
       <!-- Modal Panel -->
-      <div class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-2xl sm:w-full" onclick="event.stopPropagation()">
+      <div class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-2xl sm:w-full" onclick="event.stopPropagation()" role="document">
         <!-- Modal Content - Dynamically populated -->
         <div id="org-modal-content"></div>
       </div>
@@ -398,6 +407,46 @@
         if (window.app) {
           window.app.populateModalFilters()
         }
+
+        // Trap focus in modal
+        trapModalFocus(modal)
+      }
+    }
+
+    // Trap focus within modal (accessibility)
+    function trapModalFocus(modalElement) {
+      const focusableElements = modalElement.querySelectorAll(
+        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+      )
+      const firstFocusable = focusableElements[0]
+      const lastFocusable = focusableElements[focusableElements.length - 1]
+
+      const handleKeyDown = function(e) {
+        if (e.key === 'Tab') {
+          if (e.shiftKey) {
+            if (document.activeElement === firstFocusable) {
+              lastFocusable.focus()
+              e.preventDefault()
+            }
+          } else {
+            if (document.activeElement === lastFocusable) {
+              firstFocusable.focus()
+              e.preventDefault()
+            }
+          }
+        }
+
+        // Close modal on Escape key
+        if (e.key === 'Escape') {
+          closeFiltersModal()
+        }
+      }
+
+      modalElement.addEventListener('keydown', handleKeyDown)
+
+      // Focus first element
+      if (firstFocusable) {
+        setTimeout(() => firstFocusable.focus(), 100)
       }
     }
 
@@ -423,9 +472,16 @@
 
     // Close modal function (used by modal backdrop)
     function closeModal(event) {
-      if (event.target.id === 'org-modal' || event.target.closest('[data-close-modal]')) {
+      if (event && event.target && (event.target.id === 'org-modal' || event.target.closest('[data-close-modal]'))) {
         document.getElementById('org-modal').classList.add('hidden')
         document.body.style.overflow = 'auto'
+      } else if (!event) {
+        // Called from Escape key
+        const modal = document.getElementById('org-modal')
+        if (modal && !modal.classList.contains('hidden')) {
+          modal.classList.add('hidden')
+          document.body.style.overflow = 'auto'
+        }
       }
     }
 

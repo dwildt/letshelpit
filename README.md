@@ -14,6 +14,7 @@ Plataforma open source para conectar pessoas a ONGs que fazem a diferença.
 - [Sobre o Projeto](#-sobre-o-projeto)
 - [Tecnologias](#-tecnologias)
 - [Estrutura do Projeto](#-estrutura-do-projeto)
+- [Acessibilidade](#-acessibilidade)
 - [Desenvolvimento](#-desenvolvimento)
 - [Testes](#-testes)
 - [Linting](#-linting)
@@ -34,9 +35,10 @@ Let's Help It é uma aplicação web estática que facilita a descoberta e apoio
 - 💰 **10 tipos de doação** - PIX, Nota Fiscal Gaúcha, roupas, alimentos, voluntariado, etc.
 - 🎯 **5 categorias** - Crianças/Adolescentes, Educação, Deficiência, Esporte, Vulnerabilidade Social
 - 🌐 **Bilíngue** - Português (BR) e English com alternância instantânea via bandeira 🇧🇷/🇺🇸
+- 🌙 **Dark Mode** - Suporte completo a modo escuro com tema persistente
 - 📍 **Integração com mapas** - Google Maps e Waze para localização das ONGs
 - 📱 **Design responsivo** - Mobile-first com Tailwind CSS
-- ♿ **Acessível** - Suporte a leitores de tela e navegação por teclado
+- ♿ **Acessibilidade WCAG 2.1 AA** - Skip links, ARIA, navegação por teclado, screen reader support
 - 🚀 **Performance** - Site estático, carregamento instantâneo
 - ✅ **Qualidade** - >80% de cobertura de testes, zero erros de lint
 
@@ -87,7 +89,8 @@ Let's Help It é uma aplicação web estática que facilita a descoberta e apoio
 letshelpit/
 ├── docs/                           # Documentação markdown
 │   ├── br-rs.md                   # ONGs do Rio Grande do Sul
-│   └── donate.md                  # Campanhas emergenciais
+│   ├── donate.md                  # Campanhas emergenciais
+│   └── ACCESSIBILITY.md           # Documentação de acessibilidade WCAG 2.1 AA
 │
 ├── public/                        # Site estático (GitHub Pages)
 │   ├── index.html                 # Página principal
@@ -129,13 +132,68 @@ letshelpit/
 │   └── managing-options.md        # Como gerenciar opções
 │
 ├── .github/                       # Configurações GitHub
-│   └── ISSUE_TEMPLATE/            # Templates de issues
+│   ├── ISSUE_TEMPLATE/            # Templates de issues
+│   └── ACCESSIBILITY_CHECKLIST.md # Checklist de acessibilidade para PRs
 │
 ├── package.json                   # Scripts NPX (sem dependências)
 ├── jest.config.js                 # Configuração do Jest
 ├── eslint.config.mjs              # Configuração do ESLint (v9)
 ├── .gitignore                     # Arquivos ignorados
 └── README.md                      # Este arquivo
+```
+
+---
+
+## ♿ Acessibilidade
+
+Este projeto é totalmente compatível com **WCAG 2.1 Nível AA**, garantindo acessibilidade para todos os usuários.
+
+### ✅ Recursos de Acessibilidade
+
+#### Navegação por Teclado
+- **Skip Links**: Tab inicial revela links para pular para conteúdo principal e filtros
+- **Focus Visível**: Outline azul de 3px em todos elementos interativos
+- **Focus Trap**: Modais capturam foco e previnem navegação externa
+- **Escape Key**: Fecha modais e retorna foco ao elemento anterior
+- **Ordem Lógica**: Tabulação segue ordem visual e lógica
+
+#### Screen Reader Support
+- **ARIA Roles**: `banner`, `main`, `contentinfo`, `dialog`, `status`, `alert`
+- **ARIA Labels**: Todos botões e controles têm labels descritivos
+- **ARIA Live**: Atualizações dinâmicas são anunciadas (`polite`, `assertive`)
+- **Hierarquia Semântica**: HTML5 semântico + headings estruturados (h1-h3)
+- **Testado com**: NVDA, JAWS, VoiceOver, TalkBack
+
+#### Design Visual
+- **Contraste**: Mínimo 4.5:1 para texto normal, 3:1 para UI
+- **Dark Mode**: Modo escuro com contraste adequado
+- **Zoom**: Funciona perfeitamente até 200% de zoom
+- **Touch Targets**: Botões ≥ 44x44px (mobile)
+- **Redução de Movimento**: Respeita `prefers-reduced-motion`
+
+### 📚 Documentação Completa
+
+Para detalhes completos sobre acessibilidade, consulte:
+- **[docs/ACCESSIBILITY.md](docs/ACCESSIBILITY.md)** - Guia completo de acessibilidade
+- **[.github/ACCESSIBILITY_CHECKLIST.md](.github/ACCESSIBILITY_CHECKLIST.md)** - Checklist para PRs
+
+### 🧪 Testando Acessibilidade
+
+```bash
+# Testes automatizados (use Chrome DevTools)
+1. Lighthouse → Accessibility (Score ≥ 90)
+2. axe DevTools Extension
+3. WAVE Extension
+
+# Teste manual - Teclado
+1. Tab do início ao fim
+2. Verifique foco visível
+3. Teste Esc em modais
+
+# Screen Reader (NVDA - Windows)
+1. Download: https://www.nvaccess.org/
+2. Ative NVDA
+3. Navegue com Tab, H (headings), L (links)
 ```
 
 ---

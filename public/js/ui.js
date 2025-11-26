@@ -318,6 +318,43 @@ const UI = {
   },
 
   /**
+   * Trap focus within modal (accessibility)
+   */
+  trapFocus(modalElement) {
+    const focusableElements = modalElement.querySelectorAll(
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    )
+    const firstFocusable = focusableElements[0]
+    const lastFocusable = focusableElements[focusableElements.length - 1]
+
+    modalElement.addEventListener('keydown', function(e) {
+      if (e.key === 'Tab') {
+        if (e.shiftKey) {
+          if (document.activeElement === firstFocusable) {
+            lastFocusable.focus()
+            e.preventDefault()
+          }
+        } else {
+          if (document.activeElement === lastFocusable) {
+            firstFocusable.focus()
+            e.preventDefault()
+          }
+        }
+      }
+
+      // Close modal on Escape key
+      if (e.key === 'Escape') {
+        closeModal()
+      }
+    })
+
+    // Focus first element
+    if (firstFocusable) {
+      firstFocusable.focus()
+    }
+  },
+
+  /**
    * Open organization detail modal
    */
   openOrgModal(org) {
@@ -351,9 +388,9 @@ const UI = {
     content.innerHTML = `
       <div class="px-6 py-4 border-b border-gray-200">
         <div class="flex justify-between items-start">
-          <h2 class="text-2xl font-bold text-gray-800">${this.escapeHtml(org.name)}</h2>
-          <button onclick="closeModal(event)" data-close-modal class="text-gray-400 hover:text-gray-600 transition">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <h2 id="org-modal-title" class="text-2xl font-bold text-gray-800">${this.escapeHtml(org.name)}</h2>
+          <button onclick="closeModal(event)" data-close-modal class="text-gray-400 hover:text-gray-600 transition" aria-label="Close modal" type="button">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
             </svg>
           </button>
@@ -410,6 +447,9 @@ const UI = {
     modal.classList.remove('hidden')
     modal.querySelector('.inline-block').classList.add('modal-enter')
     document.body.style.overflow = 'hidden'
+
+    // Trap focus and set initial focus
+    this.trapFocus(modal)
   },
 
   /**
