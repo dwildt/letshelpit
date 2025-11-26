@@ -154,6 +154,7 @@ Use este checklist ao criar ou revisar PRs para garantir conformidade com WCAG 2
 
 ## 📚 Recursos Úteis
 
+- [Guia WCAG](https://guia-wcag.com/) - Guia em português sobre WCAG
 - [WCAG 2.1 Quick Reference](https://www.w3.org/WAI/WCAG21/quickref/)
 - [ARIA Authoring Practices](https://www.w3.org/WAI/ARIA/apg/)
 - [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/)

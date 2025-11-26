@@ -272,6 +272,7 @@ aria-hidden="true"
 - [NVDA Screen Reader](https://www.nvaccess.org/)
 
 ### Guias
+- [Guia WCAG](https://guia-wcag.com/) - Guia em português sobre WCAG
 - [WebAIM](https://webaim.org/)
 - [A11y Project](https://www.a11yproject.com/)
 - [MDN Accessibility](https://developer.mozilla.org/en-US/docs/Web/Accessibility)
