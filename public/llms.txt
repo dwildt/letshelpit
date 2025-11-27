@@ -1,0 +1,929 @@
+# Let's Help It - LLM Context Guide
+
+**Version**: 1.0
+**Last Updated**: 2025-11-26
+**Purpose**: This document helps Large Language Models understand Let's Help It's architecture, data schemas, and contribution patterns.
+
+---
+
+## 1. Project Overview
+
+**Let's Help It** is an open-source platform that connects people with NGOs (non-governmental organizations) in Brazil. The project facilitates donations and volunteerism through an intuitive, accessible interface.
+
+### Key Facts
+
+- **Live Site**: https://dwildt.github.io/letshelpit
+- **Repository**: https://github.com/dwildt/letshelpit
+- **License**: Apache 2.0
+- **Languages**: Bilingual (Portuguese BR / English)
+- **Technology**: 100% vanilla JavaScript (zero runtime dependencies)
+- **Hosting**: GitHub Pages (static site)
+- **Current Scope**: 9 verified NGOs in Porto Alegre, Rio Grande do Sul, Brazil
+- **Test Coverage**: >80% with Jest
+- **Status**: Production-ready, actively maintained
+
+### Mission
+
+Born from the May 2024 floods in Rio Grande do Sul, Let's Help It aims to make finding and supporting NGOs as easy as possible. The project emphasizes accessibility (WCAG 2.1 AA), performance, and data integrity.
+
+### Key Features
+
+- Geographic breadcrumb navigation (Country > State > City)
+- Advanced filters (5 categories, 10 donation types, location)
+- Bilingual content with instant language switching
+- Dark mode support
+- Mobile-responsive design (Tailwind CSS)
+- Integration with Google Maps and Waze
+- Modal details for each organization
+- Real-time filter counters
+
+---
+
+## 2. Architecture Overview
+
+### Provider Pattern (Core Design)
+
+Let's Help It implements the **Strategy/Adapter pattern** through a `DataProvider` interface that abstracts data sources. This allows swapping between JSON files, SQLite databases, or REST APIs without changing application code.
+
+```
+┌─────────────────────────────────────┐
+│         App (Application)           │
+│  Agnostic of data source            │
+└──────────────┬──────────────────────┘
+               │
+     ┌─────────▼──────────┐
+     │  DataProvider API   │ ← Abstract Interface
+     │  - init()           │
+     │  - getOrganizations()│
+     │  - searchOrganizations()│
+     │  - getCategories()  │
+     │  - getDonationTypes()│
+     └─────────┬───────────┘
+               │
+    ┌──────────┴──────────┐
+    │                     │
+┌───▼────────┐   ┌───────▼────────┐
+│JSONProvider│   │SQLiteProvider  │
+│ (Active)   │   │ (Prepared)     │
+└────────────┘   └────────────────┘
+```
+
+**Active Provider**: `JSONProvider` (production)
+- Loads 4 JSON files in parallel via `Promise.all()`
+- In-memory filtering and search
+- Perfect for <100 organizations
+- GitHub Pages compatible
+
+**Prepared Provider**: `SQLiteProvider` (future)
+- Uses sql.js for in-browser SQLite
+- Complex queries, full-text search
+- Better performance for 100+ organizations
+- Ready for implementation
+
+### Layer Architecture
+
+1. **Data Layer** (`providers/`)
+   - DataProvider interface
+   - JSONProvider implementation
+   - SQLiteProvider stub
+
+2. **Business Logic Layer** (`app.js`)
+   - Filter orchestration (category OR, location AND)
+   - Search across name, description, tags
+   - Statistics calculation
+   - Provider factory
+
+3. **UI Layer** (`ui.js`)
+   - Component rendering (cards, modals, breadcrumbs)
+   - Event handling
+   - Dynamic updates
+
+4. **Internationalization Layer** (`i18n.js`)
+   - Translation management
+   - Language persistence (localStorage)
+   - Fallback mechanism (current → other → Portuguese)
+
+### Zero-Dependency Philosophy
+
+**Why vanilla JavaScript?**
+- Eliminates supply chain attacks
+- Instant page loads (no bundle)
+- Future-proof (no framework deprecation)
+- Easy maintenance (no upgrades)
+- GitHub Pages compatible
+
+**Development Dependencies Only**:
+- Jest (testing)
+- ESLint v9 (linting)
+- http-server (local dev)
+
+All run via `npx` – no npm install required!
+
+---
+
+## 3. Data Schemas & Structure
+
+### 3.1 Organization Schema
+
+**File**: `public/data/schema/organization.schema.json`
+**Validation**: JSON Schema Draft-07
+
+#### Required Fields
+
+| Field | Type | Validation | Description |
+|-------|------|------------|-------------|
+| `id` | string | `^[a-z0-9]+(?:-[a-z0-9]+)*$` | Unique slug (lowercase, hyphens only) |
+| `name` | string | 2-200 chars | Official organization name |
+| `type` | enum | ngo, foundation, association, cooperative, social_enterprise | Organization type |
+| `status` | enum | active, inactive, emergency, completed | Operational status |
+| `about` | object | `{pt: string, en?: string}` | Bilingual description (10-2000 chars) |
+| `categories` | array | 1-5 category IDs | Area of work (e.g., children_youth, education) |
+| `location` | object | See Location Schema | Primary address |
+| `contact` | object | See Contact Schema | Website, email, phone, social |
+| `donations` | object | See Donations Schema | How to donate |
+| `verified` | boolean | - | Verified by Let's Help It team |
+| `dateAdded` | string | YYYY-MM-DD | Date added to platform |
+| `lastUpdated` | string | YYYY-MM-DD | Last update date |
+
+#### Optional Fields
+
+- `icon` (string): Custom emoji override (e.g., "🏀" for basketball org)
+- `centers` (array): Additional locations for multi-site organizations
+- `transparency` (string): URL to financial reports
+- `tags` (array): Additional searchable keywords
+- `emergencyResponse` (boolean): Emergency campaign flag
+- `relatedCampaigns` (array): Related emergency campaign IDs
+- `notes` (object): Internal notes (not public)
+
+#### Location Schema
+
+```json
+{
+  "country": "BR",           // ISO 3166-1 alpha-2
+  "countryName": "Brazil",
+  "state": "RS",             // State code
+  "stateName": "Rio Grande do Sul",
+  "city": "Porto Alegre",    // Optional
+  "neighborhood": "Centro",  // Optional
+  "address": "Rua Exemplo, 123",  // Optional
+  "postalCode": "90000-000", // Optional
+  "coordinates": {           // Optional
+    "lat": -30.0277,
+    "lng": -51.2287
+  }
+}
+```
+
+#### Contact Schema
+
+```json
+{
+  "website": "https://example.org.br",
+  "email": "contato@example.org.br",
+  "phone": "+55 51 1234-5678",
+  "social": {
+    "instagram": "example_org",     // Handle without @
+    "facebook": "exampleorg",
+    "twitter": "example_org",
+    "linkedin": "https://linkedin.com/company/example",
+    "youtube": "https://youtube.com/@example",
+    "tiktok": "example.org"
+  }
+}
+```
+
+#### Donations Schema
+
+```json
+{
+  "methods": [
+    {
+      "type": "money",              // See Donation Types
+      "url": "https://doar.example.org",  // Optional
+      "description": {              // Optional
+        "pt": "Descrição em português",
+        "en": "Description in English"
+      },
+      "pixKey": "12345678000199",   // PIX key (Brazil)
+      "bankDetails": {              // Optional
+        "bank": "Banco do Brasil",
+        "agency": "1234-5",
+        "account": "12345-6",
+        "accountType": "checking",  // or "savings"
+        "holder": "Nome da ONG"
+      }
+    }
+  ],
+  "acceptsItems": true,             // Physical donations
+  "itemTypes": ["clothes", "food"], // If acceptsItems true
+  "acceptsVolunteers": true         // Volunteer work
+}
+```
+
+#### Complete Example
+
+```json
+{
+  "id": "aldeia-da-fraternidade",
+  "name": "Aldeia da Fraternidade",
+  "type": "ngo",
+  "status": "active",
+  "about": {
+    "pt": "Acolhe crianças e adolescentes em situação de vulnerabilidade social, oferecendo atividades socioeducativas e esportivas.",
+    "en": "Welcomes children and teenagers in social vulnerability, offering socio-educational and sports activities."
+  },
+  "categories": ["children_youth", "sports"],
+  "location": {
+    "country": "BR",
+    "countryName": "Brazil",
+    "state": "RS",
+    "stateName": "Rio Grande do Sul",
+    "city": "Porto Alegre",
+    "neighborhood": "Navegantes",
+    "address": "Rua Dona Paulina, 700",
+    "postalCode": "91920-030"
+  },
+  "contact": {
+    "website": "https://aldeiadafraternidade.org.br",
+    "email": "contato@aldeiadafraternidade.org.br",
+    "phone": "+55 51 3241-6650",
+    "social": {
+      "instagram": "aldeiadafraternidade",
+      "facebook": "aldeiadafraternidade"
+    }
+  },
+  "donations": {
+    "methods": [
+      {
+        "type": "money",
+        "pixKey": "08.842.887/0001-01",
+        "description": {
+          "pt": "Doação via PIX ou transferência bancária",
+          "en": "Donation via PIX or bank transfer"
+        }
+      },
+      {
+        "type": "volunteering",
+        "description": {
+          "pt": "Voluntariado em atividades com as crianças",
+          "en": "Volunteering in activities with children"
+        }
+      }
+    ],
+    "acceptsItems": true,
+    "itemTypes": ["clothes", "food", "toys"],
+    "acceptsVolunteers": true
+  },
+  "verified": true,
+  "dateAdded": "2024-11-18",
+  "lastUpdated": "2024-11-23"
+}
+```
+
+### 3.2 Categories Configuration
+
+**File**: `public/data/config/categories.json`
+
+**Active Categories** (5):
+
+| ID | Name (PT / EN) | Icon | Color | Description |
+|----|----------------|------|-------|-------------|
+| `children_youth` | Crianças e Jovens / Children & Youth | 👶 | #3B82F6 | Organizations serving children and youth in vulnerable situations |
+| `education` | Educação / Education | 📚 | #10B981 | Formal, complementary or vocational education |
+| `disability` | Pessoas com Deficiência / People with Disabilities | ♿ | #8B5CF6 | Physical, intellectual or multiple disabilities |
+| `sports` | Esporte / Sports | ⚽ | #F59E0B | Sports as social inclusion tool |
+| `social_vulnerability` | Vulnerabilidade Social / Social Vulnerability | 🤲 | #EF4444 | Socioeconomic vulnerability |
+
+**Future-Ready Categories** (12 more):
+animals, environment, health, culture, housing, elderly, women, indigenous, quilombola, refugees_migrants, food_security, human_rights
+
+**Category Structure**:
+```json
+{
+  "id": "children_youth",
+  "name": {
+    "pt": "Crianças e Jovens",
+    "en": "Children & Youth"
+  },
+  "icon": "👶",
+  "color": "#3B82F6",
+  "description": {
+    "pt": "Organizações que atendem crianças, adolescentes e jovens em situação de vulnerabilidade",
+    "en": "Organizations serving children, teenagers and youth in vulnerable situations"
+  },
+  "keywords": {
+    "pt": ["criança", "jovem", "adolescente", "infância", "juventude", "menor"],
+    "en": ["children", "youth", "teenager", "childhood", "adolescent", "minor"]
+  },
+  "relatedCategories": ["education", "sports"]  // Optional
+}
+```
+
+### 3.3 Donation Types Configuration
+
+**File**: `public/data/config/donation-types.json`
+
+**Active Types** (10):
+
+| ID | Name (PT / EN) | Icon | Category | Regional | Description |
+|----|----------------|------|----------|----------|-------------|
+| `money` | Dinheiro / Money | 💰 | financial | - | PIX, bank transfer, credit card |
+| `nota_fiscal_gaucha` | Nota Fiscal Gaúcha / Tax Receipt | 🧾 | tax_incentive | RS | Rio Grande do Sul tax receipt program |
+| `clothes` | Roupas / Clothes | 👔 | items | - | Clothing donation for distribution |
+| `food` | Alimentos / Non-Perishable Food | 🥫 | items | - | Rice, beans, pasta, canned goods |
+| `sports_incentive_laws` | Leis de Incentivo / Sports Laws | ⚽ | tax_incentive | - | Federal sports incentive laws |
+| `monthly_contribution` | Contribuição Mensal / Monthly | 🗓️ | financial | - | Recurring monthly donation |
+| `bottle_caps` | Tampinhas / Bottle Caps | 🔴 | items | - | Plastic caps for recycling |
+| `volunteering` | Voluntariado / Volunteering | 🤝 | time | - | Time and volunteer work |
+| `funcrianca` | Funcriança / Child Fund | 👶 | tax_incentive | RS | Child welfare fund (income tax allocation) |
+| `items` | Itens Diversos / Misc Items | 📦 | items | - | Other specific items (requires details) |
+
+**Donation Type Structure**:
+```json
+{
+  "id": "nota_fiscal_gaucha",
+  "name": {
+    "pt": "Nota Fiscal Gaúcha",
+    "en": "Tax Receipt Donation (RS)"
+  },
+  "icon": "🧾",
+  "category": "tax_incentive",
+  "regional": "RS",                // Optional: state-specific
+  "description": {
+    "pt": "Doação através do programa Nota Fiscal Gaúcha do governo do Rio Grande do Sul",
+    "en": "Donation through Rio Grande do Sul's Tax Receipt program"
+  },
+  "link": "https://www.sefaz.rs.gov.br/NFG/NFG-FPG.aspx",  // Optional
+  "requiresDetails": false         // Optional: needs custom description
+}
+```
+
+### 3.4 Location Hierarchy
+
+**File**: `public/data/locations.json`
+
+**Current Structure**:
+```json
+{
+  "countries": [
+    {
+      "code": "BR",
+      "name": {
+        "pt": "Brasil",
+        "en": "Brazil"
+      },
+      "states": [
+        {
+          "code": "RS",
+          "name": {
+            "pt": "Rio Grande do Sul",
+            "en": "Rio Grande do Sul"
+          },
+          "cities": [
+            "Porto Alegre",
+            "Canoas",
+            "Caxias do Sul",
+            "Pelotas"
+          ]
+        }
+      ]
+    }
+  ]
+}
+```
+
+**Design**: Expandable to other Brazilian states and eventually other countries.
+
+---
+
+## 4. Internationalization (i18n) System
+
+**File**: `public/js/i18n.js`
+
+### Translation Structure
+
+All UI strings are stored in a `TRANSLATIONS` object:
+
+```javascript
+const TRANSLATIONS = {
+  pt: {
+    'site.title': 'Let\'s Help It',
+    'site.tagline': 'Encontre ONGs para apoiar',
+    'nav.home': 'Início',
+    'filters.categories': 'Categorias',
+    // ... 100+ keys
+  },
+  en: {
+    'site.title': 'Let\'s Help It',
+    'site.tagline': 'Find NGOs to Support',
+    'nav.home': 'Home',
+    'filters.categories': 'Categories',
+    // ... 100+ keys
+  }
+}
+```
+
+### Key Naming Convention
+
+Format: `namespace.item`
+
+Examples:
+- `nav.home` - Navigation items
+- `org.location` - Organization details
+- `filters.categories` - Filter section
+- `modal.about` - Modal content
+- `error.title` - Error messages
+
+### i18n API
+
+```javascript
+// Get current language
+i18n.getLang()  // 'pt' or 'en'
+
+// Translate a key
+i18n.t('site.title')  // "Let's Help It"
+
+// Translate with fallback
+i18n.tWithFallback({pt: "Texto", en: "Text"})  // Returns based on current lang
+
+// Change language
+i18n.setLang('en')  // Switches to English, updates DOM, saves to localStorage
+
+// Toggle language
+i18n.toggleLang()  // PT → EN or EN → PT
+
+// Listen to language changes
+i18n.onLanguageChange((newLang) => {
+  console.log('Language changed to:', newLang)
+})
+```
+
+### Bilingual Data Objects
+
+Organization data uses this pattern:
+
+```javascript
+{
+  "about": {
+    "pt": "Descrição em português",
+    "en": "Description in English"
+  }
+}
+```
+
+Rendering:
+```javascript
+const aboutText = i18n.tWithFallback(org.about)
+// Returns org.about.pt if lang is 'pt'
+// Returns org.about.en if lang is 'en' and exists
+// Falls back to org.about.pt if en doesn't exist
+```
+
+### Language Persistence
+
+- User preference saved to `localStorage.letshelpit_lang`
+- Persists across sessions
+- Default: Portuguese (PT-BR)
+- HTML `lang` attribute updated on change
+
+---
+
+## 5. Key Code Patterns
+
+### Filter Logic
+
+**Categories & Donation Types** (OR logic):
+```javascript
+// Match organizations that have ANY of the selected categories
+if (filters.categories?.length > 0) {
+  orgs = orgs.filter(org =>
+    filters.categories.some(cat => org.categories.includes(cat))
+  )
+}
+```
+
+**Location Filters** (AND logic):
+```javascript
+// Match organizations that match ALL location filters
+if (filters.country) {
+  orgs = orgs.filter(org => org.location.country === filters.country)
+}
+if (filters.state) {
+  orgs = orgs.filter(org => org.location.state === filters.state)
+}
+if (filters.city) {
+  orgs = orgs.filter(org => org.location.city === filters.city)
+}
+```
+
+**Default**: Only show organizations with `status: "active"`
+
+### Data Loading Pattern
+
+```javascript
+// JSONProvider initialization (parallel loading)
+async init() {
+  const [orgsData, catsData, typesData, locsData] = await Promise.all([
+    fetch('/data/organizations/br-rs.json').then(r => r.json()),
+    fetch('/data/config/categories.json').then(r => r.json()),
+    fetch('/data/config/donation-types.json').then(r => r.json()),
+    fetch('/data/locations.json').then(r => r.json())
+  ])
+
+  this.data = {
+    organizations: orgsData,
+    categories: catsData,
+    donationTypes: typesData,
+    locations: locsData
+  }
+  this._ready = true
+}
+```
+
+### Search Implementation
+
+```javascript
+async searchOrganizations(query, lang = 'pt') {
+  const lowerQuery = query.toLowerCase()
+  return this.data.organizations.organizations.filter(org => {
+    // Search in name
+    if (org.name.toLowerCase().includes(lowerQuery)) return true
+
+    // Search in description
+    const about = org.about[lang] || org.about.pt || ''
+    if (about.toLowerCase().includes(lowerQuery)) return true
+
+    // Search in tags
+    if (org.tags?.some(tag => tag.includes(lowerQuery))) return true
+
+    return false
+  })
+}
+```
+
+---
+
+## 6. How to Add Organizations
+
+**Complete Checklist** (from `.claude/CLAUDE.md`):
+
+### Step 1: Add to JSON
+
+Edit `public/data/organizations/br-rs.json`:
+
+1. ✅ Follow schema from `organization.schema.json`
+2. ✅ Use unique ID in slug format: `^[a-z0-9]+(?:-[a-z0-9]+)*$`
+3. ✅ Fill all required fields
+4. ✅ Include PT and EN translations for `about` field
+5. ✅ Add at least 1 donation method
+6. ✅ Set `verified: true` only after manual verification
+7. ✅ Use current date for `dateAdded` and `lastUpdated`
+
+### Step 2: Update Markdown Documentation
+
+Edit `docs/br-rs.md`:
+
+```markdown
+### Organization Name
+
+  - Sobre: Description of the organization and its mission.
+  - Endereço: Street Address, 123, Neighborhood, City/State - ZIP
+  - Site: [example.org](https://example.org)
+  - Instagram: [@example_org](https://www.instagram.com/example_org/)
+  - E-mail: contact@example.org
+  - Telefone: +55 XX XXXX-XXXX
+  - CNPJ: XX.XXX.XXX/XXXX-XX
+  - Como doar? PIX, bank transfer, volunteering
+```
+
+### Step 3: Validate
+
+```bash
+# Validate JSON syntax
+python3 -m json.tool public/data/organizations/br-rs.json > /dev/null
+
+# Run tests
+npm test
+
+# Run linter
+npm run lint
+
+# All-in-one validation
+npm run validate
+```
+
+### Step 4: Commit
+
+```bash
+# Create feature branch
+git checkout -b feat/add-org-name
+
+# Stage files
+git add public/data/organizations/br-rs.json docs/br-rs.md
+
+# Commit (Conventional Commits format)
+git commit -m "feat: add Organization Name
+
+- Add complete data for Organization Name
+- Update documentation in docs/br-rs.md
+- Closes #123"
+
+# Push and open PR
+git push origin feat/add-org-name
+```
+
+### Common Mistakes to Avoid
+
+❌ **DON'T**: Forget to update `docs/br-rs.md`
+✅ **DO**: Always update both JSON and MD files
+
+❌ **DON'T**: Use uppercase or spaces in ID
+✅ **DO**: Use lowercase slug format: `example-org-name`
+
+❌ **DON'T**: Skip English translation
+✅ **DO**: Provide both PT and EN for `about` field
+
+❌ **DON'T**: Commit without validating
+✅ **DO**: Run `npm run validate` before commit
+
+❌ **DON'T**: Use invalid CNPJ format
+✅ **DO**: Format as XX.XXX.XXX/XXXX-XX
+
+---
+
+## 7. Development Workflow
+
+### Local Development
+
+```bash
+# Start local server (no npm install needed!)
+npm run dev
+
+# Or use npx directly
+npx http-server public -p 8000 -o
+```
+
+### Testing Strategy
+
+**Framework**: Jest
+**Minimum Coverage**: 80%
+**Current Status**: 27 tests passing
+
+```bash
+# Run all tests
+npm test
+
+# Watch mode (useful during development)
+npm run test:watch
+
+# Generate coverage report
+npm run test:coverage
+```
+
+**Test Files**:
+- `public/js/__tests__/config.test.js` - 13 configuration tests
+- `public/js/__tests__/i18n.test.js` - 14 internationalization tests
+
+### Linting
+
+**Tool**: ESLint v9
+**Config**: `eslint.config.mjs`
+
+**Rules**:
+- Indentation: 2 spaces
+- Quotes: Single quotes
+- Semicolons: Not used
+- Line breaks: Unix (LF)
+- Max line length: 100 characters
+
+```bash
+# Check for issues
+npm run lint
+
+# Auto-fix issues
+npm run lint:fix
+```
+
+### Conventional Commits
+
+Format: `type(scope): description`
+
+**Types**:
+- `feat:` - New feature
+- `fix:` - Bug fix
+- `docs:` - Documentation only
+- `test:` - Adding or fixing tests
+- `chore:` - Maintenance tasks
+- `refactor:` - Code restructuring
+- `style:` - Formatting changes
+
+**Examples**:
+```
+feat: add dark mode support
+fix: breadcrumb navigation in mobile
+docs: update contributing guide
+test: add tests for filter logic
+```
+
+### CI/CD Pipeline
+
+**Workflows** (`.github/workflows/`):
+
+1. **deploy.yml** - Deploys to GitHub Pages on push to `main`
+2. **pr-validation.yml** - Runs lint + tests on PRs
+
+**Pull Request Requirements**:
+- ✅ All tests pass
+- ✅ No lint errors
+- ✅ JSON syntax valid
+- ✅ Conventional commit format
+- ✅ Issue linked (closes #X)
+
+---
+
+## 8. Quality Standards
+
+### Test Coverage
+
+**Minimum Required**: 80%
+**Measured On**:
+- Branches
+- Functions
+- Lines
+- Statements
+
+**View Report**:
+```bash
+npm run test:coverage
+open coverage/index.html
+```
+
+### Accessibility (WCAG 2.1 AA)
+
+**Requirements**:
+- ✅ Keyboard navigation (Tab, Enter, Esc)
+- ✅ Skip links to main content
+- ✅ Focus indicators (3px blue outline)
+- ✅ ARIA labels and roles
+- ✅ Screen reader support (NVDA, JAWS, VoiceOver)
+- ✅ Color contrast ≥ 4.5:1
+- ✅ Touch targets ≥ 44x44px
+- ✅ Respects `prefers-reduced-motion`
+
+**Testing**:
+- Lighthouse Accessibility Score ≥ 90
+- axe DevTools (zero violations)
+- Manual keyboard testing
+- Screen reader testing
+
+### Performance Targets
+
+- First Contentful Paint < 1.5s
+- Time to Interactive < 3.5s
+- Lighthouse Performance Score ≥ 90
+
+### Code Review Process
+
+1. Automated checks run (GitHub Actions)
+2. Manual review by maintainer
+3. Feedback provided via PR comments
+4. Changes implemented by contributor
+5. Approval required before merge
+6. Automatic deploy to production
+
+---
+
+## 9. Project Governance
+
+### Maintainer
+
+**Daniel Wildt** ([@dwildt](https://github.com/dwildt))
+- YouTube: [@danielwildt](https://youtube.com/@danielwildt)
+- Active in Brazilian tech communities since 2002
+
+### Contribution Types
+
+1. **Add NGOs** - Submit via issue template
+2. **Fix bugs** - Open PR with test coverage
+3. **Improve docs** - Documentation is code
+4. **Financial support** - GitHub Sponsors, Apoia.se, Patreon
+
+### Decision Making
+
+- Major features discussed via issues
+- Maintainer approval required for PRs
+- Breaking changes require RFC
+- Community input welcomed
+
+---
+
+## 10. Historical Context
+
+**2002-2015**: Original Ruby on Rails platform on Heroku
+**2015**: Deactivated due to bot fraud attacks
+**May 2024**: Reactivated during RS floods as static site
+**Nov 2024**: Rebuilt with modern vanilla JavaScript
+**Present**: Production-ready with 9 verified NGOs
+
+**Why Rebuild?**
+- Eliminate server costs and complexity
+- Prevent bot attacks (static site = no forms)
+- Improve security (zero backend = smaller attack surface)
+- Enhance performance (static = instant load)
+- Enable easy contributions (JSON files)
+
+---
+
+## 11. Future Roadmap
+
+**Completed** ✅:
+- Provider pattern architecture
+- JSONProvider implementation
+- i18n system
+- WCAG 2.1 AA compliance
+- Dark mode
+- Test coverage >80%
+- CI/CD pipeline
+
+**In Progress** 🔄:
+- Expanding to more cities in RS
+- SEO optimization (robots.txt, sitemap.xml, llms.txt)
+
+**Planned** 📅:
+- SQLite provider activation (for 100+ orgs)
+- Expansion to other Brazilian states
+- Organization rating system
+- Mobile app (PWA)
+- API for external integrations
+
+---
+
+## 12. Related Resources
+
+### Documentation
+
+- **Main README**: [README.md](../README.md)
+- **Contributing Guide**: [CONTRIBUTING.md](../CONTRIBUTING.md)
+- **Provider Architecture**: [specs/data-providers.md](../specs/data-providers.md)
+- **Accessibility**: [docs/ACCESSIBILITY.md](../docs/ACCESSIBILITY.md)
+- **Implementation Plan**: [specs/implementation-plan.md](../specs/implementation-plan.md)
+- **NGO Registry**: [docs/br-rs.md](../docs/br-rs.md)
+
+### Key Files
+
+- Schema: `public/data/schema/organization.schema.json`
+- Organizations: `public/data/organizations/br-rs.json`
+- Categories: `public/data/config/categories.json`
+- Donation Types: `public/data/config/donation-types.json`
+- Locations: `public/data/locations.json`
+
+### External Links
+
+- **Live Site**: https://dwildt.github.io/letshelpit
+- **GitHub Repo**: https://github.com/dwildt/letshelpit
+- **Issues**: https://github.com/dwildt/letshelpit/issues
+- **License**: Apache 2.0
+
+---
+
+## 13. Quick Reference
+
+### Most Common Tasks
+
+**Add an organization**:
+1. Edit `public/data/organizations/br-rs.json`
+2. Edit `docs/br-rs.md`
+3. Validate: `npm run validate`
+4. Commit: `git commit -m "feat: add Org Name"`
+
+**Run locally**:
+```bash
+npm run dev
+```
+
+**Before committing**:
+```bash
+npm run validate  # Runs lint + tests
+```
+
+**Validate JSON**:
+```bash
+python3 -m json.tool public/data/organizations/br-rs.json
+```
+
+### Critical Rules
+
+1. **Always** update both JSON and MD files when adding/editing NGOs
+2. **Never** commit without running `npm run validate`
+3. **Always** include PT and EN translations
+4. **Never** use uppercase or spaces in organization IDs
+5. **Always** follow JSON schema exactly
+
+---
+
+**Document Version**: 1.0
+**Last Updated**: 2025-11-26
+**Maintained By**: Let's Help It Contributors
+
+For questions or improvements to this document, open an issue at:
+https://github.com/dwildt/letshelpit/issues

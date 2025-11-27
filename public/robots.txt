@@ -1,0 +1,32 @@
+# robots.txt for Let's Help It
+# https://dwildt.github.io/letshelpit/
+
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Disallow coverage reports (dev only)
+Disallow: /coverage/
+
+# Disallow node_modules (should not be in production anyway)
+Disallow: /node_modules/
+
+# Sitemap location
+Sitemap: https://dwildt.github.io/letshelpit/sitemap.xml
+
+# LLM Context File
+# This file helps Large Language Models understand the project
+Allow: /llms.txt
+
+# Crawl-delay (be nice to servers)
+# Crawl-delay: 1
+
+# Specific bot rules (optional, uncomment if needed)
+# User-agent: Googlebot
+# Allow: /
+
+# User-agent: Bingbot
+# Allow: /
+
+# User-agent: Slurp
+# Allow: /

@@ -3,14 +3,231 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Let's Help It - Encontre ONGs para apoiar com doações e voluntariado">
-  <meta name="keywords" content="ONG, doações, voluntariado, Rio Grande do Sul, Brasil, NGO, donations">
-  <meta name="author" content="Daniel Wildt">
 
-  <title>Let's Help It - Encontre ONGs para Apoiar</title>
+  <!-- SEO Meta Tags -->
+  <title>Let's Help It - Encontre ONGs para Apoiar | Doações e Voluntariado no RS</title>
+  <meta name="description" content="Plataforma open source para conectar pessoas a ONGs no Rio Grande do Sul. Encontre organizações verificadas, compare formas de doação (PIX, voluntariado, roupas) e faça a diferença. Bilíngue PT/EN.">
+  <meta name="keywords" content="ONG, doações, voluntariado, Rio Grande do Sul, Porto Alegre, Brasil, NGO, donations, volunteering, charity, PIX, crianças, educação, esporte, deficiência">
+  <meta name="author" content="Daniel Wildt">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="Portuguese, English">
+  <meta name="revisit-after" content="7 days">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://dwildt.github.io/letshelpit/">
+
+  <!-- Alternate Languages -->
+  <link rel="alternate" hreflang="pt-BR" href="https://dwildt.github.io/letshelpit/?lang=pt">
+  <link rel="alternate" hreflang="en" href="https://dwildt.github.io/letshelpit/?lang=en">
+  <link rel="alternate" hreflang="x-default" href="https://dwildt.github.io/letshelpit/">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://dwildt.github.io/letshelpit/">
+  <meta property="og:title" content="Let's Help It - Encontre ONGs para Apoiar">
+  <meta property="og:description" content="Conecte-se com ONGs verificadas no Rio Grande do Sul. Descubra formas de doar (PIX, voluntariado, roupas, alimentos) e apoie causas sociais. Plataforma gratuita e bilíngue.">
+  <meta property="og:image" content="https://dwildt.github.io/letshelpit/images/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Let's Help It - Conectando pessoas a ONGs">
+  <meta property="og:site_name" content="Let's Help It">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:locale:alternate" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://dwildt.github.io/letshelpit/">
+  <meta name="twitter:title" content="Let's Help It - Encontre ONGs para Apoiar">
+  <meta name="twitter:description" content="Conecte-se com ONGs verificadas no RS. Descubra formas de doar e apoie causas sociais. Plataforma gratuita e bilíngue.">
+  <meta name="twitter:image" content="https://dwildt.github.io/letshelpit/images/twitter-card.png">
+  <meta name="twitter:image:alt" content="Let's Help It - Conectando pessoas a ONGs">
+  <meta name="twitter:creator" content="@danielwildt">
+  <meta name="twitter:site" content="@danielwildt">
 
   <!-- Favicon (placeholder) -->
   <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+  <!-- Schema.org Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Let's Help It",
+    "alternateName": ["Vamos Ajudar", "Let Us Help"],
+    "url": "https://dwildt.github.io/letshelpit/",
+    "description": "Plataforma open source para conectar pessoas a ONGs no Rio Grande do Sul",
+    "inLanguage": ["pt-BR", "en"],
+    "author": {
+      "@type": "Person",
+      "name": "Daniel Wildt",
+      "url": "https://github.com/dwildt"
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Daniel Wildt",
+      "url": "https://github.com/dwildt"
+    },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://dwildt.github.io/letshelpit/?search={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "ONGs Cadastradas no Let's Help It",
+    "description": "Lista de organizações não governamentais verificadas no Rio Grande do Sul",
+    "numberOfItems": 9,
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "NGO",
+          "name": "Instituto Ação Compassiva",
+          "url": "https://www.acaocompassiva.com.br/",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "R. Frederico Mentz, 1185",
+            "addressLocality": "Porto Alegre",
+            "addressRegion": "RS",
+            "postalCode": "90240-110",
+            "addressCountry": "BR"
+          },
+          "areaServed": "Porto Alegre, RS",
+          "description": "Gera ações compassivas em rede através do projeto Basquete Compaixão"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "NGO",
+          "name": "Aldeia da Fraternidade",
+          "url": "https://aldeiadafraternidade.org.br",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Rua Dona Paulina, 700",
+            "addressLocality": "Porto Alegre",
+            "addressRegion": "RS",
+            "postalCode": "91920-030",
+            "addressCountry": "BR"
+          },
+          "description": "Educação e assistência de crianças e jovens"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "NGO",
+          "name": "Fundação Tênis",
+          "url": "https://fundacaotenis.org.br/",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Tv. São José, 455",
+            "addressLocality": "Porto Alegre",
+            "addressRegion": "RS",
+            "addressCountry": "BR"
+          },
+          "description": "Programa social e educativo através do Esporte e Educação Olímpica"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "item": {
+          "@type": "NGO",
+          "name": "Kinder",
+          "url": "https://www.instagram.com/kindercriancaespecial/",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Rua Marcone, 421",
+            "addressLocality": "Porto Alegre",
+            "addressRegion": "RS",
+            "addressCountry": "BR"
+          },
+          "description": "Centro de Integração da Criança Especial"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "item": {
+          "@type": "NGO",
+          "name": "WimBelemDon",
+          "url": "https://www.wimbelemdon.com.br/",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Av. Heitor Viêira 68",
+            "addressLocality": "Porto Alegre",
+            "addressRegion": "RS",
+            "addressCountry": "BR"
+          },
+          "description": "Transformação social através do esporte para crianças e adolescentes"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 6,
+        "item": {
+          "@type": "NGO",
+          "name": "Fundação Pão dos Pobres",
+          "url": "https://www.paodospobres.org.br",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Rua da República, 801",
+            "addressLocality": "Porto Alegre",
+            "addressRegion": "RS",
+            "postalCode": "90050-321",
+            "addressCountry": "BR"
+          },
+          "description": "Desde 1895 promovendo desenvolvimento integral de crianças e adolescentes"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 7,
+        "item": {
+          "@type": "NGO",
+          "name": "VIAVIDA Pró-Doações e Transplantes",
+          "url": "https://www.viavida.org.br",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Av. Taquara, 579",
+            "addressLocality": "Porto Alegre",
+            "addressRegion": "RS",
+            "postalCode": "90460-210",
+            "addressCountry": "BR"
+          },
+          "description": "Promove doação de órgãos e oferece hospedagem gratuita através da Pousada Solidariedade"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 8,
+        "item": {
+          "@type": "NGO",
+          "name": "Instituto do Câncer Infantil",
+          "url": "https://ici.ong",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Rua São Manoel, 850",
+            "addressLocality": "Porto Alegre",
+            "addressRegion": "RS",
+            "postalCode": "90620-110",
+            "addressCountry": "BR"
+          },
+          "description": "Combate ao câncer infantojuvenil desde 1990"
+        }
+      }
+    ]
+  }
+  </script>
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
