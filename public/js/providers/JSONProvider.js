@@ -259,14 +259,62 @@ class JSONProvider extends DataProvider {
       byCity[city] = (byCity[city] || 0) + 1
     })
 
+    // Count by donation methods
+    const byDonationMethod = {}
+    activeOrgs.forEach(org => {
+      org.donations.methods.forEach(method => {
+        byDonationMethod[method.type] = (byDonationMethod[method.type] || 0) + 1
+      })
+    })
+
+    // Count by organization type
+    const byType = {}
+    activeOrgs.forEach(org => {
+      byType[org.type] = (byType[org.type] || 0) + 1
+    })
+
+    // Count organizations accepting items
+    const acceptsItems = activeOrgs.filter(org => org.donations.acceptsItems).length
+    const acceptsVolunteers = activeOrgs.filter(org => org.donations.acceptsVolunteers).length
+
+    // Get unique cities count
+    const uniqueCities = new Set(activeOrgs.map(org => org.location.city).filter(Boolean))
+    const uniqueStates = new Set(activeOrgs.map(org => org.location.state).filter(Boolean))
+
+    // Find latest added organization
+    const sortedByDate = [...activeOrgs].sort((a, b) =>
+      new Date(b.dateAdded) - new Date(a.dateAdded)
+    )
+    const latestOrg = sortedByDate[0]
+
+    // Growth over time (if we have date information)
+    const orgsByMonth = {}
+    activeOrgs.forEach(org => {
+      if (org.dateAdded) {
+        const month = org.dateAdded.substring(0, 7) // YYYY-MM
+        orgsByMonth[month] = (orgsByMonth[month] || 0) + 1
+      }
+    })
+
     return {
       totalOrganizations: orgs.length,
       activeOrganizations: activeOrgs.length,
       byCategory,
       byState,
       byCity,
+      byDonationMethod,
+      byType,
+      acceptsItems,
+      acceptsVolunteers,
+      uniqueCitiesCount: uniqueCities.size,
+      uniqueStatesCount: uniqueStates.size,
       totalCategories: this.data.categories.categories.length,
-      totalDonationTypes: this.data.donationTypes.donation_types.length
+      totalDonationTypes: this.data.donationTypes.donation_types.length,
+      latestOrganization: latestOrg ? {
+        name: latestOrg.name,
+        dateAdded: latestOrg.dateAdded
+      } : null,
+      orgsByMonth
     }
   }
 

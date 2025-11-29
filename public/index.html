@@ -270,7 +270,7 @@
             </div>
           </div>
 
-          <!-- Mobile: Filters + Theme + Language -->
+          <!-- Mobile: Filters + Stats + Theme + Language -->
           <div class="flex md:hidden items-center gap-2">
             <button
               id="filters-btn-mobile"
@@ -282,6 +282,12 @@
               <span data-i18n="filters.button">Filtros</span>
               <span id="filters-count-mobile" class="hidden px-2 py-0.5 bg-white text-primary rounded-full text-xs font-bold"></span>
             </button>
+            <a
+              href="statistics.html"
+              class="px-3 py-2 rounded-lg bg-gray-100 hover:bg-gray-200 text-2xl transition hover:scale-110"
+              aria-label="View statistics">
+              📊
+            </a>
             <button
               id="theme-toggle-mobile"
               class="px-3 py-2 rounded-lg bg-gray-100 hover:bg-gray-200 text-2xl transition hover:scale-110 theme-toggle"
@@ -328,6 +334,16 @@
             <span data-i18n="filters.button">Filtros</span>
             <span id="filters-count" class="hidden px-2 py-0.5 bg-white text-primary rounded-full text-xs font-bold"></span>
           </button>
+
+          <!-- Desktop: Statistics Button -->
+          <a
+            href="statistics.html"
+            class="hidden md:flex items-center gap-2 px-4 py-2 rounded-lg bg-gray-100 hover:bg-gray-200 transition"
+            aria-label="View statistics"
+            title="View statistics">
+            <span class="text-lg">📊</span>
+            <span data-i18n="nav.statistics">Estatísticas</span>
+          </a>
 
           <!-- Desktop: Theme Toggle -->
           <button

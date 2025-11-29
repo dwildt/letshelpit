@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO Meta Tags -->
+  <title>Estatísticas - Let's Help It | Dashboard de ONGs do RS</title>
+  <meta name="description" content="Dashboard de estatísticas das organizações cadastradas no Let's Help It. Veja dados sobre ONGs no Rio Grande do Sul por categoria, localização e métodos de doação.">
+  <meta name="keywords" content="estatísticas, ONGs, Rio Grande do Sul, dashboard, dados, doações, voluntariado">
+  <meta name="author" content="Daniel Wildt">
+  <meta name="robots" content="index, follow">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://dwildt.github.io/letshelpit/statistics.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://dwildt.github.io/letshelpit/statistics.html">
+  <meta property="og:title" content="Estatísticas - Let's Help It">
+  <meta property="og:description" content="Dashboard de estatísticas das organizações cadastradas no Let's Help It.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/statistics.css">
+
+  <style>
+    .bg-primary { background-color: var(--color-primary); }
+    .text-primary { color: var(--text-primary); }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+  <!-- Skip Links -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Header -->
+  <header class="bg-white shadow-md sticky top-0 z-50" role="banner">
+    <div class="container mx-auto px-4 py-4">
+      <div class="flex justify-between items-center">
+        <!-- Logo & Title -->
+        <a href="index.html" class="flex items-center space-x-3 hover:opacity-80 transition">
+          <div class="text-3xl">🤝</div>
+          <div>
+            <h1 class="text-2xl font-bold text-gray-800" data-i18n="site.title">Let's Help It</h1>
+            <p class="text-sm text-gray-600" data-i18n="statistics.subtitle">Estatísticas</p>
+          </div>
+        </a>
+
+        <!-- Actions -->
+        <div class="flex items-center gap-2">
+          <a
+            href="index.html"
+            class="px-4 py-2 rounded-lg bg-gray-100 hover:bg-gray-200 transition text-sm font-medium"
+            data-i18n="nav.home">
+            ← Voltar
+          </a>
+          <button
+            id="theme-toggle"
+            class="px-3 py-2 rounded-lg bg-gray-100 hover:bg-gray-200 text-2xl transition hover:scale-110"
+            onclick="toggleTheme()"
+            aria-label="Toggle theme">
+            <span id="theme-icon">☀️</span>
+          </button>
+          <button
+            id="lang-toggle"
+            class="px-3 py-2 rounded-lg bg-gray-100 hover:bg-gray-200 text-2xl transition hover:scale-110"
+            onclick="toggleLanguage()"
+            aria-label="Toggle language">
+            <span id="lang-flag">🇧🇷</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content" class="flex-1 statistics-container" role="main">
+
+    <!-- Loading State -->
+    <div id="loading-state" class="loading-container">
+      <div class="loading-spinner"></div>
+      <p class="loading-text" data-i18n="statistics.loading">Carregando estatísticas...</p>
+    </div>
+
+    <!-- Error State -->
+    <div id="error-state" class="error-container hidden">
+      <p data-i18n="statistics.error">Erro ao carregar estatísticas. Por favor, tente novamente.</p>
+    </div>
+
+    <!-- Statistics Content -->
+    <div id="statistics-content" class="hidden">
+
+      <!-- Header -->
+      <div class="statistics-header">
+        <h2 class="statistics-title" data-i18n="statistics.title">📊 Estatísticas</h2>
+        <p class="statistics-subtitle" data-i18n="statistics.description">
+          Dados agregados sobre as organizações cadastradas no Let's Help It
+        </p>
+      </div>
+
+      <!-- Overview Cards -->
+      <div class="stat-cards-grid" id="overview-cards">
+        <!-- Populated by JavaScript -->
+      </div>
+
+      <!-- Charts Section: Categories -->
+      <section class="chart-section">
+        <h3 class="chart-section-title" data-i18n="statistics.byCategory">📂 Distribuição por Categoria</h3>
+        <div class="chart-grid">
+          <div class="chart-card">
+            <h4 class="chart-title" data-i18n="statistics.categoryPie">Categorias (Pizza)</h4>
+            <canvas id="chart-category-pie" class="chart-canvas"></canvas>
+          </div>
+          <div class="chart-card">
+            <h4 class="chart-title" data-i18n="statistics.categoryBar">Top 10 Categorias (Barras)</h4>
+            <canvas id="chart-category-bar" class="chart-canvas"></canvas>
+          </div>
+        </div>
+      </section>
+
+      <!-- Charts Section: Location -->
+      <section class="chart-section">
+        <h3 class="chart-section-title" data-i18n="statistics.byLocation">📍 Distribuição por Localização</h3>
+        <div class="chart-grid">
+          <div class="chart-card">
+            <h4 class="chart-title" data-i18n="statistics.citiesBar">Top 10 Cidades</h4>
+            <canvas id="chart-cities-bar" class="chart-canvas"></canvas>
+          </div>
+          <div class="chart-card">
+            <h4 class="chart-title" data-i18n="statistics.statesBar">Distribuição por Estado</h4>
+            <canvas id="chart-states-bar" class="chart-canvas"></canvas>
+          </div>
+        </div>
+      </section>
+
+      <!-- Charts Section: Donation Methods -->
+      <section class="chart-section">
+        <h3 class="chart-section-title" data-i18n="statistics.byDonation">💰 Métodos de Doação</h3>
+        <div class="chart-grid">
+          <div class="chart-card">
+            <h4 class="chart-title" data-i18n="statistics.donationBar">Métodos Mais Aceitos</h4>
+            <canvas id="chart-donation-bar" class="chart-canvas"></canvas>
+          </div>
+          <div class="chart-card">
+            <h4 class="chart-title" data-i18n="statistics.donationPie">Distribuição de Métodos</h4>
+            <canvas id="chart-donation-pie" class="chart-canvas"></canvas>
+          </div>
+        </div>
+      </section>
+
+      <!-- Growth Chart -->
+      <section class="chart-section">
+        <h3 class="chart-section-title" data-i18n="statistics.growth">📈 Crescimento ao Longo do Tempo</h3>
+        <div class="full-width-chart chart-card">
+          <h4 class="chart-title" data-i18n="statistics.growthLine">Cadastros por Mês</h4>
+          <canvas id="chart-growth-line" class="chart-canvas" style="height: 350px;"></canvas>
+        </div>
+      </section>
+
+      <!-- Tables Section -->
+      <section class="chart-section">
+        <h3 class="chart-section-title" data-i18n="statistics.details">📋 Detalhes</h3>
+
+        <div class="chart-grid">
+          <!-- Top Cities Table -->
+          <div class="chart-card">
+            <h4 class="chart-title" data-i18n="statistics.topCities">Top 10 Cidades</h4>
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th data-i18n="statistics.city">Cidade</th>
+                  <th data-i18n="statistics.organizations">ONGs</th>
+                </tr>
+              </thead>
+              <tbody id="table-cities-body">
+                <!-- Populated by JavaScript -->
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Top Categories Table -->
+          <div class="chart-card">
+            <h4 class="chart-title" data-i18n="statistics.topCategories">Top 10 Categorias</h4>
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th data-i18n="statistics.category">Categoria</th>
+                  <th data-i18n="statistics.organizations">ONGs</th>
+                </tr>
+              </thead>
+              <tbody id="table-categories-body">
+                <!-- Populated by JavaScript -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-8 mt-auto" role="contentinfo">
+    <div class="container mx-auto px-4 text-center">
+      <p class="text-sm">
+        <span data-i18n="footer.madeWith">Feito com</span> ❤️
+        <span data-i18n="footer.by">por</span>
+        <a href="https://github.com/dwildt" class="text-blue-400 hover:text-blue-300 underline" target="_blank" rel="noopener">Daniel Wildt</a>
+      </p>
+      <p class="text-xs text-gray-400 mt-2">
+        <a href="index.html" class="hover:text-gray-300" data-i18n="nav.home">← Voltar para Home</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/theme.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/providers/DataProvider.js"></script>
+  <script src="js/providers/JSONProvider.js"></script>
+  <script src="js/providers/SQLiteProvider.js"></script>
+  <script src="js/statisticsCharts.js"></script>
+
+  <!-- Statistics App Script -->
+  <script>
+    let dataProvider = null
+    let currentLang = 'pt'
+
+    // Initialize
+    async function initStatistics() {
+      try {
+        // Initialize theme
+        if (window.themeManager) {
+          themeManager.init()
+        }
+
+        // Initialize i18n
+        if (window.i18n) {
+          currentLang = i18n.getCurrentLanguage()
+        }
+
+        // Initialize data provider
+        dataProvider = new JSONProvider()
+        await dataProvider.init()
+
+        // Load statistics
+        await loadStatistics()
+
+        // Hide loading, show content
+        document.getElementById('loading-state').classList.add('hidden')
+        document.getElementById('statistics-content').classList.remove('hidden')
+
+      } catch (error) {
+        console.error('Error initializing statistics:', error)
+        document.getElementById('loading-state').classList.add('hidden')
+        document.getElementById('error-state').classList.remove('hidden')
+      }
+    }
+
+    // Load and render statistics
+    async function loadStatistics() {
+      const stats = await dataProvider.getStatistics()
+      const categories = await dataProvider.getCategories()
+      const donationTypes = await dataProvider.getDonationTypes()
+
+      // Render overview cards
+      renderOverviewCards(stats)
+
+      // Render charts
+      renderCategoryCharts(stats, categories)
+      renderLocationCharts(stats)
+      renderDonationCharts(stats, donationTypes)
+      renderGrowthChart(stats)
+
+      // Render tables
+      renderTables(stats, categories)
+    }
+
+    // Render overview cards
+    function renderOverviewCards(stats) {
+      const container = document.getElementById('overview-cards')
+      container.innerHTML = `
+        <div class="stat-card">
+          <div class="stat-icon">🏢</div>
+          <div class="stat-value">${stats.activeOrganizations}</div>
+          <div class="stat-label" data-i18n="statistics.totalOrgs">ONGs Ativas</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">📍</div>
+          <div class="stat-value">${stats.uniqueCitiesCount}</div>
+          <div class="stat-label" data-i18n="statistics.totalCities">Cidades</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">📂</div>
+          <div class="stat-value">${Object.keys(stats.byCategory).length}</div>
+          <div class="stat-label" data-i18n="statistics.totalCategories">Categorias</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">💰</div>
+          <div class="stat-value">${Object.keys(stats.byDonationMethod).length}</div>
+          <div class="stat-label" data-i18n="statistics.donationMethods">Métodos de Doação</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">📦</div>
+          <div class="stat-value">${stats.acceptsItems}</div>
+          <div class="stat-label" data-i18n="statistics.acceptItems">Aceitam Itens</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">🙋</div>
+          <div class="stat-value">${stats.acceptsVolunteers}</div>
+          <div class="stat-label" data-i18n="statistics.acceptVolunteers">Aceitam Voluntários</div>
+        </div>
+      `
+
+      // Re-translate if i18n is available
+      if (window.i18n) {
+        i18n.translatePage()
+      }
+    }
+
+    // Render category charts
+    function renderCategoryCharts(stats, categories) {
+      const categoryNames = {}
+      categories.forEach(cat => {
+        categoryNames[cat.id] = cat.name[currentLang] || cat.name.pt
+      })
+
+      const categoryData = {}
+      Object.entries(stats.byCategory).forEach(([catId, count]) => {
+        categoryData[categoryNames[catId] || catId] = count
+      })
+
+      // Pie chart
+      const pieCanvas = document.getElementById('chart-category-pie')
+      drawPieChart(pieCanvas, categoryData, {
+        showLegend: true,
+        showPercentages: true
+      })
+
+      // Bar chart
+      const barCanvas = document.getElementById('chart-category-bar')
+      drawBarChart(barCanvas, categoryData, {
+        maxBars: 10
+      })
+    }
+
+    // Render location charts
+    function renderLocationCharts(stats) {
+      // Cities bar chart
+      const citiesCanvas = document.getElementById('chart-cities-bar')
+      drawBarChart(citiesCanvas, stats.byCity, {
+        maxBars: 10,
+        color: '#10b981'
+      })
+
+      // States bar chart
+      const statesCanvas = document.getElementById('chart-states-bar')
+      drawBarChart(statesCanvas, stats.byState, {
+        maxBars: 10,
+        color: '#8b5cf6'
+      })
+    }
+
+    // Render donation charts
+    function renderDonationCharts(stats, donationTypes) {
+      const donationNames = {}
+      donationTypes.forEach(type => {
+        donationNames[type.id] = type.name[currentLang] || type.name.pt
+      })
+
+      const donationData = {}
+      Object.entries(stats.byDonationMethod).forEach(([typeId, count]) => {
+        donationData[donationNames[typeId] || typeId] = count
+      })
+
+      // Bar chart
+      const barCanvas = document.getElementById('chart-donation-bar')
+      drawBarChart(barCanvas, donationData, {
+        maxBars: 10,
+        color: '#f59e0b'
+      })
+
+      // Pie chart
+      const pieCanvas = document.getElementById('chart-donation-pie')
+      drawPieChart(pieCanvas, donationData, {
+        showLegend: true,
+        showPercentages: false
+      })
+    }
+
+    // Render growth chart
+    function renderGrowthChart(stats) {
+      const canvas = document.getElementById('chart-growth-line')
+      drawLineChart(canvas, stats.orgsByMonth)
+    }
+
+    // Render tables
+    function renderTables(stats, categories) {
+      // Cities table
+      const citiesBody = document.getElementById('table-cities-body')
+      const topCities = Object.entries(stats.byCity)
+        .sort((a, b) => b[1] - a[1])
+        .slice(0, 10)
+
+      citiesBody.innerHTML = topCities.map(([city, count], i) => `
+        <tr>
+          <td class="rank">${i + 1}</td>
+          <td>${city}</td>
+          <td>${count}</td>
+        </tr>
+      `).join('')
+
+      // Categories table
+      const categoryNames = {}
+      categories.forEach(cat => {
+        categoryNames[cat.id] = cat.name[currentLang] || cat.name.pt
+      })
+
+      const categoriesBody = document.getElementById('table-categories-body')
+      const topCategories = Object.entries(stats.byCategory)
+        .sort((a, b) => b[1] - a[1])
+        .slice(0, 10)
+
+      categoriesBody.innerHTML = topCategories.map(([catId, count], i) => `
+        <tr>
+          <td class="rank">${i + 1}</td>
+          <td>${categoryNames[catId] || catId}</td>
+          <td>${count}</td>
+        </tr>
+      `).join('')
+    }
+
+    // Theme toggle
+    function toggleTheme() {
+      if (window.themeManager) {
+        themeManager.toggle()
+      }
+    }
+
+    // Language toggle
+    function toggleLanguage() {
+      if (window.i18n) {
+        i18n.toggleLanguage()
+        currentLang = i18n.getCurrentLanguage()
+        updateLanguageFlag()
+        // Reload statistics with new language
+        loadStatistics()
+      }
+    }
+
+    // Update language flag
+    function updateLanguageFlag() {
+      const flags = document.querySelectorAll('#lang-flag, #lang-flag-mobile')
+      const newFlag = currentLang === 'pt' ? '🇧🇷' : '🇺🇸'
+      flags.forEach(flag => {
+        flag.textContent = newFlag
+      })
+    }
+
+    // Initialize on DOM ready
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', () => {
+        initStatistics()
+        updateLanguageFlag()
+      })
+    } else {
+      initStatistics()
+      updateLanguageFlag()
+    }
+  </script>
+
+</body>
+</html>
