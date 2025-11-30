@@ -336,7 +336,7 @@ style: mudanças de formatação
 
 ### Como Reportar
 
-1. Abra uma [nova issue](https://github.com/dwildt/letshelpit/issues/new)
+1. Abra uma [nova issue usando o template "Registro de Defeito"](https://github.com/dwildt/letshelpit/issues/new?template=bug-report.md)
 2. Use um título descritivo
 3. Descreva os passos para reproduzir
 4. Inclua comportamento esperado vs atual
@@ -347,7 +347,7 @@ style: mudanças de formatação
 
 ### Features
 
-1. Abra uma issue descrevendo a feature
+1. Abra uma [nova issue usando o template "Sugestão de Feature"](https://github.com/dwildt/letshelpit/issues/new?template=feature-request.md)
 2. Explique o problema que resolve
 3. Descreva a solução proposta
 4. Aguarde feedback antes de implementar
