@@ -154,9 +154,9 @@ letshelpit/
 │   ├── donate.md                  # Campanhas emergenciais
 │   ├── ACCESSIBILITY.md           # Documentação de acessibilidade WCAG 2.1 AA
 │   └── screenshots/               # Screenshots do projeto
-│       ├── desktop/               # Screenshots versão desktop
-│       ├── mobile/                # Screenshots versão mobile
-│       └── features/              # Screenshots de funcionalidades
+│       ├── desktop/               # Screenshots desktop
+│       ├── mobile/                # Screenshots mobile
+│       └── features/              # Screenshots features
 │
 ├── public/                        # Site estático (GitHub Pages)
 │   ├── index.html                 # Página principal
