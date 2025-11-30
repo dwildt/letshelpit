@@ -12,6 +12,7 @@ Plataforma open source para conectar pessoas a ONGs que fazem a diferença.
 ## 📋 Índice
 
 - [Sobre o Projeto](#-sobre-o-projeto)
+  - [Screenshots](#-screenshots)
 - [Tecnologias](#-tecnologias)
 - [Estrutura do Projeto](#-estrutura-do-projeto)
 - [Acessibilidade](#-acessibilidade)
@@ -49,6 +50,67 @@ Let's Help It é uma aplicação web estática que facilita a descoberta e apoio
 - Filtros interativos com contadores em tempo real
 - Sistema de badges para métodos de doação
 - Breadcrumb navigation para navegação geográfica
+
+### 📸 Screenshots
+
+#### Desktop
+
+<table>
+  <tr>
+    <td align="center">
+      <img src="docs/screenshots/desktop/home-page.png" alt="Home Page" width="400"/>
+      <br/><strong>Home Page</strong><br/>Lista de organizações
+    </td>
+    <td align="center">
+      <img src="docs/screenshots/desktop/filters-modal.png" alt="Filters Modal" width="400"/>
+      <br/><strong>Filtros</strong><br/>Modal de filtros aberto
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="docs/screenshots/desktop/organization-modal.png" alt="Organization Modal" width="400"/>
+      <br/><strong>Detalhes da ONG</strong><br/>Modal com informações completas
+    </td>
+    <td align="center">
+      <img src="docs/screenshots/desktop/search-results.png" alt="Search Results" width="400"/>
+      <br/><strong>Busca</strong><br/>Resultados de busca
+    </td>
+  </tr>
+</table>
+
+#### Mobile
+
+<table>
+  <tr>
+    <td align="center">
+      <img src="docs/screenshots/mobile/mobile-home.png" alt="Mobile Home" width="200"/>
+      <br/><strong>Home Mobile</strong>
+    </td>
+    <td align="center">
+      <img src="docs/screenshots/mobile/mobile-filters.png" alt="Mobile Filters" width="200"/>
+      <br/><strong>Filtros Mobile</strong>
+    </td>
+    <td align="center">
+      <img src="docs/screenshots/mobile/mobile-organization.png" alt="Mobile Organization" width="200"/>
+      <br/><strong>ONG Mobile</strong>
+    </td>
+  </tr>
+</table>
+
+#### Features
+
+<table>
+  <tr>
+    <td align="center">
+      <img src="docs/screenshots/features/language-toggle.png" alt="Language Toggle" width="300"/>
+      <br/><strong>Idioma</strong><br/>Troca PT/EN
+    </td>
+    <td align="center">
+      <img src="docs/screenshots/features/category-badges.png" alt="Category Badges" width="300"/>
+      <br/><strong>Categorias</strong><br/>Badges coloridos
+    </td>
+  </tr>
+</table>
 
 ---
 
@@ -90,7 +152,11 @@ letshelpit/
 ├── docs/                           # Documentação markdown
 │   ├── br-rs.md                   # ONGs do Rio Grande do Sul
 │   ├── donate.md                  # Campanhas emergenciais
-│   └── ACCESSIBILITY.md           # Documentação de acessibilidade WCAG 2.1 AA
+│   ├── ACCESSIBILITY.md           # Documentação de acessibilidade WCAG 2.1 AA
+│   └── screenshots/               # Screenshots do projeto
+│       ├── desktop/               # Screenshots desktop
+│       ├── mobile/                # Screenshots mobile
+│       └── features/              # Screenshots features
 │
 ├── public/                        # Site estático (GitHub Pages)
 │   ├── index.html                 # Página principal
