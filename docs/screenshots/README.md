@@ -18,25 +18,24 @@ screenshots/
 1. Abra o site em https://dwildt.github.io/letshelpit/public/
 2. Use Chrome DevTools (F12) → Device Toolbar para definir resolução 1280x800
 3. Capture as seguintes telas:
-   - `home-page.png` - Lista de organizações
-   - `filters-modal.png` - Modal de filtros aberto
-   - `organization-modal.png` - Modal de detalhes de uma ONG
-   - `search-results.png` - Resultados de busca
+   - `home-page.png` - Lista de organizações ✅
+   - `filters-modal.png` - Modal de filtros aberto ✅
 
 ### Mobile Screenshots
 
 1. Use Chrome DevTools (F12) → Device Toolbar
 2. Selecione "iPhone SE" ou resolução 375x667
 3. Capture:
-   - `mobile-home.png` - Vista mobile da home
-   - `mobile-filters.png` - Filtros no mobile
-   - `mobile-organization.png` - Modal de ONG no mobile
+   - `mobile-home.png` - Vista mobile da home ✅
+   - `mobile-filters.png` - Filtros no mobile ✅
 
 ### Features Screenshots
 
+_(Pending manual capture or script adjustments)_
+
 1. Capture detalhes específicos:
-   - `language-toggle.png` - Botão de troca de idioma PT/EN
-   - `category-badges.png` - Badges coloridos das categorias
+   - `language-toggle.png` - Botão de troca de idioma PT/EN (TODO)
+   - `category-badges.png` - Badges coloridos das categorias (TODO)
 
 ## 🔧 Ferramentas Recomendadas / Recommended Tools
 
