@@ -518,15 +518,3 @@ a, button, .card, .filter-chip {
 :root[data-theme="dark"] footer .text-gray-500 {
   color: var(--text-tertiary);
 }
-
-/* Performance Optimization: Prevent Layout Shift (CLS) */
-/* Reserve space for dynamically loaded organization cards */
-#main-content {
-  min-height: 600px;
-  transition: min-height var(--transition-speed);
-}
-
-/* Ensure org grid has minimum height to prevent shift */
-#org-list {
-  min-height: 400px;
-}
