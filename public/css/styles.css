@@ -5,6 +5,10 @@
  * Most styling is done via Tailwind classes in HTML.
  */
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* Root Variables - Light Theme (Default) */
 :root {
   /* Brand Colors */
