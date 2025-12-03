@@ -19,6 +19,7 @@ Plataforma open source para conectar pessoas a ONGs que fazem a diferença.
 - [Desenvolvimento](#-desenvolvimento)
 - [Testes](#-testes)
 - [Linting](#-linting)
+- [Performance Audit](#-performance-audit)
 - [Como Contribuir](#-como-contribuir)
 - [História](#-história)
 - [Licença](#-licença)
@@ -312,6 +313,14 @@ npm run test:coverage  # Gera relatório de cobertura
 
 # Validação Completa
 npm run validate   # Lint + Testes (rodar antes de commit!)
+
+# Performance Audit
+npm run lighthouse:desktop   # Lighthouse audit para desktop
+npm run lighthouse:mobile    # Lighthouse audit para mobile
+npm run lighthouse           # Executa ambos (desktop + mobile)
+
+# Screenshots
+npm run screenshots          # Captura screenshots automatizados
 ```
 
 ### Estrutura de Comandos
@@ -383,6 +392,89 @@ npm run lint:fix
 - **Semicolons:** Não usar
 - **Line breaks:** Unix (LF)
 - **ES Version:** ES2021
+
+---
+
+## 📊 Performance Audit
+
+### Google Lighthouse
+
+O projeto usa **Google Lighthouse** para auditoria de performance, acessibilidade, melhores práticas e SEO.
+
+### Executar Auditorias
+
+```bash
+# Auditoria Desktop
+npm run lighthouse:desktop
+
+# Auditoria Mobile
+npm run lighthouse:mobile
+
+# Ambas (Desktop + Mobile)
+npm run lighthouse
+```
+
+### Relatórios
+
+Os relatórios HTML são gerados na raiz do projeto:
+- `lighthouse-report-desktop.html` - Auditoria desktop (1350x940)
+- `lighthouse-report-mobile.html` - Auditoria mobile (375x667)
+
+Abra os arquivos no navegador para visualizar os resultados detalhados.
+
+### Métricas Avaliadas
+
+#### Performance
+- **FCP** (First Contentful Paint) - Primeira renderização de conteúdo
+- **LCP** (Largest Contentful Paint) - Renderização do maior elemento
+- **TBT** (Total Blocking Time) - Tempo de bloqueio total
+- **CLS** (Cumulative Layout Shift) - Mudanças cumulativas de layout
+- **Speed Index** - Índice de velocidade de carregamento
+
+#### Accessibility
+- **Score de acessibilidade** - Compatibilidade WCAG 2.1 AA
+- **Contraste de cores** - Razão de contraste adequada
+- **ARIA attributes** - Atributos semânticos
+- **Navegação por teclado** - Focus e skip links
+
+#### Best Practices
+- **HTTPS** - Conexão segura
+- **No console errors** - Sem erros no console
+- **Image aspect ratios** - Proporções corretas de imagens
+- **Secure dependencies** - Dependências seguras
+
+#### SEO
+- **Meta tags** - Títulos e descrições
+- **Mobile-friendly** - Responsividade mobile
+- **Crawlable links** - Links indexáveis
+- **Structured data** - Dados estruturados
+
+### Metas de Performance
+
+O projeto visa os seguintes scores mínimos:
+- ✅ **Performance:** >90
+- ✅ **Accessibility:** 100
+- ✅ **Best Practices:** 100
+- ✅ **SEO:** >95
+
+### Rodando Manualmente
+
+```bash
+# Desktop
+npx lighthouse https://dwildt.github.io/letshelpit/ \
+  --output=html \
+  --output-path=./lighthouse-report-desktop.html \
+  --chrome-flags="--headless" \
+  --preset=desktop
+
+# Mobile
+npx lighthouse https://dwildt.github.io/letshelpit/ \
+  --output=html \
+  --output-path=./lighthouse-report-mobile.html \
+  --chrome-flags="--headless" \
+  --screenEmulation.mobile=true \
+  --formFactor=mobile
+```
 
 ---
 

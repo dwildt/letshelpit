@@ -12,7 +12,10 @@
     "test:watch": "npx jest --watch",
     "test:coverage": "npx jest --coverage",
     "validate": "npm run lint && npm run test",
-    "screenshots": "node scripts/capture-screenshots.js"
+    "screenshots": "node scripts/capture-screenshots.js",
+    "lighthouse:desktop": "npx lighthouse https://dwildt.github.io/letshelpit/ --output=html --output-path=./lighthouse-report-desktop.html --chrome-flags=\"--headless\" --preset=desktop",
+    "lighthouse:mobile": "npx lighthouse https://dwildt.github.io/letshelpit/ --output=html --output-path=./lighthouse-report-mobile.html --chrome-flags=\"--headless\" --screenEmulation.mobile=true --formFactor=mobile",
+    "lighthouse": "npm run lighthouse:desktop && npm run lighthouse:mobile"
   },
   "repository": {
     "type": "git",

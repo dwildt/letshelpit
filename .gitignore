@@ -72,6 +72,9 @@ yarn-debug.log*
 coverage/
 *.log
 
+# Lighthouse reports
+lighthouse-report-*.html
+
 # Build artifacts
 dist/
 build/
