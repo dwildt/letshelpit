@@ -78,6 +78,7 @@ lighthouse-report-*.html
 # Build artifacts
 dist/
 build/
+public/css/output.css
 
 # OS files
 .DS_Store
