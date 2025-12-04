@@ -44,8 +44,9 @@
   <meta name="twitter:creator" content="@danielwildt">
   <meta name="twitter:site" content="@danielwildt">
 
-  <!-- Favicon (placeholder) -->
-  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="alternate icon" type="image/x-icon" href="favicon.ico">
 
   <!-- Performance: Resource Hints -->
   <link rel="preload" href="css/output.css" as="style">
@@ -385,10 +386,90 @@
       </div>
     </div>
 
-    <!-- Loading State -->
-    <div id="loading-state" class="text-center py-16" role="status" aria-live="polite">
-      <div class="spinner mx-auto mb-4" aria-hidden="true"></div>
-      <p class="text-gray-600" data-i18n="loading.text">Carregando organizações...</p>
+    <!-- Loading State with Skeleton -->
+    <div id="loading-state" class="org-grid" role="status" aria-live="polite" style="display: grid;">
+      <!-- Skeleton Cards (8 cards to match typical result count) -->
+      <div class="skeleton-card">
+        <div class="skeleton-line skeleton-title"></div>
+        <div class="skeleton-line short"></div>
+        <div class="skeleton-line medium"></div>
+        <div class="skeleton-line"></div>
+        <div class="mt-4">
+          <div class="skeleton-badge skeleton-line"></div>
+          <div class="skeleton-badge skeleton-line"></div>
+        </div>
+      </div>
+      <div class="skeleton-card">
+        <div class="skeleton-line skeleton-title"></div>
+        <div class="skeleton-line short"></div>
+        <div class="skeleton-line medium"></div>
+        <div class="skeleton-line"></div>
+        <div class="mt-4">
+          <div class="skeleton-badge skeleton-line"></div>
+          <div class="skeleton-badge skeleton-line"></div>
+        </div>
+      </div>
+      <div class="skeleton-card">
+        <div class="skeleton-line skeleton-title"></div>
+        <div class="skeleton-line short"></div>
+        <div class="skeleton-line medium"></div>
+        <div class="skeleton-line"></div>
+        <div class="mt-4">
+          <div class="skeleton-badge skeleton-line"></div>
+          <div class="skeleton-badge skeleton-line"></div>
+        </div>
+      </div>
+      <div class="skeleton-card">
+        <div class="skeleton-line skeleton-title"></div>
+        <div class="skeleton-line short"></div>
+        <div class="skeleton-line medium"></div>
+        <div class="skeleton-line"></div>
+        <div class="mt-4">
+          <div class="skeleton-badge skeleton-line"></div>
+          <div class="skeleton-badge skeleton-line"></div>
+        </div>
+      </div>
+      <div class="skeleton-card">
+        <div class="skeleton-line skeleton-title"></div>
+        <div class="skeleton-line short"></div>
+        <div class="skeleton-line medium"></div>
+        <div class="skeleton-line"></div>
+        <div class="mt-4">
+          <div class="skeleton-badge skeleton-line"></div>
+          <div class="skeleton-badge skeleton-line"></div>
+        </div>
+      </div>
+      <div class="skeleton-card">
+        <div class="skeleton-line skeleton-title"></div>
+        <div class="skeleton-line short"></div>
+        <div class="skeleton-line medium"></div>
+        <div class="skeleton-line"></div>
+        <div class="mt-4">
+          <div class="skeleton-badge skeleton-line"></div>
+          <div class="skeleton-badge skeleton-line"></div>
+        </div>
+      </div>
+      <div class="skeleton-card">
+        <div class="skeleton-line skeleton-title"></div>
+        <div class="skeleton-line short"></div>
+        <div class="skeleton-line medium"></div>
+        <div class="skeleton-line"></div>
+        <div class="mt-4">
+          <div class="skeleton-badge skeleton-line"></div>
+          <div class="skeleton-badge skeleton-line"></div>
+        </div>
+      </div>
+      <div class="skeleton-card">
+        <div class="skeleton-line skeleton-title"></div>
+        <div class="skeleton-line short"></div>
+        <div class="skeleton-line medium"></div>
+        <div class="skeleton-line"></div>
+        <div class="mt-4">
+          <div class="skeleton-badge skeleton-line"></div>
+          <div class="skeleton-badge skeleton-line"></div>
+        </div>
+      </div>
+      <span class="sr-only" data-i18n="loading.text">Carregando organizações...</span>
     </div>
 
     <!-- Error State -->

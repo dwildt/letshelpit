@@ -18,7 +18,7 @@ const APP_CONFIG = {
    *
    * Can be overridden via URL query: ?provider=json or ?provider=sqlite
    */
-  dataProvider: 'auto',
+  dataProvider: 'json',
 
   /**
    * Data Sources Configuration

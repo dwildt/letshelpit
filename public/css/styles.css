@@ -248,6 +248,66 @@ a, button, .card, .filter-chip {
   100% { transform: rotate(360deg); }
 }
 
+/* Skeleton Loader */
+.skeleton-card {
+  background-color: var(--bg-primary);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+  min-height: 320px;
+  animation: skeleton-pulse 1.5s ease-in-out infinite;
+}
+
+.skeleton-line {
+  height: 1rem;
+  background: linear-gradient(90deg, var(--bg-tertiary) 25%, var(--bg-secondary) 50%, var(--bg-tertiary) 75%);
+  background-size: 200% 100%;
+  border-radius: 4px;
+  animation: skeleton-shimmer 1.5s ease-in-out infinite;
+  margin-bottom: 0.75rem;
+}
+
+.skeleton-line.short {
+  width: 60%;
+}
+
+.skeleton-line.medium {
+  width: 80%;
+}
+
+.skeleton-title {
+  height: 1.5rem;
+  width: 70%;
+  margin-bottom: 1rem;
+}
+
+.skeleton-badge {
+  display: inline-block;
+  height: 1.25rem;
+  width: 5rem;
+  border-radius: 9999px;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+@keyframes skeleton-shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+@keyframes skeleton-pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
 /* Breadcrumb */
 .breadcrumb {
   display: flex;
@@ -516,6 +576,12 @@ a, button, .card, .filter-chip {
 
 :root[data-theme="dark"] .hover\:text-blue-800:hover {
   color: #93c5fd;
+}
+
+/* Footer performance optimization */
+footer {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 300px;
 }
 
 /* Dark mode for footer */

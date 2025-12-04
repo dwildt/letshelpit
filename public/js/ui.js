@@ -466,7 +466,9 @@ const UI = {
    * Hide loading state
    */
   hideLoading() {
-    document.getElementById('loading-state').classList.add('hidden')
+    const loadingState = document.getElementById('loading-state')
+    loadingState.classList.add('hidden')
+    loadingState.style.display = 'none'
   },
 
   /**
