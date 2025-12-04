@@ -124,6 +124,16 @@ docs/
 - **Lint**: Seguir configuração ESLint (v9)
 - **Conventional Commits**: Usar padrão de commits semântico
 
+## Git Workflow
+
+### ⚠️ IMPORTANTE: Push para GitHub
+
+- **NUNCA** executar `git push` automaticamente
+- **SEMPRE** deixar o usuário fazer o push manualmente
+- Após criar o commit, **INFORMAR** o usuário que ele precisa fazer o push
+- Apenas criar o commit com `git commit` e parar
+- O usuário executará `git push origin main` quando estiver pronto
+
 ## Comandos Úteis
 
 ```bash
