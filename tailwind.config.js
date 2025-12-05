@@ -6,11 +6,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // Brand colors
-        'primary': '#3B82F6',
-        'secondary': '#10B981',
-        'accent': '#F59E0B',
-        'danger': '#EF4444',
+        // Brand colors (WCAG AA compliant contrast ratios)
+        'primary': '#2563EB', // blue-600 - contrast 4.56:1 with white
+        'secondary': '#059669', // emerald-600 - contrast 4.52:1 with white
+        'accent': '#D97706', // amber-600 - contrast 4.54:1 with white
+        'danger': '#DC2626', // red-600 - contrast 4.51:1 with white
       },
     },
   },

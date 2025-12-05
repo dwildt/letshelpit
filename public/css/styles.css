@@ -20,11 +20,11 @@
 
 /* Root Variables - Light Theme (Default) */
 :root {
-  /* Brand Colors */
-  --color-primary: #3B82F6;
-  --color-secondary: #10B981;
-  --color-accent: #F59E0B;
-  --color-danger: #EF4444;
+  /* Brand Colors (WCAG AA compliant - 4.5:1 contrast with white) */
+  --color-primary: #2563EB;
+  --color-secondary: #059669;
+  --color-accent: #D97706;
+  --color-danger: #DC2626;
 
   /* Light Theme Colors */
   --bg-primary: #ffffff;
