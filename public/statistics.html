@@ -23,17 +23,10 @@
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Custom CSS -->
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/output.css">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/statistics.css">
-
-  <style>
-    .bg-primary { background-color: var(--color-primary); }
-    .text-primary { color: var(--text-primary); }
-  </style>
 </head>
 <body class="min-h-screen flex flex-col">
 
@@ -212,25 +205,25 @@
   <!-- Footer -->
   <footer class="bg-gray-800 text-white py-8 mt-auto" role="contentinfo">
     <div class="container mx-auto px-4 text-center">
-      <p class="text-sm">
+      <p class="text-white text-sm">
         <span data-i18n="footer.madeWith">Feito com</span> ❤️
         <span data-i18n="footer.by">por</span>
-        <a href="https://github.com/dwildt" class="text-blue-400 hover:text-blue-300 underline" target="_blank" rel="noopener">Daniel Wildt</a>
+        <a href="https://github.com/dwildt" class="text-white hover:text-gray-100 underline transition" target="_blank" rel="noopener">Daniel Wildt</a>
       </p>
-      <p class="text-xs text-gray-400 mt-2">
-        <a href="index.html" class="hover:text-gray-300" data-i18n="nav.home">← Voltar para Home</a>
+      <p class="text-white text-xs mt-2">
+        <a href="index.html" class="hover:text-gray-100 transition" data-i18n="nav.home">← Voltar para Home</a>
       </p>
     </div>
   </footer>
 
   <!-- Scripts -->
-  <script src="js/theme.js"></script>
-  <script src="js/config.js"></script>
-  <script src="js/i18n.js"></script>
-  <script src="js/providers/DataProvider.js"></script>
-  <script src="js/providers/JSONProvider.js"></script>
-  <script src="js/providers/SQLiteProvider.js"></script>
-  <script src="js/statisticsCharts.js"></script>
+  <script defer src="js/theme.js"></script>
+  <script defer src="js/config.js"></script>
+  <script defer src="js/i18n.js"></script>
+  <script defer src="js/providers/DataProvider.js"></script>
+  <script defer src="js/providers/JSONProvider.js"></script>
+  <script defer src="js/providers/SQLiteProvider.js"></script>
+  <script defer src="js/statisticsCharts.js"></script>
 
   <!-- Statistics App Script -->
   <script>
