@@ -112,7 +112,7 @@ function drawPieChart(canvas, data, options = {}) {
   const height = rect.height
   const centerX = showLegend ? width / 3 : width / 2
   const centerY = height / 2
-  const radius = Math.min(centerX, centerY) - 20
+  const radius = Math.max(Math.min(centerX, centerY) - 20, 0) // Ensure radius is not negative
 
   const total = values.reduce((sum, val) => sum + val, 0)
   let currentAngle = -Math.PI / 2
