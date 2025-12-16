@@ -69,6 +69,16 @@ const TRANSLATIONS = {
     'modal.visitWebsite': 'Visitar Site',
     'modal.transparency': 'Transparência',
 
+    // Share
+    'share.title': 'Compartilhar',
+    'share.whatsapp': 'WhatsApp',
+    'share.facebook': 'Facebook',
+    'share.twitter': 'Twitter',
+    'share.linkedin': 'LinkedIn',
+    'share.copyLink': 'Copiar Link',
+    'share.copied': 'Link copiado!',
+    'share.copyFailed': 'Erro ao copiar',
+
     // Empty States
     'empty.title': 'Nenhuma organização encontrada',
     'empty.description': 'Tente ajustar os filtros ou fazer uma nova busca',
@@ -200,6 +210,16 @@ const TRANSLATIONS = {
     'modal.maps.waze': 'Waze',
     'modal.visitWebsite': 'Visit Website',
     'modal.transparency': 'Transparency',
+
+    // Share
+    'share.title': 'Share',
+    'share.whatsapp': 'WhatsApp',
+    'share.facebook': 'Facebook',
+    'share.twitter': 'Twitter',
+    'share.linkedin': 'LinkedIn',
+    'share.copyLink': 'Copy Link',
+    'share.copied': 'Link copied!',
+    'share.copyFailed': 'Copy failed',
 
     // Empty States
     'empty.title': 'No organizations found',

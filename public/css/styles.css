@@ -611,3 +611,93 @@ footer {
   background-color: var(--color-primary);
   color: var(--text-inverted);
 }
+
+/* ============================================
+   Share Buttons
+   ============================================ */
+
+/* Base share button styles */
+.share-btn {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-speed) ease;
+}
+
+.share-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.2);
+}
+
+.share-btn:active {
+  transform: translateY(0);
+}
+
+/* WhatsApp - Brand green #25D366 */
+.share-btn-whatsapp {
+  background-color: #25D366;
+}
+
+.share-btn-whatsapp:hover {
+  background-color: #20BA5A;
+}
+
+/* Facebook - Brand blue #1877F2 */
+.share-btn-facebook {
+  background-color: #1877F2;
+}
+
+.share-btn-facebook:hover {
+  background-color: #0E63D3;
+}
+
+/* Twitter/X - Black #000000 */
+.share-btn-twitter {
+  background-color: #000000;
+}
+
+.share-btn-twitter:hover {
+  background-color: #14171A;
+}
+
+/* LinkedIn - Brand blue #0A66C2 */
+.share-btn-linkedin {
+  background-color: #0A66C2;
+}
+
+.share-btn-linkedin:hover {
+  background-color: #084D94;
+}
+
+/* Copy Link - Gray #6B7280 */
+.share-btn-copy {
+  background-color: #6B7280;
+}
+
+.share-btn-copy:hover {
+  background-color: #4B5563;
+}
+
+/* Dark mode adjustments for share buttons */
+:root[data-theme="dark"] .share-btn {
+  color: white;
+}
+
+:root[data-theme="dark"] .share-btn:hover {
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.5);
+}
+
+/* Responsive share buttons */
+@media (max-width: 640px) {
+  .share-btn {
+    font-size: 0.75rem;
+    padding: 0.5rem 0.75rem;
+  }
+
+  .share-btn svg {
+    width: 1rem;
+    height: 1rem;
+  }
+}

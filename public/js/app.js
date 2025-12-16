@@ -8,6 +8,7 @@ class App {
   constructor() {
     this.dataProvider = null
     this.organizations = []
+    this.organizationsMap = {}
     this.categories = []
     this.categoriesMap = {}
     this.donationTypes = []
@@ -48,8 +49,14 @@ class App {
       // Setup event listeners
       this.setupEventListeners()
 
+      // Setup deep linking
+      this.setupDeepLinking()
+
       // Initial render
       await this.applyFilters()
+
+      // Handle deep link if present
+      this.handleDeepLink()
 
       UI.hideLoading()
       debugLog('App: Initialized successfully')
@@ -520,6 +527,12 @@ class App {
 
       this.organizations = results
 
+      // Build organizations map for quick lookup (used by share feature)
+      this.organizationsMap = {}
+      results.forEach(org => {
+        this.organizationsMap[org.id] = org
+      })
+
       // Update UI
       UI.renderOrganizations(results)
 
@@ -581,6 +594,38 @@ class App {
 
     // Re-render organizations
     UI.renderOrganizations(this.organizations)
+  }
+
+  /**
+   * Setup deep linking handler
+   */
+  setupDeepLinking() {
+    // Handle hash changes (back/forward navigation)
+    window.addEventListener('hashchange', () => {
+      this.handleDeepLink()
+    })
+  }
+
+  /**
+   * Handle deep link from URL hash
+   * Format: #org-{orgId}
+   */
+  handleDeepLink() {
+    const hash = window.location.hash
+
+    if (!hash || hash.length <= 1) {
+      return
+    }
+
+    // Check if it's an organization deep link
+    const orgMatch = hash.match(/^#org-(.+)$/)
+    if (orgMatch) {
+      const orgId = orgMatch[1]
+      debugLog(`App: Deep link detected for organization: ${orgId}`)
+
+      // Open the organization modal
+      this.openOrgModal(orgId)
+    }
   }
 
   /**
