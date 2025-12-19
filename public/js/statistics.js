@@ -15,7 +15,7 @@ async function initStatistics() {
 
     // Initialize i18n
     if (window.i18n) {
-      currentLang = i18n.getCurrentLanguage()
+      currentLang = i18n.getLang()
     }
 
     // Initialize data provider
@@ -98,7 +98,7 @@ function renderOverviewCards(stats) {
 
   // Re-translate if i18n is available
   if (window.i18n) {
-    i18n.translatePage()
+    i18n.updateDOM()
   }
 }
 
@@ -224,9 +224,11 @@ function toggleTheme() {
 // Language toggle
 function toggleLanguage() {
   if (window.i18n) {
-    i18n.toggleLanguage()
-    currentLang = i18n.getCurrentLanguage()
+    i18n.toggleLang()
+    currentLang = i18n.getLang()
     updateLanguageFlag()
+    // Update DOM translations for static elements
+    i18n.updateDOM()
     // Reload statistics with new language
     loadStatistics()
   }
@@ -234,7 +236,8 @@ function toggleLanguage() {
 
 // Update language flag
 function updateLanguageFlag() {
-  const flags = document.querySelectorAll('#lang-flag, #lang-flag-mobile')
+  const flags = document.querySelectorAll('#lang-flag')
+  const currentLang = i18n.getLang()  // Get fresh value
   const newFlag = currentLang === 'pt' ? '🇧🇷' : '🇺🇸'
   flags.forEach(flag => {
     flag.textContent = newFlag
