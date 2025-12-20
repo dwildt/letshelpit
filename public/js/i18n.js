@@ -455,7 +455,12 @@ class I18n {
 // Create global instance
 const i18n = new I18n()
 
-// Export for use in other modules
+// Export to window for browser use
+if (typeof window !== 'undefined') {
+  window.i18n = i18n
+}
+
+// Export for use in other modules (Node.js/Jest)
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = { I18n, i18n, TRANSLATIONS }
 }
