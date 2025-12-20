@@ -16,6 +16,7 @@ async function initStatistics() {
     // Initialize i18n
     if (window.i18n) {
       currentLang = i18n.getLang()
+      i18n.updateDOM()  // Translate static elements
     }
 
     // Initialize data provider
@@ -236,6 +237,9 @@ function toggleLanguage() {
 
 // Update language flag
 function updateLanguageFlag() {
+  if (!window.i18n) {
+    return  // i18n not loaded yet
+  }
   const flags = document.querySelectorAll('#lang-flag')
   const currentLang = i18n.getLang()  // Get fresh value
   const newFlag = currentLang === 'pt' ? '🇧🇷' : '🇺🇸'
