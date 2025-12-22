@@ -12,7 +12,9 @@ const { mockDonationTypes } = require('./fixtures/mockDonationTypes')
 global.i18n = {
   t: jest.fn((key) => key),
   tWithFallback: jest.fn((obj) => {
-    if (typeof obj === 'string') return obj
+    if (typeof obj === 'string') {
+      return obj
+    }
     return obj?.pt || obj?.en || ''
   }),
   getLang: jest.fn(() => 'pt')
@@ -89,7 +91,9 @@ document.createElement = jest.fn((tag) => {
   }
   // Special handling for escapeHtml
   Object.defineProperty(element, 'textContent', {
-    get() { return this._text || '' },
+    get() {
+      return this._text || ''
+    },
     set(value) {
       this._text = value
       // Simulate HTML escaping
@@ -252,9 +256,15 @@ describe('UI Module', () => {
       const resultsCount = createMockElement('results-count')
 
       document.getElementById = jest.fn((id) => {
-        if (id === 'organizations-grid') return grid
-        if (id === 'empty-state') return emptyState
-        if (id === 'results-count') return resultsCount
+        if (id === 'organizations-grid') {
+          return grid
+        }
+        if (id === 'empty-state') {
+          return emptyState
+        }
+        if (id === 'results-count') {
+          return resultsCount
+        }
         return createMockElement(id)
       })
 
@@ -271,9 +281,15 @@ describe('UI Module', () => {
       const resultsCount = createMockElement('results-count')
 
       document.getElementById = jest.fn((id) => {
-        if (id === 'organizations-grid') return grid
-        if (id === 'empty-state') return emptyState
-        if (id === 'results-count') return resultsCount
+        if (id === 'organizations-grid') {
+          return grid
+        }
+        if (id === 'empty-state') {
+          return emptyState
+        }
+        if (id === 'results-count') {
+          return resultsCount
+        }
         return createMockElement(id)
       })
 

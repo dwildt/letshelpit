@@ -98,11 +98,21 @@ const createMockElement = (id) => ({
 })
 
 document.getElementById = jest.fn((id) => {
-  if (id === 'search-input') return createMockElement(id)
-  if (id === 'filters-count') return createMockElement(id)
-  if (id === 'filters-count-mobile') return createMockElement(id)
-  if (id === 'active-filters-container') return createMockElement(id)
-  if (id === 'active-filters-tags') return createMockElement(id)
+  if (id === 'search-input') {
+    return createMockElement(id)
+  }
+  if (id === 'filters-count') {
+    return createMockElement(id)
+  }
+  if (id === 'filters-count-mobile') {
+    return createMockElement(id)
+  }
+  if (id === 'active-filters-container') {
+    return createMockElement(id)
+  }
+  if (id === 'active-filters-tags') {
+    return createMockElement(id)
+  }
   return createMockElement(id)
 })
 
