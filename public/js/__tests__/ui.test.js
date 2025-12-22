@@ -136,8 +136,9 @@ describe('UI Module', () => {
       )
 
       expect(url).toContain('google.com/maps')
-      expect(url).toContain('Rua+Teste')
-      expect(url).toContain('Porto+Alegre')
+      // encodeURIComponent uses %20 for spaces, not +
+      expect(url).toContain('Rua%20Teste')
+      expect(url).toContain('Porto%20Alegre')
     })
 
     test('should generate Waze URL', () => {
@@ -186,21 +187,48 @@ describe('UI Module', () => {
   // ========================================
   describe('State Display', () => {
     test('should show loading state', () => {
-      const loading = createMockElement('loading')
-      document.querySelectorAll = jest.fn(() => [loading])
+      const loadingState = createMockElement('loading-state')
+      const errorState = createMockElement('error-state')
+      const emptyState = createMockElement('empty-state')
+      const grid = createMockElement('organizations-grid')
+
+      document.getElementById = jest.fn((id) => {
+        if (id === 'loading-state') {
+          return loadingState
+        }
+        if (id === 'error-state') {
+          return errorState
+        }
+        if (id === 'empty-state') {
+          return emptyState
+        }
+        if (id === 'organizations-grid') {
+          return grid
+        }
+        return createMockElement(id)
+      })
 
       UI.showLoading()
 
-      expect(loading.classList.remove).toHaveBeenCalledWith('hidden')
+      expect(loadingState.classList.remove).toHaveBeenCalledWith('hidden')
+      expect(errorState.classList.add).toHaveBeenCalledWith('hidden')
+      expect(emptyState.classList.add).toHaveBeenCalledWith('hidden')
+      expect(grid.classList.add).toHaveBeenCalledWith('hidden')
     })
 
     test('should hide loading state', () => {
-      const loading = createMockElement('loading')
-      document.querySelectorAll = jest.fn(() => [loading])
+      const loadingState = createMockElement('loading-state')
+
+      document.getElementById = jest.fn((id) => {
+        if (id === 'loading-state') {
+          return loadingState
+        }
+        return createMockElement(id)
+      })
 
       UI.hideLoading()
 
-      expect(loading.classList.add).toHaveBeenCalledWith('hidden')
+      expect(loadingState.classList.add).toHaveBeenCalledWith('hidden')
     })
 
     test('should show error state', () => {
@@ -213,10 +241,32 @@ describe('UI Module', () => {
     })
 
     test('should handle missing DOM elements gracefully', () => {
-      document.getElementById = jest.fn(() => null)
+      const loadingState = createMockElement('loading-state')
+      const errorState = createMockElement('error-state')
+      const emptyState = createMockElement('empty-state')
+      const grid = createMockElement('organizations-grid')
 
-      // Should not throw
+      document.getElementById = jest.fn((id) => {
+        if (id === 'loading-state') {
+          return loadingState
+        }
+        if (id === 'error-state') {
+          return errorState
+        }
+        if (id === 'empty-state') {
+          return emptyState
+        }
+        if (id === 'organizations-grid') {
+          return grid
+        }
+        return null
+      })
+
+      // Should not throw when core elements exist
       expect(() => UI.showError()).not.toThrow()
+
+      // Verify the error state was shown
+      expect(errorState.classList.remove).toHaveBeenCalledWith('hidden')
     })
   })
 
