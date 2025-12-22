@@ -126,6 +126,52 @@ docs/
 
 ## Git Workflow
 
+### ⚠️ CRÍTICO: Prevenção de Branch Divergence
+
+**NUNCA USAR `git commit --amend` APÓS O PUSH!** Isso causa divergência de branches.
+
+#### Workflow Correto
+
+1. **Antes de Fazer Commit:**
+   - Executar validações: `npm run lint` e `npm test`
+   - Corrigir todos os erros ANTES do commit inicial
+   - Se houver problemas, corrigir e incluir no mesmo commit
+
+2. **Após Push (se encontrar erros de CI):**
+   - ❌ **ERRADO**: `git commit --amend` (causa divergência!)
+   - ✅ **CORRETO**: Criar novo commit separado com as correções
+
+3. **Se Divergência Já Ocorreu:**
+   ```bash
+   # Resetar para o commit remoto
+   git reset --hard origin/main
+
+   # Aplicar correções novamente
+   npm run lint:fix
+
+   # Criar novo commit separado
+   git add .
+   git commit -m "style: apply lint fixes"
+   ```
+
+#### Ordem de Operações
+
+```bash
+# 1. Fazer mudanças no código
+# 2. Executar validações
+npm run lint:fix    # Corrigir lint automaticamente
+npm test            # Verificar testes
+
+# 3. Adicionar ao stage
+git add .
+
+# 4. Criar commit
+git commit -m "mensagem"
+
+# 5. INFORMAR usuário para fazer push
+# O usuário executará: git push origin main
+```
+
 ### ⚠️ IMPORTANTE: Push para GitHub
 
 - **NUNCA** executar `git push` automaticamente
